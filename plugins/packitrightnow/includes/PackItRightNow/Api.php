@@ -15,6 +15,7 @@ namespace PackItRightNow;
  * Calling add_action or add_filter can cause unexpected issues with AJAX and
  * CLI scripts as WordPress has not completely loaded at this point.
  */
+
 use PackItRightNow\Plugin;
 
 function get_plugin() {

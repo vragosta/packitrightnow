@@ -1,0 +1,15 @@
+/**
+ * PackItRightNow - Twenty Seventeen
+ * Site CSS
+ */
+
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+a:hover,
+a:focus,
+a:active,
+a:focus:active {
+	text-decoration: none;
+}

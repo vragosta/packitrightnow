@@ -35,7 +35,7 @@ function packitrightnow_can_autoload() {
 			return true;
 		} else {
 			error_log(
-				"Fatal Error: Composer not setup in " . VINCENTRAGOSTA_PLUGIN_DIR
+				"Fatal Error: Composer not setup in " . PACKITRIGHTNOW_PLUGIN_DIR
 			);
 			return false;
 		}
@@ -48,7 +48,7 @@ function packitrightnow_can_autoload() {
  * Defaults is Composer's autoloader
  */
 function packitrightnow_autoloader() {
-	return PACK_IT_RIGHT_NOW_PLUGIN_DIR . '/vendor/autoload.php';
+	return PACKITRIGHTNOW_PLUGIN_DIR . '/vendor/autoload.php';
 }
 
 /**

@@ -8,6 +8,8 @@
 
 namespace PackItRightNow;
 
-get_header();
+get_header(); ?>
 
-get_footer();
+<section style="height: 1200px;"></section>
+
+<?php get_footer(); ?>

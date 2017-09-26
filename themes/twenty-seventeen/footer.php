@@ -11,6 +11,7 @@ namespace PackItRightNow;
 
 ?>
 
+	<?php get_partial( 'template-parts/content-mobile-menu' ); ?>
 	</body>
 </html>
 <?php wp_footer(); ?>

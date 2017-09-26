@@ -77,7 +77,7 @@ function scripts() {
 
 	wp_enqueue_script(
 		'packitrightnow',
-		PACKITRIGHTNOW_TEMPLATE_URL . "/assets/js/inline-corp---twenty-seventeen.js",
+		PACKITRIGHTNOW_TEMPLATE_URL . "/assets/js/packitrightnow---twenty-seventeen.js",
 		array( 'jquery', 'bootstrap' ),
 		PACKITRIGHTNOW_VERSION,
 		true
@@ -105,6 +105,13 @@ add_action( 'wp_enqueue_scripts', 'scripts' );
  * @return void
  */
 function styles() {
+	wp_register_style(
+		'fonts',
+		'https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,500i,600,600i,700,700i|Lato:100,100i,300,300i,400,400i,700,700i,900,900i',
+		array(),
+		PACKITRIGHTNOW_VERSION
+	);
+
 	wp_register_style(
 		'fontawesome',
 		PACKITRIGHTNOW_TEMPLATE_URL . "/assets/lib/fontawesome/css/font-awesome.min.css",
@@ -136,7 +143,7 @@ function styles() {
 	wp_enqueue_style(
 		'packitrightnow',
 		PACKITRIGHTNOW_TEMPLATE_URL . "/assets/css/packitrightnow---twenty-seventeen.css",
-		array( 'fontawesome', 'ionicons', 'bootstrap', 'sanitize' ),
+		array( 'fonts', 'fontawesome', 'ionicons', 'bootstrap', 'sanitize' ),
 		PACKITRIGHTNOW_VERSION
 	);
 }

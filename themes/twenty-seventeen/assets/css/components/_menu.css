@@ -1,0 +1,30 @@
+/**
+ * PackItRightNow - Twenty Seventeen
+ * Menu CSS
+ */
+
+.menu {
+	display: flex;
+	opacity: 1;
+	visibility: visible;
+	transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
+}
+
+@media only screen and ( max-width: 991px ) {
+	.menu {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+.menu a {
+	color: #fff;
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
+	font-size: 16px;
+}
+
+.menu a:last-child {
+	padding-right: 0;
+}

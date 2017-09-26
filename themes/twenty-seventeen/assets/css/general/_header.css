@@ -1,0 +1,57 @@
+/**
+ * PackItRightNow - Twenty Seventeen
+ * Header CSS
+ */
+
+.header {
+	background-color: green;
+}
+
+.header .container {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	height: 60.75px;
+}
+
+.header .container:before,
+.header .container:after {
+	display: none;
+}
+
+.header .logo {
+	position: absolute;
+	left: 15px;
+}
+
+.header h1 {
+	color: #fff;
+	font-size: 1.8em;
+}
+
+
+@media only screen and ( max-width: 767px ) {
+	.header h1 {
+		font-size: 1.5em;
+		margin: .91em 0;
+	}
+}
+
+.header i {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	color: #fff;
+	font-size: 3em;
+	top: 10px;
+	right: 15px;
+	cursor: pointer;
+	transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
+}
+
+@media only screen and ( max-width: 991px ) {
+	.header i {
+		opacity: 1;
+		visibility: visible;
+	}
+}
