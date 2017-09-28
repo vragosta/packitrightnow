@@ -7,7 +7,7 @@
 
 ( function( $ ) {
 
-	var vincentragosta = {
+	var packitrightnow = {
 
 		/**
 		 * When the dropdown button is clicked ( hamburger button ),
@@ -21,9 +21,6 @@
 
 			// Listener for drop down button.
 			$( '.drop-down' ).click( function() {
-				// console.log( 'clicked' );
-				// $( '.nav-container' )
-				// 	.hide();
 				$( this ).fadeOut();
 
 				$( '#mobile-menu' )
@@ -32,15 +29,29 @@
 
 			// Listener for close menu button.
 			$( '.fa-times' ).click( function () {
-				// console.log( 'clicked' );
-				// $( '.nav-container' )
-				// 	.show()
 				$( '.drop-down' ).fadeIn();
 
 				$( '#mobile-menu' )
 					.removeClass( 'load' );
 			});
 
+		},
+
+		/**
+		 * Declare carousel settings.
+		 *
+		 * @since 0.1.0
+		 * @uses slick()
+		 * @return void
+		 */
+		setCarouselSettings: function() {
+			$( '.carousel' ).slick( {
+				infinite: true,
+				slidesToShow: 1,
+				autoplay: true,
+				autoplaySpeed: 3000,
+				dots: true
+			} );
 		},
 
 		/**
@@ -52,13 +63,11 @@
 		 */
 		init: function() {
 			this.setupMenuToggle();
+			this.setCarouselSettings();
 		}
 	};
 
 	jQuery( document ).ready( function() {
-
-		// Initialize the vincentragosta class.
-		vincentragosta.init();
-
+		packitrightnow.init();
 	} );
 } )( jQuery );

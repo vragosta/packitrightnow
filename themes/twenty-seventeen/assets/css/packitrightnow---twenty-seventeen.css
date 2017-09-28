@@ -13,5 +13,7 @@
 /*--- Components ---*/
 @import "components/_menu.css";
 @import "components/_mobile-menu.css";
+@import "components/_carousel.css";
 
 /*--- Templates ---*/
+@import "templates/_front-page.css";

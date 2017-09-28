@@ -16,20 +16,7 @@ namespace PackItRightNow;
 		<?php get_partial( 'template-parts/content-menu' ); ?>
 		<i class="ion ion-navicon drop-down"></i>
 	</div>
-	<figure style="
-			height: 200px;
-			position: relative;
-			">
-		<div style="
-			background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/banner.png'; ?> );
-			background-position: center;
-			background-size: cover;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			">
-		</div>
+	<figure class="banner">
+		<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/banner.png'; ?> );"></div>
 	</figure>
 </header>

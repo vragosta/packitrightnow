@@ -74,10 +74,18 @@ function scripts() {
 		true
 	);
 
+	wp_register_script(
+		'slick',
+		'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js',
+		array( 'jquery' ),
+		PACKITRIGHTNOW_VERSION,
+		true
+	);
+
 	wp_enqueue_script(
 		'packitrightnow',
 		PACKITRIGHTNOW_TEMPLATE_URL . "/assets/js/packitrightnow---twenty-seventeen.js",
-		array( 'jquery', 'bootstrap' ),
+		array( 'jquery', 'slick', 'bootstrap' ),
 		PACKITRIGHTNOW_VERSION,
 		true
 	);
@@ -139,10 +147,24 @@ function styles() {
 		PACKITRIGHTNOW_VERSION
 	);
 
+	wp_register_style(
+		'slick',
+		'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css',
+		array(),
+		PACKITRIGHTNOW_VERSION
+	);
+
+	wp_register_style(
+		'slick-theme',
+		'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css',
+		array( 'slick' ),
+		STORYCORPS_ORG_VERSION
+	);
+
 	wp_enqueue_style(
 		'packitrightnow',
 		PACKITRIGHTNOW_TEMPLATE_URL . "/assets/css/packitrightnow---twenty-seventeen.css",
-		array( 'fonts', 'fontawesome', 'ionicons', 'bootstrap', 'sanitize' ),
+		array( 'fonts', 'fontawesome', 'ionicons', 'bootstrap', 'sanitize', 'slick-theme' ),
 		PACKITRIGHTNOW_VERSION
 	);
 }

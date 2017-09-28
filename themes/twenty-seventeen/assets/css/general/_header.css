@@ -29,7 +29,6 @@
 	font-size: 1.8em;
 }
 
-
 @media only screen and ( max-width: 767px ) {
 	.header h1 {
 		font-size: 1.5em;
@@ -54,4 +53,19 @@
 		opacity: 1;
 		visibility: visible;
 	}
+}
+
+.header .banner {
+	height: 100px;
+	position: relative;
+}
+
+.header .banner .source {
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
