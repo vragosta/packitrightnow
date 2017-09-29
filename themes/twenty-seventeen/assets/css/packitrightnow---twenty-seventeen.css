@@ -14,6 +14,7 @@
 @import "components/_menu.css";
 @import "components/_mobile-menu.css";
 @import "components/_carousel.css";
+@import "components/_featured-products.css";
 
 /*--- Templates ---*/
 @import "templates/_front-page.css";

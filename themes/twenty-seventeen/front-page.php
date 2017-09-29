@@ -10,7 +10,7 @@ namespace PackItRightNow;
 
 get_header(); ?>
 
-<section class="front-page container" style="min-height: 1200px;">
+<section class="front-page container" style="min-height: 2000px;">
 
 	<div class="carousel">
 
@@ -50,6 +50,69 @@ get_header(); ?>
 			</figure>
 		</div>
 
+	</div>
+
+	<div class="featured-products">
+		<h2>Featured Products</h2>
+		<div class="row">
+			<div class="col-xs-12 col-sm-4">
+				<figure class="image">
+					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder.jpg'; ?> );"></div>
+				</figure>
+			</div>
+
+			<div class="col-xs-12 col-sm-4">
+				<figure class="image">
+					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder.jpg'; ?> );"></div>
+				</figure>
+			</div>
+
+			<div class="col-xs-12 col-sm-4">
+				<figure class="image">
+					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder.jpg'; ?> );"></div>
+				</figure>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-4">
+				<figure class="image">
+					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder.jpg'; ?> );"></div>
+				</figure>
+			</div>
+
+			<div class="col-xs-12 col-sm-4">
+				<figure class="image">
+					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder.jpg'; ?> );"></div>
+				</figure>
+			</div>
+
+			<div class="col-xs-12 col-sm-4">
+				<figure class="image">
+					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder.jpg'; ?> );"></div>
+				</figure>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-4">
+				<figure class="image">
+					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder.jpg'; ?> );"></div>
+				</figure>
+			</div>
+
+			<div class="col-xs-12 col-sm-4">
+				<figure class="image">
+					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder.jpg'; ?> );"></div>
+				</figure>
+			</div>
+
+			<div class="col-xs-12 col-sm-4">
+				<figure class="image">
+					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder.jpg'; ?> );"></div>
+				</figure>
+			</div>
+		</div>
 	</div>
 
 </section>

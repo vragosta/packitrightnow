@@ -5,6 +5,9 @@
 
 .header {
 	background-color: #157702;
+	position: fixed;
+    z-index: 10;
+    width: 100%;
 }
 
 .header .container {
@@ -27,6 +30,7 @@
 .header h1 {
 	color: #fff;
 	font-size: 1.8em;
+	font-weight: 300;
 }
 
 @media only screen and ( max-width: 767px ) {
@@ -55,7 +59,7 @@
 	}
 }
 
-.header .banner {
+/*.header .banner {
 	height: 100px;
 	position: relative;
 }
@@ -68,4 +72,4 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-}
+}*/
