@@ -3,6 +3,10 @@
  * Featured Products CSS
  */
 
+.featured-products {
+	margin-bottom: 60px;
+}
+
 .featured-products h2 {
 	text-transform: uppercase;
 	text-align: center;

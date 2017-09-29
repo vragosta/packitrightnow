@@ -10,7 +10,7 @@ namespace PackItRightNow;
 
 get_header(); ?>
 
-<section class="front-page container" style="min-height: 2000px;">
+<section class="front-page container" style="min-height: 2500px;">
 
 	<div class="carousel">
 
@@ -113,6 +113,16 @@ get_header(); ?>
 				</figure>
 			</div>
 		</div>
+	</div>
+
+	<div class="about">
+		<!-- <div class="container"> -->
+			<h2>About Us</h2>
+			<p>
+				Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+				Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligula porta felis euismod semper.
+			</p>
+		<!-- </div> -->
 	</div>
 
 </section>
