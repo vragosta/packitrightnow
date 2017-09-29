@@ -57,39 +57,19 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-xs-12 col-sm-4">
 				<figure class="image">
-					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder.jpg'; ?> );"></div>
+					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder2.jpg'; ?> );"></div>
 				</figure>
 			</div>
 
 			<div class="col-xs-12 col-sm-4">
 				<figure class="image">
-					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder.jpg'; ?> );"></div>
+					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder3.jpg'; ?> );"></div>
 				</figure>
 			</div>
 
 			<div class="col-xs-12 col-sm-4">
 				<figure class="image">
-					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder.jpg'; ?> );"></div>
-				</figure>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-xs-12 col-sm-4">
-				<figure class="image">
-					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder.jpg'; ?> );"></div>
-				</figure>
-			</div>
-
-			<div class="col-xs-12 col-sm-4">
-				<figure class="image">
-					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder.jpg'; ?> );"></div>
-				</figure>
-			</div>
-
-			<div class="col-xs-12 col-sm-4">
-				<figure class="image">
-					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder.jpg'; ?> );"></div>
+					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder4.jpg'; ?> );"></div>
 				</figure>
 			</div>
 		</div>
@@ -97,19 +77,39 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-xs-12 col-sm-4">
 				<figure class="image">
-					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder.jpg'; ?> );"></div>
+					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder2.jpg'; ?> );"></div>
 				</figure>
 			</div>
 
 			<div class="col-xs-12 col-sm-4">
 				<figure class="image">
-					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder.jpg'; ?> );"></div>
+					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder3.jpg'; ?> );"></div>
 				</figure>
 			</div>
 
 			<div class="col-xs-12 col-sm-4">
 				<figure class="image">
-					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder.jpg'; ?> );"></div>
+					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder4.jpg'; ?> );"></div>
+				</figure>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-4">
+				<figure class="image">
+					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder2.jpg'; ?> );"></div>
+				</figure>
+			</div>
+
+			<div class="col-xs-12 col-sm-4">
+				<figure class="image">
+					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder3.jpg'; ?> );"></div>
+				</figure>
+			</div>
+
+			<div class="col-xs-12 col-sm-4">
+				<figure class="image">
+					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder4.jpg'; ?> );"></div>
 				</figure>
 			</div>
 		</div>

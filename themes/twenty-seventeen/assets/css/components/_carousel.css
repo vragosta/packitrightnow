@@ -4,13 +4,13 @@
  */
 
 .carousel.slick-dotted {
-	/*margin-bottom: 60px;*/
-	margin: 60px 0;
+	margin: 60px 0 80px;
 }
 
 .carousel .image {
 	padding-bottom: 40%;
 	position: relative;
+	min-height: 355px;
 }
 
 .carousel .image .source {

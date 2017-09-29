@@ -50,7 +50,9 @@
 				slidesToShow: 1,
 				autoplay: true,
 				autoplaySpeed: 3000,
-				dots: true
+				dots: true,
+				prevArrow: false,
+				nextArrow: false
 			} );
 		},
 
