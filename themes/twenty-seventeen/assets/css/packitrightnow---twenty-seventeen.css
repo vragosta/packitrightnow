@@ -9,6 +9,7 @@
 /*--- General ---*/
 @import "general/_site.css";
 @import "general/_header.css";
+@import "general/_footer.css";
 
 /*--- Components ---*/
 @import "components/_menu.css";
