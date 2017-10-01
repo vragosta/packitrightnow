@@ -14,7 +14,10 @@ namespace PackItRightNow;
 	<?php get_partial( 'template-parts/content-mobile-menu' ); ?>
 
 	<footer class="footer">
-		<?php get_partial( 'template-parts/content-menu' ); ?>
+		<nav class="menu">
+			<a href="<?php echo home_url( '/about/' ); ?>">About Us</a>
+			<a href="<?php echo home_url( '/contact/' ); ?>">Contact Us</a>
+		</nav>
 		<p>&copy; <?php echo date( 'Y' ); ?> Pack It Right LLC. All Rights Reserved. Responsive Website by <a href="http://vincentragosta.com">Vincent Ragosta</a></p>
 	</footer>
 	</body>

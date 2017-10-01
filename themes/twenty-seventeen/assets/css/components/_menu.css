@@ -31,3 +31,26 @@
 	background-color: #fff;
 	color: #157702;
 }
+
+/* Dropdown */
+
+.menu .dropdown {
+	display: flex;
+	cursor: pointer;
+}
+
+.menu .dropdown-menu {
+	margin-top: -1px;
+	border-radius: 0;
+	border: none;
+}
+
+.menu .dropdown-menu a {
+	color: #157702;
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.menu .dropdown-menu a:hover {
+	background-color: #157702;
+	color: #fff;
+}

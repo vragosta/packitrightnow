@@ -38,6 +38,38 @@
 		},
 
 		/**
+		 * When the products link is clicked,
+		 * toggle the products dropdown.
+		 *
+		 * @since 0.1.0
+		 * @uses removeClass(), addClass()
+		 * @return void
+		 */
+		productsToggle : function() {
+			$( 'a[name=products]' ).click( function() {
+				if ( $( '.sub-menu' ).hasClass( 'load' ) ) {
+					$( '.sub-menu' ).removeClass( 'load' );
+				} else {
+					$( '.sub-menu' ).addClass( 'load' );
+				}
+			});
+
+			$( '.dropdown-toggle' ).on( 'click', function() {
+				if ( $( '.dropdown' ).hasClass( 'open' ) ) {
+					$( this ).css({
+						'background-color' : '#157702',
+						'color' : '#fff'
+					});
+				} else {
+					$( this ).css({
+						'background-color' : '#fff',
+						'color' : '#157702'
+					});
+				}
+			});
+		},
+
+		/**
 		 * Declare carousel settings.
 		 *
 		 * @since 0.1.0
@@ -65,6 +97,7 @@
 		 */
 		init: function() {
 			this.setupMenuToggle();
+			this.productsToggle();
 			this.setCarouselSettings();
 		}
 	};

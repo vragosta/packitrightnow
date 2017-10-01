@@ -45,10 +45,32 @@
 	font-size: 32px;
 	margin: 10px 0;
 	padding: 0;
+	cursor: pointer;
 }
 
 #mobile-menu .menu a:hover {
 	background-color: transparent;
-	color: #fff;
-	text-decoration: underline;
+	color: #157702;
+}
+
+#mobile-menu .sub-menu {
+	opacity: 0;
+	visibility: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 0;
+	transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+#mobile-menu .sub-menu.load {
+	height: 105px;
+	opacity: 1;
+	visibility: visible;
+}
+
+#mobile-menu .sub-menu a {
+	margin: 0;
+	font-size: 24px;
 }
