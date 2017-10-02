@@ -6,10 +6,11 @@ namespace PackItRightNow;
  * Router provides Rewrite Rules for custom URLs and endpoints used by
  * PackItRightNow Archive. The custom routes provider are,
  *
- * 1. Alumunim Endpoint
- * 2. Cutlery Endpoint
- * 3. Gloves Endpoint
- * 4. Packaging Endpoint
+ * 1. Accessories Endpoint
+ * 2. Clothing Endpoint
+ * 3. Cutlery Endpoint
+ * 4. Gloves Endpoint
+ * 5. Packaging Endpoint
  *
  * NOTE: The routes declared have an implicit order. Any changes here
  * require a through round of Testing for each of the above URLs &
@@ -44,27 +45,27 @@ namespace PackItRightNow;
  * 3. Add corresponding template file in Theme or Endpoint in the
  * plugin.
  *
- * Eg:- To add a new route /aluminum
+ * Eg:- To add a new route /accessories/
  *
  * 1. route params
  *
  * array(
- *   'products/aluminum',
- *   '^/aluminum/?$',
+ *   'products/accessories',
+ *   '^/accessories/?$',
  *   array(
- *     'aluminum' => true,
+ *     'accessories' => true,
  *   )
  * );
  *
  * 2. Case statement
  *
  * case 'aluminum':
- *   $template_file = 'products-aluminum.php';
+ *   $template_file = 'products-accessories.php';
  *   break;
  *
- * 3. Template File - products-aluminum.php
+ * 3. Template File - products-accessories.php
  *
- * <?php get_query_var( 'aluminum' ); ?>
+ * <?php get_query_var( 'accessories' ); ?>
  *
  */
 class Router {
@@ -74,7 +75,7 @@ class Router {
 	public $routes;
 
 	public function get_version() {
-		return '0.0.1';
+		return '0.0.2';
 	}
 
 	public function register() {
@@ -107,8 +108,12 @@ class Router {
 
 		switch ( $route_name ) {
 
-			case 'products/aluminum':
-				$template_file = 'products-aluminum.php';
+			case 'products/accessories':
+				$template_file = 'products-accessories.php';
+				break;
+
+			case 'products/clothing':
+				$template_file = 'products-clothing.php';
 				break;
 
 			case 'products/cutlery':
@@ -176,16 +181,25 @@ class Router {
 			/**
 			 * Product Routes
 			 *
-			 * Aluminum : /aluminum/
+			 * Accessories : /accessories/
+			 * Clothing : /clothing/
 			 * Cutlery : /cutlery/
 			 * Gloves : /gloves/
 			 * Packaging : /packaging/
 			 */
 			array(
-				'products/aluminum',
-				'^aluminum/?$',
+				'products/accessories',
+				'^accessories/?$',
 				array(
-					'aluminum' => true,
+					'accessories' => true,
+				),
+			),
+
+			array(
+				'products/clothing',
+				'^clothing/?$',
+				array(
+					'clothing' => true,
 				),
 			),
 

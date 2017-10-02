@@ -37,6 +37,17 @@
 .menu .dropdown {
 	display: flex;
 	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+}
+
+/* Class appended to element on click */
+.menu .dropdown.change-color {
+	background-color: #fff;
+}
+
+/* Class appended to element on click */
+.menu .dropdown-toggle.change-color {
+	color: #157702;
 }
 
 .menu .dropdown-menu {

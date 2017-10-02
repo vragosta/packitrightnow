@@ -42,10 +42,14 @@
 		 * toggle the products dropdown.
 		 *
 		 * @since 0.1.0
-		 * @uses removeClass(), addClass()
+		 * @uses click(), on(), hasClass(), removeClass(), addClass()
 		 * @return void
 		 */
 		productsToggle : function() {
+			/**
+			 * Listens for click on products link on mobile menu.
+			 * Toggles 'load' class.
+			 */
 			$( 'a[name=products]' ).click( function() {
 				if ( $( '.sub-menu' ).hasClass( 'load' ) ) {
 					$( '.sub-menu' ).removeClass( 'load' );
@@ -54,17 +58,28 @@
 				}
 			});
 
+			/**
+			 * Listens for click on dropdown-toggle button.
+			 * Toggles 'change-color' class.
+			 */
 			$( '.dropdown-toggle' ).on( 'click', function() {
 				if ( $( '.dropdown' ).hasClass( 'open' ) ) {
-					$( this ).css({
-						'background-color' : '#157702',
-						'color' : '#fff'
-					});
+					$( '.dropdown' ).removeClass( 'change-color' );
+					$( '.dropdown-toggle' ).removeClass( 'change-color' );
 				} else {
-					$( this ).css({
-						'background-color' : '#fff',
-						'color' : '#157702'
-					});
+					$( '.dropdown' ).addClass( 'change-color' );
+					$( '.dropdown-toggle' ).addClass( 'change-color' );
+				}
+			});
+
+			/**
+			 * Listens for click on document that is not the dropdown-toggle button.
+			 * Removes 'change-color' class.
+			 */
+			$( 'html' ).on( 'click', function(e) {
+				if ( e.srcElement.className !== "dropdown-toggle change-color" ) {
+					$( '.dropdown' ).removeClass( 'change-color' );
+					$( '.dropdown-toggle' ).removeClass( 'change-color' );
 				}
 			});
 		},
