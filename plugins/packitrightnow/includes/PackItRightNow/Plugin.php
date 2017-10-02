@@ -29,6 +29,7 @@ class Plugin {
 	}
 
 	public $post_type_factory;
+	public $router;
 
 	public function enable() {
 		add_action( 'init', array( $this, 'init' ) );
@@ -44,5 +45,8 @@ class Plugin {
 	function init() {
 		$this->post_type_factory = new PostTypeFactory();
 		$this->post_type_factory->build_all();
+
+		$this->router = new Router();
+		$this->router->register();
 	}
 }
