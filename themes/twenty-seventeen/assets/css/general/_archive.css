@@ -1,13 +1,13 @@
 /**
  * PackItRightNow - Twenty Seventeen
- * Products Accessories CSS
+ * Archive CSS
  */
 
-.accessories {
+.archive {
 	padding: 60px 15px 0;
 }
 
-.accessories .preface {
+.archive .preface {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -15,31 +15,31 @@
 }
 
 @media only screen and ( max-width: 767px ) {
-	.accessories .preface {
+	.archive .preface {
 		flex-direction: column;
 		padding: 60px 0;
 	}
 
-	.accessories .preface > div {
+	.archive .preface > div {
 		padding: 0;
 	}
 
-	.accessories .preface > div:last-child {
+	.archive .preface > div:last-child {
 		margin-top: 40px;
 	}
 }
 
-.accessories .preface h2 {
+.archive .preface h2 {
 	font-size: 40px;
 	margin: 0;
 }
 
-.accessories .preface h2 + p {
+.archive .preface h2 + p {
 	font-size: 18px;
 	margin-top: 20px;
 }
 
-.accessories .preface ul {
+.archive .preface ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -48,49 +48,49 @@
 }
 
 @media only screen and ( max-width: 767px ) {
-	.accessories .preface ul {
+	.archive .preface ul {
 		width: 100%;
 		float: none;
 	}
 }
 
-.accessories .preface ul li {
+.archive .preface ul li {
 	font-size: 26px;
 	line-height: 1;
 }
 
-.accessories .content {
+.archive .content {
 	padding: 40px 0 0;
 }
 
 /*--- Toggle every even content class background-color ---*/
-.accessories .content:nth-child(even) {
+.archive .content:nth-child(even) {
 	background-color: #f2fff7;
 }
 
 /*--- Offset the fixed header when bookmark linking ---*/
-.accessories .content .anchor {
+.archive .content .anchor {
 	padding-top: 75px;
 	margin-top: -75px;
 }
 
-.accessories .content h2 {
+.archive .content h2 {
 	font-size: 32px;
 	margin-bottom: 30px;
 	margin-top: 0;
 	border-bottom: 1px solid #333;
 }
 
-.accessories .content-item {
+.archive .content-item {
 	padding-bottom: 60px;
 }
 
-.accessories .image {
+.archive .image {
 	padding-bottom: 100%;
 	position: relative;
 }
 
-.accessories .image .source {
+.archive .image .source {
 	background-position: center;
 	background-size: cover;
 	position: absolute;
@@ -100,7 +100,7 @@
 	right: 0;
 }
 
-.accessories .content h3 {
+.archive .content h3 {
 	margin-bottom: 0;
 	font-size: 20px;
 }
