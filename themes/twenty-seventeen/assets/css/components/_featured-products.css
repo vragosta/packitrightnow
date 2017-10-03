@@ -4,7 +4,7 @@
  */
 
 .featured-products {
-	margin-bottom: 60px;
+	margin-bottom: 35px;
 }
 
 .featured-products h2 {
@@ -23,10 +23,15 @@
 	.featured-products .row:not(:last-child) {
 		margin: 0;
 	}
+}
 
+.featured-products .row .col-xs-12 {
+	padding: 0 15px 25px;
+}
+
+@media only screen and ( max-width: 767px ) {
 	.featured-products .row .col-xs-12 {
-		margin-bottom: 15px;
-		padding: 0;
+		padding: 0 0 15px;
 	}
 }
 
