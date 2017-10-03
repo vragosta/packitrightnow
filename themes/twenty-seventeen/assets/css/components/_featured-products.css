@@ -30,17 +30,17 @@
 	}
 }
 
- .featured-products .image {
- 	padding-bottom: 100%;
- 	position: relative;
- }
+.featured-products .image {
+	padding-bottom: 100%;
+	position: relative;
+}
 
- .featured-products .image .source {
- 	background-position: center;
- 	background-size: cover;
- 	position: absolute;
- 	top: 0;
- 	bottom: 0;
- 	left: 0;
- 	right: 0;
- }
+.featured-products .image .source {
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}

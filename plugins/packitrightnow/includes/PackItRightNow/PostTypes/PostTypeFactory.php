@@ -32,8 +32,8 @@ class PostTypeFactory {
 				case PAGE_POST_TYPE:
 					$instance = new PagePostType();
 					break;
-				case 'bird':
-					$instance = new PagePostType();
+				case ACCESSORY_POST_TYPE:
+					$instance = new AccessoryPostType();
 					break;
 				default:
 					throw new \Exception(
@@ -74,7 +74,7 @@ class PostTypeFactory {
 		$post_types = array(
 			POST_POST_TYPE,
 			PAGE_POST_TYPE,
-			'bird'
+			ACCESSORY_POST_TYPE
 		);
 
 		$post_types = apply_filters( 'packitrightnow_post_types', $post_types );

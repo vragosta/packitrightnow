@@ -9,6 +9,7 @@ define( 'PACKITRIGHTNOW_PLUGIN_URL' , plugin_dir_url( __FILE__ ) );
 # Post Types
 define( 'POST_POST_TYPE' , 'post' );
 define( 'PAGE_POST_TYPE' , 'page' );
+define( 'ACCESSORY_POST_TYPE', 'accessory' );
 
 # Taxonomies
 define( 'CATEGORY_TAXONOMY' , 'category' );
