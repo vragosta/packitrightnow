@@ -26,6 +26,134 @@ get_header(); ?>
 		</div>
 	</div>
 
+	<div class="content row">
+		<div class="container">
+			<h2 id="latex" class="anchor">Latex</h2>
+			<div class="row">
+				<div class="content-item col-xs-12 col-sm-4">
+					<figure class="image">
+						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder3.jpg'; ?> );"></div>
+					</figure>
+					<h3>Latex Title 1</h3>
+				</div>
+				<div class="content-item col-xs-12 col-sm-4">
+					<figure class="image">
+						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder2.jpg'; ?> );"></div>
+					</figure>
+					<h3>Latex Title 2</h3>
+				</div>
+				<div class="content-item col-xs-12 col-sm-4">
+					<figure class="image">
+						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder5.jpg'; ?> );"></div>
+					</figure>
+					<h3>Latex Title 3</h3>
+				</div>
+				<div class="content-item col-xs-12 col-sm-4">
+					<figure class="image">
+						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder3.jpg'; ?> );"></div>
+					</figure>
+					<h3>Latex Title 4</h3>
+				</div>
+				<div class="content-item col-xs-12 col-sm-4">
+					<figure class="image">
+						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder2.jpg'; ?> );"></div>
+					</figure>
+					<h3>Latex Title 5</h3>
+				</div>
+				<div class="content-item col-xs-12 col-sm-4">
+					<figure class="image">
+						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder5.jpg'; ?> );"></div>
+					</figure>
+					<h3>Latex Title 6</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content row">
+		<div class="container">
+			<h2 id="nitrile" class="anchor">Nitrile</h2>
+			<div class="row">
+				<div class="content-item col-xs-12 col-sm-4">
+					<figure class="image">
+						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder3.jpg'; ?> );"></div>
+					</figure>
+					<h3>Nitrile Title 1</h3>
+				</div>
+				<div class="content-item col-xs-12 col-sm-4">
+					<figure class="image">
+						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder2.jpg'; ?> );"></div>
+					</figure>
+					<h3>Nitrile Title 2</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content row">
+		<div class="container">
+			<h2 id="polyhybrid" class="anchor">Poly Hybrid</h2>
+			<div class="row">
+				<div class="content-item col-xs-12 col-sm-4">
+					<figure class="image">
+						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder3.jpg'; ?> );"></div>
+					</figure>
+					<h3>Poly Hybrid Title 1</h3>
+				</div>
+				<div class="content-item col-xs-12 col-sm-4">
+					<figure class="image">
+						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder2.jpg'; ?> );"></div>
+					</figure>
+					<h3>Poly Hybrid Title 2</h3>
+				</div>
+				<div class="content-item col-xs-12 col-sm-4">
+					<figure class="image">
+						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder5.jpg'; ?> );"></div>
+					</figure>
+					<h3>Poly Hybrid Title 3</h3>
+				</div>
+				<div class="content-item col-xs-12 col-sm-4">
+					<figure class="image">
+						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder3.jpg'; ?> );"></div>
+					</figure>
+					<h3>Poly Hybrid Title 4</h3>
+				</div>
+				<div class="content-item col-xs-12 col-sm-4">
+					<figure class="image">
+						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder2.jpg'; ?> );"></div>
+					</figure>
+					<h3>Poly Hybrid Title 5</h3>
+				</div>
+				<div class="content-item col-xs-12 col-sm-4">
+					<figure class="image">
+						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder5.jpg'; ?> );"></div>
+					</figure>
+					<h3>Poly Hybrid Title 6</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content row">
+		<div class="container">
+			<h2 id="vinyl" class="anchor">Vinyl</h2>
+			<div class="row">
+				<div class="content-item col-xs-12 col-sm-4">
+					<figure class="image">
+						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder3.jpg'; ?> );"></div>
+					</figure>
+					<h3>Vinyl Title 1</h3>
+				</div>
+				<div class="content-item col-xs-12 col-sm-4">
+					<figure class="image">
+						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder2.jpg'; ?> );"></div>
+					</figure>
+					<h3>Vinyl Title 2</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </div>
 
 <?php get_footer(); ?>
