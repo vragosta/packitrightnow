@@ -63,10 +63,12 @@
 	padding: 40px 0 0;
 }
 
+/*--- Toggle every even content class background-color ---*/
 .accessories .content:nth-child(even) {
 	background-color: #f2fff7;
 }
 
+/*--- Offset the fixed header when bookmark linking ---*/
 .accessories .content .anchor {
 	padding-top: 75px;
 	margin-top: -75px;
