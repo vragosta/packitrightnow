@@ -59,6 +59,10 @@
 	line-height: 1;
 }
 
+.archive.gloves .preface ul li {
+	font-size: 18px;
+}
+
 .archive .content {
 	padding: 40px 0 0;
 }
