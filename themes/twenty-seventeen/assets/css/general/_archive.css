@@ -24,9 +24,11 @@
 		padding: 0;
 	}
 
-	.archive .preface > div:last-child {
+	.archive:not(.gloves) .preface > div:last-child,
+	.archive.gloves .preface > div:nth-child(2) {
 		margin-top: 40px;
 	}
+
 }
 
 .archive .preface h2 {
@@ -59,8 +61,10 @@
 	line-height: 1;
 }
 
-.archive.gloves .preface ul li {
-	font-size: 18px;
+@media only screen and ( min-width: 768px ) {
+	.archive.gloves .preface ul li {
+		font-size: 18px;
+	}
 }
 
 .archive .content {
