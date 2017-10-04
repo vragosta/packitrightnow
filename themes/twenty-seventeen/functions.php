@@ -158,7 +158,7 @@ function styles() {
 		'slick-theme',
 		'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css',
 		array( 'slick' ),
-		STORYCORPS_ORG_VERSION
+		PACKITRIGHTNOW_VERSION
 	);
 
 	wp_enqueue_style(

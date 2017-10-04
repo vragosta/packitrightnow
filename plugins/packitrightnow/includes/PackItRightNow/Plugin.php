@@ -2,6 +2,7 @@
 
 namespace PackItRightNow;
 
+use PackItRightNow\Taxonomies\TaxonomyFactory;
 use PackItRightNow\PostTypes\PostTypeFactory;
 
 /**
@@ -43,6 +44,9 @@ class Plugin {
 	 * Taxonomies must be registered before the Post Types etc.
 	 */
 	function init() {
+		$this->taxonomy_factory = new TaxonomyFactory();
+		$this->taxonomy_factory->build_all();
+
 		$this->post_type_factory = new PostTypeFactory();
 		$this->post_type_factory->build_all();
 
