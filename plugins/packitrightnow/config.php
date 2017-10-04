@@ -17,6 +17,6 @@ define( 'PACKAGE_POST_TYPE', 'package' );
 
 # Taxonomies
 define( 'CATEGORY_TAXONOMY' , 'category' );
-define( 'HEADGEAR_TAXONOMY', 'headgear' );
 define( 'FACEGEAR_TAXONOMY', 'facegear' );
+define( 'HEADGEAR_TAXONOMY', 'headgear' );
 define( 'MISCELLANEOUS_TAXONOMY', 'miscellaneous' );

@@ -89,6 +89,11 @@
 	border-bottom: 1px solid #333;
 }
 
+.archive .content h3 {
+	font-weight: 700;
+	margin: 0 0 30px 0;
+}
+
 .archive .content-item {
 	padding-bottom: 60px;
 }
@@ -108,7 +113,7 @@
 	right: 0;
 }
 
-.archive .content h3 {
+.archive .content h4 {
 	margin-bottom: 0;
 	font-size: 20px;
 }

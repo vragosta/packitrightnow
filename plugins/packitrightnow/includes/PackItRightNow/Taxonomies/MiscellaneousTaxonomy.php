@@ -7,7 +7,7 @@ namespace PackItRightNow\Taxonomies;
  */
 class MiscellaneousTaxonomy extends BaseTaxonomy {
 	public function get_name() {
-		return HEADGEAR_TAXONOMY;
+		return MISCELLANEOUS_TAXONOMY;
 	}
 
 	public function get_labels() {

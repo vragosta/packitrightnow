@@ -14,11 +14,11 @@ class TaxonomyFactory {
 				case CATEGORY_TAXONOMY:
 					$instance = new CategoryTaxonomy();
 					break;
-				case HEADGEAR_TAXONOMY:
-					$instance = new HeadGearTaxonomy();
-					break;
 				case FACEGEAR_TAXONOMY:
 					$instance = new FaceGearTaxonomy();
+					break;
+				case HEADGEAR_TAXONOMY:
+					$instance = new HeadGearTaxonomy();
 					break;
 				case MISCELLANEOUS_TAXONOMY:
 					$instance = new MiscellaneousTaxonomy();
@@ -50,8 +50,8 @@ class TaxonomyFactory {
 	public function get_supported_taxonomies() {
 		$taxonomies = array(
 			CATEGORY_TAXONOMY,
-			HEADGEAR_TAXONOMY,
 			FACEGEAR_TAXONOMY,
+			HEADGEAR_TAXONOMY,
 			MISCELLANEOUS_TAXONOMY
 		);
 

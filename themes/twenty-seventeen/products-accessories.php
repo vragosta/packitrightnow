@@ -18,8 +18,8 @@ get_header(); ?>
 		</div>
 		<div class="col-xs-12 col-sm-6">
 			<ul>
-				<li><a href="#headgear">HeadGear</a></li>
 				<li><a href="#facegear">FaceGear</a></li>
+				<li><a href="#headgear">HeadGear</a></li>
 				<li><a href="#miscellaneous">Miscellaneous</a></li>
 			</ul>
 		</div>
@@ -27,87 +27,70 @@ get_header(); ?>
 
 	<div class="content row">
 		<div class="container">
-			<h2 id="headgear" class="anchor">HeadGear</h2>
+			<h2 id="facegear" class="anchor">FaceGear</h2>
+
 			<div class="row">
-				<div class="content-item col-xs-12 col-sm-4">
-					<figure class="image">
-						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder3.jpg'; ?> );"></div>
-					</figure>
-					<h3>HeadGear Title 1</h3>
+
+				<div class="col-xs-12">
+					<h3>Beard Covers</h3>
 				</div>
-				<div class="content-item col-xs-12 col-sm-4">
-					<figure class="image">
-						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder2.jpg'; ?> );"></div>
-					</figure>
-					<h3>HeadGear Title 2</h3>
-				</div>
-				<div class="content-item col-xs-12 col-sm-4">
-					<figure class="image">
-						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder5.jpg'; ?> );"></div>
-					</figure>
-					<h3>HeadGear Title 3</h3>
-				</div>
-				<div class="content-item col-xs-12 col-sm-4">
-					<figure class="image">
-						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder3.jpg'; ?> );"></div>
-					</figure>
-					<h3>HeadGear Title 4</h3>
-				</div>
-				<div class="content-item col-xs-12 col-sm-4">
-					<figure class="image">
-						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder2.jpg'; ?> );"></div>
-					</figure>
-					<h3>HeadGear Title 5</h3>
-				</div>
-				<div class="content-item col-xs-12 col-sm-4">
-					<figure class="image">
-						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder5.jpg'; ?> );"></div>
-					</figure>
-					<h3>HeadGear Title 6</h3>
-				</div>
+
+				<?php $beard_cover_ids = get_accessories( FACEGEAR_TAXONOMY, 'beard-covers' ); ?>
+				<?php foreach( $beard_cover_ids as $id ) { ?>
+					<?php $featured_image = get_featured_image( $id ); ?>
+					<?php $title = get_the_title( $id ); ?>
+					<div class="content-item col-xs-12 col-sm-4">
+						<figure class="image">
+							<div class="source" style="background-image: url( <?php echo esc_url( $featured_image ); ?> );"></div>
+						</figure>
+						<h4><?php echo esc_html( $title ); ?></h4>
+					</div>
+				<?php } ?>
+
 			</div>
 		</div>
 	</div>
 
 	<div class="content row">
 		<div class="container">
-			<h2 id="facegear" class="anchor">FaceGear</h2>
+			<h2 id="headgear" class="anchor">HeadGear</h2>
+			<p style="font-size: 20px; font-weight: 700; margin-bottom: 30px;">* Available in a variety of colors.</p>
 			<div class="row">
 				<div class="content-item col-xs-12 col-sm-4">
 					<figure class="image">
 						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder3.jpg'; ?> );"></div>
 					</figure>
-					<h3>FaceGear Title 1</h3>
+					<h4>HeadGear Title 1</h4>
 				</div>
 				<div class="content-item col-xs-12 col-sm-4">
 					<figure class="image">
 						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder2.jpg'; ?> );"></div>
 					</figure>
-					<h3>FaceGear Title 2</h3>
+					<h4>HeadGear Title 2</h4>
 				</div>
 				<div class="content-item col-xs-12 col-sm-4">
 					<figure class="image">
 						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder5.jpg'; ?> );"></div>
 					</figure>
-					<h3>FaceGear Title 3</h3>
+					<h4>HeadGear Title 3</h4>
 				</div>
 				<div class="content-item col-xs-12 col-sm-4">
 					<figure class="image">
 						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder3.jpg'; ?> );"></div>
 					</figure>
-					<h3>FaceGear Title 4</h3>
+					<h4>HeadGear Title 4</h4>
 				</div>
 				<div class="content-item col-xs-12 col-sm-4">
 					<figure class="image">
 						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder2.jpg'; ?> );"></div>
 					</figure>
-					<h3>FaceGear Title 5</h3>
+					<h4>HeadGear Title 5</h4>
 				</div>
 				<div class="content-item col-xs-12 col-sm-4">
 					<figure class="image">
 						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder5.jpg'; ?> );"></div>
 					</figure>
-					<h3>FaceGear Title 6</h3>
+					<h4>HeadGear Title 6</h4>
 				</div>
 			</div>
 		</div>
@@ -121,37 +104,37 @@ get_header(); ?>
 					<figure class="image">
 						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder3.jpg'; ?> );"></div>
 					</figure>
-					<h3>Miscellaneous Title 1</h3>
+					<h4>Miscellaneous Title 1</h4>
 				</div>
 				<div class="content-item col-xs-12 col-sm-4">
 					<figure class="image">
 						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder2.jpg'; ?> );"></div>
 					</figure>
-					<h3>Miscellaneous Title 2</h3>
+					<h4>Miscellaneous Title 2</h4>
 				</div>
 				<div class="content-item col-xs-12 col-sm-4">
 					<figure class="image">
 						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder5.jpg'; ?> );"></div>
 					</figure>
-					<h3>Miscellaneous Title 3</h3>
+					<h4>Miscellaneous Title 3</h4>
 				</div>
 				<div class="content-item col-xs-12 col-sm-4">
 					<figure class="image">
 						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder3.jpg'; ?> );"></div>
 					</figure>
-					<h3>Miscellaneous Title 4</h3>
+					<h4>Miscellaneous Title 4</h4>
 				</div>
 				<div class="content-item col-xs-12 col-sm-4">
 					<figure class="image">
 						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder2.jpg'; ?> );"></div>
 					</figure>
-					<h3>Miscellaneous Title 5</h3>
+					<h4>Miscellaneous Title 5</h4>
 				</div>
 				<div class="content-item col-xs-12 col-sm-4">
 					<figure class="image">
 						<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder5.jpg'; ?> );"></div>
 					</figure>
-					<h3>Miscellaneous Title 6</h3>
+					<h4>Miscellaneous Title 6</h4>
 				</div>
 			</div>
 		</div>
