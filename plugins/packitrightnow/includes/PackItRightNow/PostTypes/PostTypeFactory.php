@@ -35,6 +35,19 @@ class PostTypeFactory {
 				case ACCESSORY_POST_TYPE:
 					$instance = new AccessoryPostType();
 					break;
+				case CLOTHING_POST_TYPE:
+					$instance = new ClothingPostType();
+					break;
+				case CUTLERY_POST_TYPE:
+					$instance = new CutleryPostType();
+					break;
+				case GLOVE_POST_TYPE:
+					$instance = new GlovePostType();
+					break;
+				case PACKAGE_POST_TYPE:
+					$instance = new PackagePostType();
+					break;
+
 				default:
 					throw new \Exception(
 						"PostTypeFactory - Unknown PostType: $post_type"
@@ -74,7 +87,11 @@ class PostTypeFactory {
 		$post_types = array(
 			POST_POST_TYPE,
 			PAGE_POST_TYPE,
-			ACCESSORY_POST_TYPE
+			ACCESSORY_POST_TYPE,
+			CLOTHING_POST_TYPE,
+			CUTLERY_POST_TYPE,
+			GLOVE_POST_TYPE,
+			PACKAGE_POST_TYPE
 		);
 
 		$post_types = apply_filters( 'packitrightnow_post_types', $post_types );

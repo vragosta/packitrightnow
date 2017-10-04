@@ -3,27 +3,27 @@
 namespace PackItRightNow\PostTypes;
 
 /**
- * AccessoryPostType is a custom post type object for storing projects
+ * GlovePostType is a custom post type object for storing projects
  * in WordPress.
  */
-class AccessoryPostType extends BasePostType {
+class GlovePostType extends BasePostType {
 	public function get_name() {
-		return ACCESSORY_POST_TYPE;
+		return GLOVE_POST_TYPE;
 	}
 
 	public function get_labels() {
 		return array(
-			'name'               => __( 'Accessories', 'packitrightnow' ),
-			'singular_name'      => __( 'Accessory', 'packitrightnow' ),
-			'menu_name'          => __( 'Accessories', 'packitrightnow' ),
-			'parent_item_colon'  => __( 'Parent Accessory:', 'packitrightnow' ),
-			'all_items'          => __( 'All Accessories', 'packitrightnow' ),
-			'view_item'          => __( 'View Accesory', 'packitrightnow' ),
-			'add_new_item'       => __( 'Add New Accesory', 'packitrightnow' ),
+			'name'               => __( 'Gloves', 'packitrightnow' ),
+			'singular_name'      => __( 'Glove', 'packitrightnow' ),
+			'menu_name'          => __( 'Gloves', 'packitrightnow' ),
+			'parent_item_colon'  => __( 'Parent Glove:', 'packitrightnow' ),
+			'all_items'          => __( 'All Gloves', 'packitrightnow' ),
+			'view_item'          => __( 'View Glove', 'packitrightnow' ),
+			'add_new_item'       => __( 'Add New Glove', 'packitrightnow' ),
 			'add_new'            => __( 'Add New', 'packitrightnow' ),
-			'edit_item'          => __( 'Edit Accesory', 'packitrightnow' ),
-			'update_item'        => __( 'Update Accesory', 'packitrightnow' ),
-			'search_items'       => __( 'Search Accessories', 'packitrightnow' ),
+			'edit_item'          => __( 'Edit Glove', 'packitrightnow' ),
+			'update_item'        => __( 'Update Glove', 'packitrightnow' ),
+			'search_items'       => __( 'Search Gloves', 'packitrightnow' ),
 			'not_found'          => __( 'Not found', 'packitrightnow' ),
 			'not_found_in_trash' => __( 'Not found in Trash', 'packitrightnow' )
 		);
@@ -40,7 +40,7 @@ class AccessoryPostType extends BasePostType {
 			'show_in_menu'        => true,
 			'show_in_nav_menus'   => true,
 			'show_in_admin_bar'   => true,
-			'menu_icon'           => 'dashicons-forms',
+			'menu_icon'           => 'dashicons-thumbs-up',
 			'menu_position'       => 26,
 			'can_export'          => true,
 			'has_archive'         => true,
