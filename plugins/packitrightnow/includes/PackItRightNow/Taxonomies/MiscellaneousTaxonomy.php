@@ -45,7 +45,8 @@ class MiscellaneousTaxonomy extends BaseTaxonomy {
 
 	public function get_post_types() {
 		return array(
-			ACCESSORY_POST_TYPE
+			ACCESSORY_POST_TYPE,
+			CUTLERY_POST_TYPE
 		);
 	}
 }

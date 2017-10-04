@@ -20,6 +20,9 @@ class TaxonomyFactory {
 				case FACEGEAR_TAXONOMY:
 					$instance = new FaceGearTaxonomy();
 					break;
+				case MISCELLANEOUS_TAXONOMY:
+					$instance = new MiscellaneousTaxonomy();
+					break;
 
 				default:
 					throw new \Exception(
@@ -49,6 +52,7 @@ class TaxonomyFactory {
 			CATEGORY_TAXONOMY,
 			HEADGEAR_TAXONOMY,
 			FACEGEAR_TAXONOMY,
+			MISCELLANEOUS_TAXONOMY
 		);
 
 		$taxonomies = apply_filters( 'packitrightnow_taxonomies', $taxonomies );
