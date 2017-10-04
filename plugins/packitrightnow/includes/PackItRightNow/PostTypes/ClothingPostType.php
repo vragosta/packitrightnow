@@ -13,19 +13,19 @@ class ClothingPostType extends BasePostType {
 
 	public function get_labels() {
 		return array(
-			'name'               => __( 'Clothing', 'packitrightnow' ),
-			'singular_name'      => __( 'Clothing', 'packitrightnow' ),
-			'menu_name'          => __( 'Clothing', 'packitrightnow' ),
-			'parent_item_colon'  => __( 'Parent Clothing:', 'packitrightnow' ),
-			'all_items'          => __( 'All Clothing', 'packitrightnow' ),
-			'view_item'          => __( 'View Clothing', 'packitrightnow' ),
-			'add_new_item'       => __( 'Add New Clothing', 'packitrightnow' ),
-			'add_new'            => __( 'Add New', 'packitrightnow' ),
-			'edit_item'          => __( 'Edit Clothing', 'packitrightnow' ),
-			'update_item'        => __( 'Update Clothing', 'packitrightnow' ),
-			'search_items'       => __( 'Search Clothing', 'packitrightnow' ),
-			'not_found'          => __( 'Not found', 'packitrightnow' ),
-			'not_found_in_trash' => __( 'Not found in Trash', 'packitrightnow' )
+			'name'               => __( 'Clothing', 'packitrightnow_com' ),
+			'singular_name'      => __( 'Clothing', 'packitrightnow_com' ),
+			'menu_name'          => __( 'Clothing', 'packitrightnow_com' ),
+			'parent_item_colon'  => __( 'Parent Clothing:', 'packitrightnow_com' ),
+			'all_items'          => __( 'All Clothing', 'packitrightnow_com' ),
+			'view_item'          => __( 'View Clothing', 'packitrightnow_com' ),
+			'add_new_item'       => __( 'Add New Clothing', 'packitrightnow_com' ),
+			'add_new'            => __( 'Add New', 'packitrightnow_com' ),
+			'edit_item'          => __( 'Edit Clothing', 'packitrightnow_com' ),
+			'update_item'        => __( 'Update Clothing', 'packitrightnow_com' ),
+			'search_items'       => __( 'Search Clothing', 'packitrightnow_com' ),
+			'not_found'          => __( 'Not found', 'packitrightnow_com' ),
+			'not_found_in_trash' => __( 'Not found in Trash', 'packitrightnow_com' )
 		);
 	}
 

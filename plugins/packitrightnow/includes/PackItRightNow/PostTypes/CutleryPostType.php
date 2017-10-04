@@ -13,19 +13,19 @@ class CutleryPostType extends BasePostType {
 
 	public function get_labels() {
 		return array(
-			'name'               => __( 'Cutlery', 'packitrightnow' ),
-			'singular_name'      => __( 'Cutlery', 'packitrightnow' ),
-			'menu_name'          => __( 'Cutlery', 'packitrightnow' ),
-			'parent_item_colon'  => __( 'Parent Cutlery:', 'packitrightnow' ),
-			'all_items'          => __( 'All Cutlery', 'packitrightnow' ),
-			'view_item'          => __( 'View Cutlery', 'packitrightnow' ),
-			'add_new_item'       => __( 'Add New Cutlery', 'packitrightnow' ),
-			'add_new'            => __( 'Add New', 'packitrightnow' ),
-			'edit_item'          => __( 'Edit Cutlery', 'packitrightnow' ),
-			'update_item'        => __( 'Update Cutlery', 'packitrightnow' ),
-			'search_items'       => __( 'Search Cutlery', 'packitrightnow' ),
-			'not_found'          => __( 'Not found', 'packitrightnow' ),
-			'not_found_in_trash' => __( 'Not found in Trash', 'packitrightnow' )
+			'name'               => __( 'Cutlery', 'packitrightnow_com' ),
+			'singular_name'      => __( 'Cutlery', 'packitrightnow_com' ),
+			'menu_name'          => __( 'Cutlery', 'packitrightnow_com' ),
+			'parent_item_colon'  => __( 'Parent Cutlery:', 'packitrightnow_com' ),
+			'all_items'          => __( 'All Cutlery', 'packitrightnow_com' ),
+			'view_item'          => __( 'View Cutlery', 'packitrightnow_com' ),
+			'add_new_item'       => __( 'Add New Cutlery', 'packitrightnow_com' ),
+			'add_new'            => __( 'Add New', 'packitrightnow_com' ),
+			'edit_item'          => __( 'Edit Cutlery', 'packitrightnow_com' ),
+			'update_item'        => __( 'Update Cutlery', 'packitrightnow_com' ),
+			'search_items'       => __( 'Search Cutlery', 'packitrightnow_com' ),
+			'not_found'          => __( 'Not found', 'packitrightnow_com' ),
+			'not_found_in_trash' => __( 'Not found in Trash', 'packitrightnow_com' )
 		);
 	}
 

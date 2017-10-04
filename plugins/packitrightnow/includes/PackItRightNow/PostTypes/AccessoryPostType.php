@@ -13,19 +13,19 @@ class AccessoryPostType extends BasePostType {
 
 	public function get_labels() {
 		return array(
-			'name'               => __( 'Accessories', 'packitrightnow' ),
-			'singular_name'      => __( 'Accessory', 'packitrightnow' ),
-			'menu_name'          => __( 'Accessories', 'packitrightnow' ),
-			'parent_item_colon'  => __( 'Parent Accessory:', 'packitrightnow' ),
-			'all_items'          => __( 'All Accessories', 'packitrightnow' ),
-			'view_item'          => __( 'View Accesory', 'packitrightnow' ),
-			'add_new_item'       => __( 'Add New Accesory', 'packitrightnow' ),
-			'add_new'            => __( 'Add New', 'packitrightnow' ),
-			'edit_item'          => __( 'Edit Accesory', 'packitrightnow' ),
-			'update_item'        => __( 'Update Accesory', 'packitrightnow' ),
-			'search_items'       => __( 'Search Accessories', 'packitrightnow' ),
-			'not_found'          => __( 'Not found', 'packitrightnow' ),
-			'not_found_in_trash' => __( 'Not found in Trash', 'packitrightnow' )
+			'name'               => __( 'Accessories', 'packitrightnow_com' ),
+			'singular_name'      => __( 'Accessory', 'packitrightnow_com' ),
+			'menu_name'          => __( 'Accessories', 'packitrightnow_com' ),
+			'parent_item_colon'  => __( 'Parent Accessory:', 'packitrightnow_com' ),
+			'all_items'          => __( 'All Accessories', 'packitrightnow_com' ),
+			'view_item'          => __( 'View Accesory', 'packitrightnow_com' ),
+			'add_new_item'       => __( 'Add New Accesory', 'packitrightnow_com' ),
+			'add_new'            => __( 'Add New', 'packitrightnow_com' ),
+			'edit_item'          => __( 'Edit Accesory', 'packitrightnow_com' ),
+			'update_item'        => __( 'Update Accesory', 'packitrightnow_com' ),
+			'search_items'       => __( 'Search Accessories', 'packitrightnow_com' ),
+			'not_found'          => __( 'Not found', 'packitrightnow_com' ),
+			'not_found_in_trash' => __( 'Not found in Trash', 'packitrightnow_com' )
 		);
 	}
 

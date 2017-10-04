@@ -13,19 +13,19 @@ class PackagePostType extends BasePostType {
 
 	public function get_labels() {
 		return array(
-			'name'               => __( 'Packages', 'packitrightnow' ),
-			'singular_name'      => __( 'Package', 'packitrightnow' ),
-			'menu_name'          => __( 'Packages', 'packitrightnow' ),
-			'parent_item_colon'  => __( 'Parent Package:', 'packitrightnow' ),
-			'all_items'          => __( 'All Packages', 'packitrightnow' ),
-			'view_item'          => __( 'View Package', 'packitrightnow' ),
-			'add_new_item'       => __( 'Add New Package', 'packitrightnow' ),
-			'add_new'            => __( 'Add New', 'packitrightnow' ),
-			'edit_item'          => __( 'Edit Package', 'packitrightnow' ),
-			'update_item'        => __( 'Update Package', 'packitrightnow' ),
-			'search_items'       => __( 'Search Packages', 'packitrightnow' ),
-			'not_found'          => __( 'Not found', 'packitrightnow' ),
-			'not_found_in_trash' => __( 'Not found in Trash', 'packitrightnow' )
+			'name'               => __( 'Packages', 'packitrightnow_com' ),
+			'singular_name'      => __( 'Package', 'packitrightnow_com' ),
+			'menu_name'          => __( 'Packages', 'packitrightnow_com' ),
+			'parent_item_colon'  => __( 'Parent Package:', 'packitrightnow_com' ),
+			'all_items'          => __( 'All Packages', 'packitrightnow_com' ),
+			'view_item'          => __( 'View Package', 'packitrightnow_com' ),
+			'add_new_item'       => __( 'Add New Package', 'packitrightnow_com' ),
+			'add_new'            => __( 'Add New', 'packitrightnow_com' ),
+			'edit_item'          => __( 'Edit Package', 'packitrightnow_com' ),
+			'update_item'        => __( 'Update Package', 'packitrightnow_com' ),
+			'search_items'       => __( 'Search Packages', 'packitrightnow_com' ),
+			'not_found'          => __( 'Not found', 'packitrightnow_com' ),
+			'not_found_in_trash' => __( 'Not found in Trash', 'packitrightnow_com' )
 		);
 	}
 

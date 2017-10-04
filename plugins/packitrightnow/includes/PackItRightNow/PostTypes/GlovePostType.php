@@ -13,19 +13,19 @@ class GlovePostType extends BasePostType {
 
 	public function get_labels() {
 		return array(
-			'name'               => __( 'Gloves', 'packitrightnow' ),
-			'singular_name'      => __( 'Glove', 'packitrightnow' ),
-			'menu_name'          => __( 'Gloves', 'packitrightnow' ),
-			'parent_item_colon'  => __( 'Parent Glove:', 'packitrightnow' ),
-			'all_items'          => __( 'All Gloves', 'packitrightnow' ),
-			'view_item'          => __( 'View Glove', 'packitrightnow' ),
-			'add_new_item'       => __( 'Add New Glove', 'packitrightnow' ),
-			'add_new'            => __( 'Add New', 'packitrightnow' ),
-			'edit_item'          => __( 'Edit Glove', 'packitrightnow' ),
-			'update_item'        => __( 'Update Glove', 'packitrightnow' ),
-			'search_items'       => __( 'Search Gloves', 'packitrightnow' ),
-			'not_found'          => __( 'Not found', 'packitrightnow' ),
-			'not_found_in_trash' => __( 'Not found in Trash', 'packitrightnow' )
+			'name'               => __( 'Gloves', 'packitrightnow_com' ),
+			'singular_name'      => __( 'Glove', 'packitrightnow_com' ),
+			'menu_name'          => __( 'Gloves', 'packitrightnow_com' ),
+			'parent_item_colon'  => __( 'Parent Glove:', 'packitrightnow_com' ),
+			'all_items'          => __( 'All Gloves', 'packitrightnow_com' ),
+			'view_item'          => __( 'View Glove', 'packitrightnow_com' ),
+			'add_new_item'       => __( 'Add New Glove', 'packitrightnow_com' ),
+			'add_new'            => __( 'Add New', 'packitrightnow_com' ),
+			'edit_item'          => __( 'Edit Glove', 'packitrightnow_com' ),
+			'update_item'        => __( 'Update Glove', 'packitrightnow_com' ),
+			'search_items'       => __( 'Search Gloves', 'packitrightnow_com' ),
+			'not_found'          => __( 'Not found', 'packitrightnow_com' ),
+			'not_found_in_trash' => __( 'Not found in Trash', 'packitrightnow_com' )
 		);
 	}
 
