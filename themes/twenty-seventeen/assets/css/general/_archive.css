@@ -84,14 +84,14 @@
 
 .archive .content h2 {
 	font-size: 32px;
+	font-weight: 700;
 	margin-bottom: 30px;
 	margin-top: 0;
-	border-bottom: 1px solid #333;
 }
 
 .archive .content h3 {
-	font-weight: 700;
 	margin: 0 0 30px 0;
+	border-bottom: 1px solid #333;
 }
 
 .archive .content-item {
