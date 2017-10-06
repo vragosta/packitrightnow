@@ -8,6 +8,11 @@
 
 namespace PackItRightNow;
 
+$beard_cover_ids = get_accessories( FACEGEAR_TAXONOMY, 'beard-cover' );
+$eye_wear_ids = get_accessories( FACEGEAR_TAXONOMY, 'eye-wear' );
+$face_shield_ids = get_accessories( FACEGEAR_TAXONOMY, 'face-shield' );
+$mask_ids = get_accessories( FACEGEAR_TAXONOMY, 'mask' );
+
 get_header(); ?>
 
 <div class="archive accessories">
@@ -31,80 +36,92 @@ get_header(); ?>
 
 			<div class="row">
 
-				<div class="col-xs-12">
-					<h3>Beard Covers</h3>
-				</div>
+				<?php if ( ! empty( $beard_cover_ids ) ) { ?>
 
-				<?php $beard_cover_ids = get_accessories( FACEGEAR_TAXONOMY, 'beard-cover' ); ?>
-				<?php foreach( $beard_cover_ids as $id ) { ?>
-					<?php $featured_image = get_featured_image( $id ); ?>
-					<?php $title = get_the_title( $id ); ?>
-					<div class="content-item col-xs-12 col-sm-4">
-						<figure class="image">
-							<div class="source" style="background-image: url( <?php echo esc_url( $featured_image ); ?> );"></div>
-						</figure>
-						<h4><?php echo esc_html( $title ); ?></h4>
+					<div class="col-xs-12">
+						<h3>Beard Covers</h3>
 					</div>
+
+					<?php foreach( $beard_cover_ids as $id ) { ?>
+						<?php $featured_image = get_featured_image( $id ); ?>
+						<?php $title = get_the_title( $id ); ?>
+						<div class="content-item col-xs-12 col-sm-4">
+							<figure class="image">
+								<div class="source" style="background-image: url( <?php echo esc_url( $featured_image ); ?> );"></div>
+							</figure>
+							<h4><?php echo esc_html( $title ); ?></h4>
+						</div>
+					<?php } ?>
+
 				<?php } ?>
 
 			</div>
 
 			<div class="row">
 
-				<div class="col-xs-12">
-					<h3>Eye Wear</h3>
-				</div>
+				<?php if ( ! empty( $eye_wear_ids ) ) { ?>
 
-				<?php $eye_wear_ids = get_accessories( FACEGEAR_TAXONOMY, 'eye-wear' ); ?>
-				<?php foreach( $eye_wear_ids as $id ) { ?>
-					<?php $featured_image = get_featured_image( $id ); ?>
-					<?php $title = get_the_title( $id ); ?>
-					<div class="content-item col-xs-12 col-sm-4">
-						<figure class="image">
-							<div class="source" style="background-image: url( <?php echo esc_url( $featured_image ); ?> );"></div>
-						</figure>
-						<h4><?php echo esc_html( $title ); ?></h4>
+					<div class="col-xs-12">
+						<h3>Eye Wear</h3>
 					</div>
+
+					<?php foreach( $eye_wear_ids as $id ) { ?>
+						<?php $featured_image = get_featured_image( $id ); ?>
+						<?php $title = get_the_title( $id ); ?>
+						<div class="content-item col-xs-12 col-sm-4">
+							<figure class="image">
+								<div class="source" style="background-image: url( <?php echo esc_url( $featured_image ); ?> );"></div>
+							</figure>
+							<h4><?php echo esc_html( $title ); ?></h4>
+						</div>
+					<?php } ?>
+
 				<?php } ?>
 
 			</div>
 
 			<div class="row">
 
-				<div class="col-xs-12">
-					<h3>Face Shield</h3>
-				</div>
+				<?php if ( ! empty( $face_shield_ids ) ) { ?>
 
-				<?php $face_shield_ids = get_accessories( FACEGEAR_TAXONOMY, 'face-shield' ); ?>
-				<?php foreach( $face_shield_ids as $id ) { ?>
-					<?php $featured_image = get_featured_image( $id ); ?>
-					<?php $title = get_the_title( $id ); ?>
-					<div class="content-item col-xs-12 col-sm-4">
-						<figure class="image">
-							<div class="source" style="background-image: url( <?php echo esc_url( $featured_image ); ?> );"></div>
-						</figure>
-						<h4><?php echo esc_html( $title ); ?></h4>
+					<div class="col-xs-12">
+						<h3>Face Shield</h3>
 					</div>
+
+					<?php foreach( $face_shield_ids as $id ) { ?>
+						<?php $featured_image = get_featured_image( $id ); ?>
+						<?php $title = get_the_title( $id ); ?>
+						<div class="content-item col-xs-12 col-sm-4">
+							<figure class="image">
+								<div class="source" style="background-image: url( <?php echo esc_url( $featured_image ); ?> );"></div>
+							</figure>
+							<h4><?php echo esc_html( $title ); ?></h4>
+						</div>
+					<?php } ?>
+
 				<?php } ?>
 
 			</div>
 
 			<div class="row">
 
-				<div class="col-xs-12">
-					<h3>Masks</h3>
-				</div>
+				<?php if ( ! empty( $mask_ids ) ) { ?>
 
-				<?php $mask_ids = get_accessories( FACEGEAR_TAXONOMY, 'mask' ); ?>
-				<?php foreach( $mask_ids as $id ) { ?>
-					<?php $featured_image = get_featured_image( $id ); ?>
-					<?php $title = get_the_title( $id ); ?>
-					<div class="content-item col-xs-12 col-sm-4">
-						<figure class="image">
-							<div class="source" style="background-image: url( <?php echo esc_url( $featured_image ); ?> );"></div>
-						</figure>
-						<h4><?php echo esc_html( $title ); ?></h4>
+					<div class="col-xs-12">
+						<h3>Masks</h3>
 					</div>
+
+					<?php foreach( $mask_ids as $id ) { ?>
+						<?php $featured_image = get_featured_image( $id ); ?>
+						<?php $title = get_the_title( $id ); ?>
+						<div class="content-item col-xs-12 col-sm-4">
+							<figure class="image">
+								<div class="source" style="background-image: url( <?php echo esc_url( $featured_image ); ?> );"></div>
+							</figure>
+							<h4><?php echo esc_html( $title ); ?></h4>
+						</div>
+					<?php } ?>
+
 				<?php } ?>
 
 			</div>
@@ -114,7 +131,7 @@ get_header(); ?>
 	<div class="content row">
 		<div class="container">
 			<h2 id="headgear" class="anchor">HeadGear</h2>
-			<p style="font-size: 20px; font-weight: 700; margin-bottom: 30px;">* Available in a variety of colors.</p>
+			<!-- <p style="font-size: 20px; font-weight: 700; margin-bottom: 30px;">* Available in a variety of colors.</p> -->
 			<div class="row">
 				<div class="content-item col-xs-12 col-sm-4">
 					<figure class="image">
