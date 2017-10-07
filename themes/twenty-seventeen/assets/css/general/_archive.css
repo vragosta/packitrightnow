@@ -8,6 +8,10 @@
 }
 
 .archive .preface {
+	background-color: #f2fff7;
+}
+
+.archive .preface .container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -15,7 +19,7 @@
 }
 
 @media only screen and ( max-width: 767px ) {
-	.archive .preface {
+	.archive .preface .container {
 		flex-direction: column;
 		padding: 60px 0;
 	}
@@ -23,22 +27,23 @@
 	.archive .preface > div {
 		padding: 0;
 	}
-
-	.archive:not(.gloves) .preface > div:last-child,
-	.archive.gloves .preface > div:nth-child(2) {
-		margin-top: 40px;
-	}
-
 }
 
 .archive .preface h2 {
-	font-size: 40px;
+	font-size: 48px;
+	font-weight: 700;
 	margin: 0;
 }
 
 .archive .preface h2 + p {
 	font-size: 18px;
-	margin-top: 20px;
+	margin: 20px 0 0;
+}
+
+@media only screen and ( max-width: 767px ) {
+	.archive .preface h2 + p {
+		margin: 20px 0;
+	}
 }
 
 .archive .preface ul {
@@ -67,31 +72,82 @@
 	}
 }
 
-.archive .content {
-	padding: 40px 0 0;
+.archive .taxonomy-header {
+	background-color: #157702;
+	border-top: 2px solid #333;
+	border-bottom: 2px solid #333;
+	margin: 0;
 }
 
-/*--- Toggle every even content class background-color ---*/
-.archive .content:nth-child(even) {
-	background-color: #f2fff7;
+.archive .taxonomy-header .container {
+	padding: 40px 0;
 }
 
 /*--- Offset the fixed header when bookmark linking ---*/
 .archive .content .anchor {
-	padding-top: 75px;
-	margin-top: -75px;
+	padding-top: 103px;
+	margin-top: -103px;
 }
 
 .archive .content h2 {
-	font-size: 32px;
-	font-weight: 700;
-	margin-bottom: 30px;
-	margin-top: 0;
+	font-size: 44px;
+	font-weight: 500;
+	margin: 0;
+	color: #f2fff7;
 }
 
-.archive .content h3 {
-	margin: 0 0 30px 0;
+.archive .content-header {
+	padding: 100px 0;
+	margin: 0;
+	width: 100%;
+	background-color: #f2fff7;
+	border-top: 1px solid #333;
 	border-bottom: 1px solid #333;
+}
+
+.archive .taxonomy-header + .content-header {
+	border-top: none;
+}
+
+@media only screen and ( max-width: 767px ) {
+	.archive .content-header {
+		padding: 60px 0;
+	}
+}
+
+.archive .content-header .container {
+	display: flex;
+}
+
+@media only screen and ( max-width: 767px ) {
+	.archive .content-header .container {
+		flex-direction: column;
+		padding: 0;
+	}
+}
+
+.archive .content-header:not(:last-child) {
+	margin-bottom: 60px;
+}
+
+.archive .content-header > div {
+	display: flex;
+	align-items: center;
+}
+
+.archive .content-header h3 {
+	font-size: 32px;
+	margin: 0;
+}
+
+.archive .content-header p {
+	font-size: 16px;
+}
+
+@media only screen and ( max-width: 767px ) {
+	.archive .content-header p {
+		margin-top: 20px;
+	}
 }
 
 .archive .content-item {
@@ -104,8 +160,8 @@
 }
 
 .archive .image .source {
-	background-position: center;
-	background-size: cover;
+	background-position: center bottom;
+	background-size: contain;
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -115,5 +171,7 @@
 
 .archive .content h4 {
 	margin-bottom: 0;
+	margin-top: 30px;
 	font-size: 20px;
+	text-align: center;
 }

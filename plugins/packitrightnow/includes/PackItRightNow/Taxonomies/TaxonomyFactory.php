@@ -11,9 +11,6 @@ class TaxonomyFactory {
 			return $this->taxonomies[ $taxonomy ];
 		} else {
 			switch ( $taxonomy ) {
-				case CATEGORY_TAXONOMY:
-					$instance = new CategoryTaxonomy();
-					break;
 				case FACEGEAR_TAXONOMY:
 					$instance = new FaceGearTaxonomy();
 					break;
@@ -49,7 +46,6 @@ class TaxonomyFactory {
 
 	public function get_supported_taxonomies() {
 		$taxonomies = array(
-			CATEGORY_TAXONOMY,
 			FACEGEAR_TAXONOMY,
 			HEADGEAR_TAXONOMY,
 			MISCELLANEOUS_TAXONOMY

@@ -16,7 +16,6 @@ define( 'GLOVE_POST_TYPE', 'glove' );
 define( 'PACKAGE_POST_TYPE', 'package' );
 
 # Taxonomies
-define( 'CATEGORY_TAXONOMY' , 'category' );
 define( 'FACEGEAR_TAXONOMY', 'facegear' );
 define( 'HEADGEAR_TAXONOMY', 'headgear' );
 define( 'MISCELLANEOUS_TAXONOMY', 'miscellaneous' );
