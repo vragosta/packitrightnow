@@ -9,12 +9,7 @@
 namespace PackItRightNow;
 
 # Get all taxonomies of the 'Accessory' post type.
-$taxonomies = get_object_taxonomies( ACCESSORY_POST_TYPE );
-
-// echo '<pre>';
-// var_dump( $taxonomies );
-// echo '</pre>';
-// exit();
+$taxonomies = get_taxonomies_by_post_type( ACCESSORY_POST_TYPE );
 
 get_header(); ?>
 
@@ -27,16 +22,15 @@ get_header(); ?>
 			</div>
 			<div class="col-xs-12 col-sm-6">
 				<ul>
-					<li><a href="#facegear">FaceGear</a></li>
-					<li><a href="#headgear">HeadGear</a></li>
-					<li><a href="#miscellaneous">Miscellaneous</a></li>
+					<?php foreach( $taxonomies as $taxonomy ) { ?>
+						<li><a href="#<?php echo esc_attr( $taxonomy->name ); ?>"><?php echo esc_html( $taxonomy->label ); ?></a></li>
+					<?php } ?>
 				</ul>
 			</div>
 		</div>
 	</div>
 
 	<?php foreach( $taxonomies as $taxonomy ) { ?>
-		<?php $taxonomy = get_taxonomy( $taxonomy ); ?>
 		<?php $terms = get_terms( $taxonomy->name ); ?>
 
 		<div class="content row">

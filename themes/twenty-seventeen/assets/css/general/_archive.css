@@ -30,13 +30,13 @@
 }
 
 .archive .preface h2 {
-	font-size: 48px;
+	font-size: 32px;
 	font-weight: 700;
 	margin: 0;
 }
 
 .archive .preface h2 + p {
-	font-size: 18px;
+	font-size: 16px;
 	margin: 20px 0 0;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .archive .preface ul li {
-	font-size: 26px;
+	font-size: 20px;
 	line-height: 1;
 }
 
@@ -80,24 +80,24 @@
 }
 
 .archive .taxonomy-header .container {
-	padding: 40px 0;
+	padding: 20px 0;
 }
 
 /*--- Offset the fixed header when bookmark linking ---*/
 .archive .content .anchor {
-	padding-top: 103px;
-	margin-top: -103px;
+	padding-top: 83px;
+	margin-top: -83px;
 }
 
 .archive .content h2 {
-	font-size: 44px;
+	font-size: 24px;
 	font-weight: 500;
 	margin: 0;
 	color: #f2fff7;
 }
 
 .archive .content-header {
-	padding: 100px 0;
+	padding: 60px 0;
 	margin: 0;
 	width: 100%;
 	background-color: #f2fff7;
