@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for displaying the accessories archive.
+ * Template for displaying the accessory archive.
  *
  * @package PackItRightNow - Twenty Seventeen
  * @since 0.1.0
@@ -8,12 +8,12 @@
 
 namespace PackItRightNow;
 
-# Get all taxonomies of the 'Accessory' post type.
+# Get all taxonomies of the accessory post type.
 $taxonomies = get_taxonomies_by_post_type( ACCESSORY_POST_TYPE );
 
 get_header(); ?>
 
-<div class="archive accessories">
+<div class="archive accessory">
 	<div class="preface row">
 		<div class="container">
 			<div class="col-xs-12 col-sm-6">

@@ -8,12 +8,12 @@
 
 namespace PackItRightNow;
 
-# Get all taxonomies of the 'Accessory' post type.
+# Get all taxonomies of the clothing post type.
 $taxonomies = get_taxonomies_by_post_type( CLOTHING_POST_TYPE );
 
 get_header(); ?>
 
-<div class="archive accessories">
+<div class="archive clothing">
 	<div class="preface row">
 		<div class="container">
 			<div class="col-xs-12 col-sm-6">

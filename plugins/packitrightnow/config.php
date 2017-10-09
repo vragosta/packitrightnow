@@ -30,3 +30,11 @@ define( 'RAINGEAR_TAXONOMY', 'raingear' );
 # Cutlery Taxonomies
 define( 'KIT_PIECE_TAXONOMY', 'kit-piece' );
 define( 'KIT_TAXONOMY', 'kit' );
+
+# Glove Taxonomies
+define( 'CHEMICAL_TAXONOMY', 'chemical' );
+define( 'LATEX_TAXONOMY', 'latex' );
+define( 'NITRILE_TAXONOMY', 'nitrile' );
+define( 'POLY_TAXONOMY', 'poly' );
+define( 'VINYL_TAXONOMY', 'vinyl' );
+define( 'WORK_TAXONOMY', 'work' );

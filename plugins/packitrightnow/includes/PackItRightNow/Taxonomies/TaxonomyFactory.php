@@ -32,6 +32,24 @@ class TaxonomyFactory {
 				case KIT_TAXONOMY:
 					$instance = new KitTaxonomy();
 					break;
+				case CHEMICAL_TAXONOMY:
+					$instance = new ChemicalTaxonomy();
+					break;
+				case LATEX_TAXONOMY:
+					$instance = new LatexTaxonomy();
+					break;
+				case NITRILE_TAXONOMY:
+					$instance = new NitrileTaxonomy();
+					break;
+				case POLY_TAXONOMY:
+					$instance = new PolyTaxonomy();
+					break;
+				case VINYL_TAXONOMY:
+					$instance = new VinylTaxonomy();
+					break;
+				case WORK_TAXONOMY:
+					$instance = new WorkTaxonomy();
+					break;
 				case MISCELLANEOUS_TAXONOMY:
 					$instance = new MiscellaneousTaxonomy();
 					break;
@@ -68,6 +86,12 @@ class TaxonomyFactory {
 			RAINGEAR_TAXONOMY,
 			KIT_PIECE_TAXONOMY,
 			KIT_TAXONOMY,
+			CHEMICAL_TAXONOMY,
+			LATEX_TAXONOMY,
+			NITRILE_TAXONOMY,
+			POLY_TAXONOMY,
+			VINYL_TAXONOMY,
+			WORK_TAXONOMY,
 			MISCELLANEOUS_TAXONOMY
 		);
 
