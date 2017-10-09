@@ -12,7 +12,7 @@ class KitTaxonomy extends BaseTaxonomy {
 
 	public function get_labels() {
 		return array(
-			'name'                       => __( 'Kit', 'packitrightnow_com' ),
+			'name'                       => __( 'Kits', 'packitrightnow_com' ),
 			'singular_name'              => __( 'Kit', 'packitrightnow_com' ),
 			'menu_name'                  => __( 'Kits', 'packitrightnow_com' ),
 			'all_items'                  => __( 'All Kits', 'packitrightnow_com' ),

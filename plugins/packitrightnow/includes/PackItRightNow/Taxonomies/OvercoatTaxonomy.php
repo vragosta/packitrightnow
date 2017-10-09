@@ -12,7 +12,7 @@ class OvercoatTaxonomy extends BaseTaxonomy {
 
 	public function get_labels() {
 		return array(
-			'name'                       => __( 'Overcoat', 'packitrightnow_com' ),
+			'name'                       => __( 'Overcoats', 'packitrightnow_com' ),
 			'singular_name'              => __( 'Overcoat', 'packitrightnow_com' ),
 			'menu_name'                  => __( 'Overcoats', 'packitrightnow_com' ),
 			'all_items'                  => __( 'All Overcoats', 'packitrightnow_com' ),

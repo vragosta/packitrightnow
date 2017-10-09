@@ -12,7 +12,7 @@ class ApronTaxonomy extends BaseTaxonomy {
 
 	public function get_labels() {
 		return array(
-			'name'                       => __( 'Apron', 'packitrightnow_com' ),
+			'name'                       => __( 'Aprons', 'packitrightnow_com' ),
 			'singular_name'              => __( 'Apron', 'packitrightnow_com' ),
 			'menu_name'                  => __( 'Aprons', 'packitrightnow_com' ),
 			'all_items'                  => __( 'All Aprons', 'packitrightnow_com' ),
