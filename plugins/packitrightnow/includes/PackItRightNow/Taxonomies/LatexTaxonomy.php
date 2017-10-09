@@ -45,7 +45,8 @@ class LatexTaxonomy extends BaseTaxonomy {
 
 	public function get_post_types() {
 		return array(
-			GLOVE_POST_TYPE
+			GLOVE_POST_TYPE,
+			PACKAGE_POST_TYPE
 		);
 	}
 }

@@ -15,12 +15,9 @@ define( 'CUTLERY_POST_TYPE', 'cutlery' );
 define( 'GLOVE_POST_TYPE', 'glove' );
 define( 'PACKAGE_POST_TYPE', 'package' );
 
-# Taxonomies
-
 # Accessory Taxonomies
 define( 'FACEGEAR_TAXONOMY', 'facegear' );
 define( 'HEADGEAR_TAXONOMY', 'headgear' );
-define( 'MISCELLANEOUS_TAXONOMY', 'miscellaneous' );
 
 # Clothing Taxonomies
 define( 'APRON_TAXONOMY', 'apron' );
@@ -33,8 +30,13 @@ define( 'KIT_TAXONOMY', 'kit' );
 
 # Glove Taxonomies
 define( 'CHEMICAL_TAXONOMY', 'chemical' );
+define( 'WORK_TAXONOMY', 'work' );
+
+# Glove and Package Taxonomies
 define( 'LATEX_TAXONOMY', 'latex' );
 define( 'NITRILE_TAXONOMY', 'nitrile' );
 define( 'POLY_TAXONOMY', 'poly' );
 define( 'VINYL_TAXONOMY', 'vinyl' );
-define( 'WORK_TAXONOMY', 'work' );
+
+# Accessory and Cutlery Taxonomies
+define( 'MISCELLANEOUS_TAXONOMY', 'miscellaneous' );
