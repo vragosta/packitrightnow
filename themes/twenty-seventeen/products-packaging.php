@@ -48,9 +48,9 @@ get_header(); ?>
 			</div>
 
 			<?php foreach( $terms as $term ) { ?>
-				<?php $term_ids = get_accessories( $taxonomy->name, $term->slug ); ?>
+				<?php $post_ids = get_post_ids( PACKAGE_POST_TYPE, $taxonomy->name, $term->slug ); ?>
 
-				<?php if ( ! empty( $term_ids ) ) { ?>
+				<?php if ( ! empty( $post_ids ) ) { ?>
 
 					<div class="content-header row">
 						<div class="container">
@@ -67,9 +67,9 @@ get_header(); ?>
 
 					<div class="container">
 
-						<?php foreach( $term_ids as $term_id ) { ?>
-							<?php $featured_image = get_featured_image( $term_id ); ?>
-							<?php $title = get_the_title( $term_id ); ?>
+						<?php foreach( $post_ids as $post_id ) { ?>
+							<?php $featured_image = get_featured_image( $post_id ); ?>
+							<?php $title = get_the_title( $post_id ); ?>
 
 							<div class="content-item col-xs-12 col-sm-4">
 								<figure class="image">
