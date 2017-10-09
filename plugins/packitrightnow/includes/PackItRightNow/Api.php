@@ -24,4 +24,3 @@ function get_plugin() {
 
 require_once( __DIR__ . '/Api/Partial.php' );
 require_once( __DIR__ . '/Api/Helpers.php' );
-require_once( __DIR__ . '/Api/Accessory.php' );

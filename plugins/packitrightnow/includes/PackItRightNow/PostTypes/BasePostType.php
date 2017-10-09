@@ -57,9 +57,7 @@ class BasePostType {
 	 * @return array list of taxonomy names
 	 */
 	public function get_supported_taxonomies() {
-		return array(
-			CATEGORY_TAXONOMY,
-		);
+		return array();
 	}
 
 	/* abstract end */

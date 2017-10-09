@@ -8,49 +8,29 @@
 
 namespace PackItRightNow;
 
+# Get carousel images.
+$carousel_posts = get_carousel_posts();
+
 get_header(); ?>
 
 <section class="front-page container">
 
-	<div class="carousel">
+	<?php if ( $carousel_posts->have_posts() ) { ?>
+		<div class="carousel">
+			<?php while ( $carousel_posts->have_posts() ) { ?>
+				<?php $carousel_posts->the_post(); ?>
+				<?php $image_source = get_carousel_image( $post ); ?>
 
-		<div>
-			<figure class="image">
-				<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder.jpg'; ?> );"></div>
-			</figure>
+				<div>
+					<figure class="image">
+						<div class="source" style="background-image: url( <?php echo esc_url( $image_source ); ?> );"></div>
+					</figure>
+				</div>
+
+			<?php } ?>
+			<?php wp_reset_postdata(); ?>
 		</div>
-
-		<div>
-			<figure class="image">
-				<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder1.jpg'; ?> );"></div>
-			</figure>
-		</div>
-
-		<div>
-			<figure class="image">
-				<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder2.jpg'; ?> );"></div>
-			</figure>
-		</div>
-
-		<div>
-			<figure class="image">
-				<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder3.jpg'; ?> );"></div>
-			</figure>
-		</div>
-
-		<div>
-			<figure class="image">
-				<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder4.jpg'; ?> );"></div>
-			</figure>
-		</div>
-
-		<div>
-			<figure class="image">
-				<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder5.jpg'; ?> );"></div>
-			</figure>
-		</div>
-
-	</div>
+	<?php } ?>
 
 	<div class="featured-products">
 		<h2>Featured Products</h2>

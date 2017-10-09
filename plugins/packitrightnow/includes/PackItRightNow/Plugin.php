@@ -4,6 +4,8 @@ namespace PackItRightNow;
 
 use PackItRightNow\Taxonomies\TaxonomyFactory;
 use PackItRightNow\PostTypes\PostTypeFactory;
+use PackItRightNow\Admin\PostTypeSupport;
+use PackItRightNow\Admin\MetaBoxes\PostMetaFieldsMetaBox;
 
 /**
  * Plugin is the main entry point into the PackItRightNow plugin
@@ -29,11 +31,14 @@ class Plugin {
 		return self::$instance;
 	}
 
+	public $taxonomy_factory;
 	public $post_type_factory;
 	public $router;
+	public $post_type_support;
 
 	public function enable() {
 		add_action( 'init', array( $this, 'init' ) );
+		add_action( 'admin_init', array( $this, 'init_admin' ) );
 	}
 
 	/**
@@ -52,5 +57,13 @@ class Plugin {
 
 		$this->router = new Router();
 		$this->router->register();
+
+		$this->post_type_support = new PostTypeSupport();
+		$this->post_type_support->register();
+	}
+
+	function init_admin() {
+		$postmeta_meta_box = new PostMetaFieldsMetaBox();
+		$postmeta_meta_box->register();
 	}
 }

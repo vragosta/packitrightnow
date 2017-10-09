@@ -11,12 +11,6 @@ class PostPostType extends BasePostType {
 		return 'post';
 	}
 
-	public function get_supported_taxonomies() {
-		return array(
-			CATEGORY_TAXONOMY
-		);
-	}
-
 	# override parent - since this is a Core Post Type
 	public function register_post_type() {
 		add_post_type_support( 'post', 'postmeta-fields' );

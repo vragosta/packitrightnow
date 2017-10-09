@@ -12,7 +12,6 @@
  * @since 0.1.0
  */
 # Useful global constants.
-define( 'PACKITRIGHTNOW_VERSION', '0.1.0' );
 define( 'PACKITRIGHTNOW_TEMPLATE_URL', get_template_directory_uri() );
 define( 'PACKITRIGHTNOW_PATH', get_template_directory() . '/' );
 
