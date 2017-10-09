@@ -16,6 +16,16 @@ define( 'GLOVE_POST_TYPE', 'glove' );
 define( 'PACKAGE_POST_TYPE', 'package' );
 
 # Taxonomies
+
+# Accessory Taxonomies
 define( 'FACEGEAR_TAXONOMY', 'facegear' );
 define( 'HEADGEAR_TAXONOMY', 'headgear' );
 define( 'MISCELLANEOUS_TAXONOMY', 'miscellaneous' );
+
+# Clothing Taxonomies
+define( 'APRON_TAXONOMY', 'apron' );
+define( 'OVERCOAT_TAXONOMY', 'overcoat' );
+define( 'RAINGEAR_TAXONOMY', 'raingear' );
+
+# Cutlery Taxonomies
+define( 'KIT_PIECE_TAXONOMY', 'kit-piece' );

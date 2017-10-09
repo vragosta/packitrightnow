@@ -17,6 +17,15 @@ class TaxonomyFactory {
 				case HEADGEAR_TAXONOMY:
 					$instance = new HeadGearTaxonomy();
 					break;
+				case APRON_TAXONOMY:
+					$instance = new ApronTaxonomy();
+					break;
+				case OVERCOAT_TAXONOMY:
+					$instance = new OvercoatTaxonomy();
+					break;
+				case RAINGEAR_TAXONOMY:
+					$instance = new RainGearTaxonomy();
+					break;
 				case MISCELLANEOUS_TAXONOMY:
 					$instance = new MiscellaneousTaxonomy();
 					break;
@@ -48,6 +57,9 @@ class TaxonomyFactory {
 		$taxonomies = array(
 			FACEGEAR_TAXONOMY,
 			HEADGEAR_TAXONOMY,
+			APRON_TAXONOMY,
+			OVERCOAT_TAXONOMY,
+			RAINGEAR_TAXONOMY,
 			MISCELLANEOUS_TAXONOMY
 		);
 
