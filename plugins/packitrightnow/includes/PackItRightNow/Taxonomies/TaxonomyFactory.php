@@ -26,6 +26,12 @@ class TaxonomyFactory {
 				case RAINGEAR_TAXONOMY:
 					$instance = new RainGearTaxonomy();
 					break;
+				case KIT_PIECE_TAXONOMY:
+					$instance = new KitPieceTaxonomy();
+					break;
+				case KIT_TAXONOMY:
+					$instance = new KitTaxonomy();
+					break;
 				case MISCELLANEOUS_TAXONOMY:
 					$instance = new MiscellaneousTaxonomy();
 					break;
@@ -60,6 +66,8 @@ class TaxonomyFactory {
 			APRON_TAXONOMY,
 			OVERCOAT_TAXONOMY,
 			RAINGEAR_TAXONOMY,
+			KIT_PIECE_TAXONOMY,
+			KIT_TAXONOMY,
 			MISCELLANEOUS_TAXONOMY
 		);
 

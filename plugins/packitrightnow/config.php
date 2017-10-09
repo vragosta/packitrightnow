@@ -29,3 +29,4 @@ define( 'RAINGEAR_TAXONOMY', 'raingear' );
 
 # Cutlery Taxonomies
 define( 'KIT_PIECE_TAXONOMY', 'kit-piece' );
+define( 'KIT_TAXONOMY', 'kit' );
