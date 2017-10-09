@@ -17,3 +17,8 @@ function get_taxonomies_by_post_type( $post_type ) {
 
 	return $taxonomies;
 }
+
+function get_post_type_description( $post_type ) {
+	$post_type = get_post_type_object( $post_type );
+	return $post_type->description ? $post_type->description : NULL;
+}
