@@ -58,7 +58,9 @@ get_header(); ?>
 								<h3><?php echo esc_html( $term->name ); ?></h3>
 							</div>
 							<div class="col-xs-12 col-sm-6">
-								<p>Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+								<?php if ( $term->description ) { ?>
+									<p><?php echo esc_html( $term->description ); ?></p>
+								<?php } ?>
 							</div>
 						</div>
 					</div>
