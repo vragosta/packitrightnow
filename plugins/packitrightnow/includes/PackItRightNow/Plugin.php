@@ -13,6 +13,9 @@ use PackItRightNow\Admin\PostTypeSupport;
 use PackItRightNow\Admin\MetaBoxes\PostMetaFieldsMetaBox;
 use PackItRightNow\Admin\Metaboxes\AccessoryMetaBox;
 use PackItRightNow\Admin\Metaboxes\ClothingMetaBox;
+use PackItRightNow\Admin\Metaboxes\CutleryMetaBox;
+use PackItRightNow\Admin\Metaboxes\GloveMetaBox;
+use PackItRightNow\Admin\Metaboxes\PackageMetaBox;
 
 /**
  * Plugin is the main entry point into the PackItRightNow plugin
@@ -79,6 +82,15 @@ class Plugin {
 
 		$clothing_meta_box = new ClothingMetaBox();
 		$clothing_meta_box->register();
+
+		$cutlery_meta_box = new CutleryMetaBox();
+		$cutlery_meta_box->register();
+
+		$glove_meta_box = new GloveMetaBox();
+		$glove_meta_box->register();
+
+		$package_meta_box = new PackageMetaBox();
+		$package_meta_box->register();
 	}
 
 	function get_accessory_finder( $post_id ) {

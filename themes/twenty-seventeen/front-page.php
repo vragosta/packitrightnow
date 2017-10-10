@@ -14,11 +14,6 @@ $carousel_posts = get_carousel_posts();
 # Get featured products.
 $featured_products = get_featured_products();
 
-// echo '<pre>';
-// var_dump( $featured_products->posts );
-// echo '</pre>';
-// exit();
-
 get_header(); ?>
 
 <section class="front-page container">
