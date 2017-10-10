@@ -4,8 +4,15 @@ namespace PackItRightNow;
 
 use PackItRightNow\Taxonomies\TaxonomyFactory;
 use PackItRightNow\PostTypes\PostTypeFactory;
+use PackItRightNow\Finders\AccessoryFinder;
+use PackItRightNow\Finders\ClothingFinder;
+use PackItRightNow\Finders\CutleryFinder;
+use PackItRightNow\Finders\GloveFinder;
+use PackItRightNow\Finders\PackageFinder;
 use PackItRightNow\Admin\PostTypeSupport;
 use PackItRightNow\Admin\MetaBoxes\PostMetaFieldsMetaBox;
+use PackItRightNow\Admin\Metaboxes\AccessoryMetaBox;
+use PackItRightNow\Admin\Metaboxes\ClothingMetaBox;
 
 /**
  * Plugin is the main entry point into the PackItRightNow plugin
@@ -36,6 +43,7 @@ class Plugin {
 	public $router;
 	public $post_type_support;
 
+
 	public function enable() {
 		add_action( 'init', array( $this, 'init' ) );
 		add_action( 'admin_init', array( $this, 'init_admin' ) );
@@ -65,5 +73,31 @@ class Plugin {
 	function init_admin() {
 		$postmeta_meta_box = new PostMetaFieldsMetaBox();
 		$postmeta_meta_box->register();
+
+		$accessory_meta_box = new AccessoryMetaBox();
+		$accessory_meta_box->register();
+
+		$clothing_meta_box = new ClothingMetaBox();
+		$clothing_meta_box->register();
+	}
+
+	function get_accessory_finder( $post_id ) {
+		return new AccessoryFinder( $post_id );
+	}
+
+	function get_clothing_finder( $post_id ) {
+		return new ClothingFinder( $post_id );
+	}
+
+	function get_cutlery_finder( $post_id ) {
+		return new CutleryFinder( $post_id );
+	}
+
+	function get_glove_finder( $post_id ) {
+		return new GloveFinder( $post_id );
+	}
+
+	function get_package_finder( $post_id ) {
+		return new PackageFinder( $post_id );
 	}
 }

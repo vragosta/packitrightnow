@@ -11,6 +11,14 @@ namespace PackItRightNow;
 # Get carousel images.
 $carousel_posts = get_carousel_posts();
 
+# Get featured products.
+$featured_products = get_featured_products();
+
+// echo '<pre>';
+// var_dump( $featured_products->posts );
+// echo '</pre>';
+// exit();
+
 get_header(); ?>
 
 <section class="front-page container">
@@ -32,64 +40,25 @@ get_header(); ?>
 		</div>
 	<?php } ?>
 
-	<div class="featured-products">
-		<h2>Featured Products</h2>
-		<div class="row">
-			<div class="col-xs-12 col-sm-4">
-				<figure class="image">
-					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder2.jpg'; ?> );"></div>
-				</figure>
-			</div>
+	<?php if ( $featured_products->have_posts() ) { ?>
+		<div class="featured-products">
+			<h2>Featured Products</h2>
+			<div class="row">
+				<?php while ( $featured_products->have_posts() ) { ?>
+					<?php $featured_products->the_post(); ?>
+					<?php $image_source = get_featured_image( $post->ID ); ?>
 
-			<div class="col-xs-12 col-sm-4">
-				<figure class="image">
-					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder3.jpg'; ?> );"></div>
-				</figure>
-			</div>
+						<div class="col-xs-12 col-sm-4">
+							<figure class="image">
+								<div class="source" style="background-image: url( <?php echo esc_url( $image_source ); ?> );"></div>
+							</figure>
+						</div>
 
-			<div class="col-xs-12 col-sm-4">
-				<figure class="image">
-					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder4.jpg'; ?> );"></div>
-				</figure>
-			</div>
-
-			<div class="col-xs-12 col-sm-4">
-				<figure class="image">
-					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder2.jpg'; ?> );"></div>
-				</figure>
-			</div>
-
-			<div class="col-xs-12 col-sm-4">
-				<figure class="image">
-					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder3.jpg'; ?> );"></div>
-				</figure>
-			</div>
-
-			<div class="col-xs-12 col-sm-4">
-				<figure class="image">
-					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder4.jpg'; ?> );"></div>
-				</figure>
-			</div>
-
-			<div class="col-xs-12 col-sm-4">
-				<figure class="image">
-					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder2.jpg'; ?> );"></div>
-				</figure>
-			</div>
-
-			<div class="col-xs-12 col-sm-4">
-				<figure class="image">
-					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder3.jpg'; ?> );"></div>
-				</figure>
-			</div>
-
-			<div class="col-xs-12 col-sm-4">
-				<figure class="image">
-					<div class="source" style="background-image: url( <?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/placeholder4.jpg'; ?> );"></div>
-				</figure>
+				<?php } ?>
+				<?php wp_reset_postdata(); ?>
 			</div>
 		</div>
-	</div>
+	<?php } ?>
 
 	<div class="about">
 		<h2>About Us</h2>

@@ -155,3 +155,26 @@ function get_carousel_image( $post ) {
 
 	return NULL;
 }
+
+function get_featured_products() {
+	$query_params = array(
+		'post_type' => array(
+			ACCESSORY_POST_TYPE,
+			CLOTHING_POST_TYPE,
+			CUTLERY_POST_TYPE,
+			GLOVE_POST_TYPE,
+			PACKAGE_POST_TYPE
+		),
+		'meta_query' => array(
+			array(
+				'key'     => '_featured',
+				'value'   => true,
+				'compare' => '=',
+			),
+		)
+	);
+
+	$query = new \WP_Query( $query_params );
+
+	return $query;
+}
