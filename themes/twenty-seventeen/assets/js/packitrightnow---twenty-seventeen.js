@@ -137,7 +137,9 @@
 							data: JSON.stringify( data ),
 							dataType: 'json',
 						} ).then(function( response ) {
-							location.reload();
+							$( '.error' ).find( '.alert-danger' ).removeClass( 'alert-danger' ).addClass( 'alert-success' );
+							$( '.error' ).find( 'p' ).html( 'You message was successfully sent!' );
+							$( '.error' ).addClass( 'show-message' );
 						} );
 					}
 			});

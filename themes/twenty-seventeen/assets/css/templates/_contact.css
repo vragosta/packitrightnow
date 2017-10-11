@@ -19,16 +19,14 @@
 
 .contact .error {
 	display: none;
-	/*opacity: 0;
-	visibility: hidden;
-	transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out;*/
 }
 
 .contact .error.show-message {
 	display: block;
 }
 
-.contact .alert-danger {
+.contact .alert-danger,
+.contact .alert-success {
 	padding: 10px;
 	border-radius: 4px;
 }
