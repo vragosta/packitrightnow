@@ -47,12 +47,47 @@ class CutleryMetaBox {
 
 		# Call AccessoryFinder class methods.
 		$finder = new CutleryFinder( $post->ID );
+		$is_carousel = $finder->is_carousel();
+		$carousel_position = $finder->get_carousel_position();
 		$is_featured = $finder->is_featured();
 		$featured_position = $finder->get_featured_position();
 
 		?>
 
 		<table style="width: 100%;">
+			<tr>
+				<td>
+					<h2 style="padding: 0; margin-bottom: 10px; font-weight: 700; font-size: 20px;">Carousel</h2>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="_carousel"><?php echo esc_html( __( 'Carousel', 'packitrightnow_com' ) ); ?></label>
+				</td>
+				<td>
+					<input name="_carousel" type="checkbox" <?php echo $is_carousel == true ? 'checked': ''; ?> />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="_carousel_position"><?php echo esc_html( __( 'Carousel Position', 'packitrightnow_com' ) ); ?></label>
+				</td>
+				<td>
+					<select name="_carousel_position" style="width: 100%;">
+						<option value="1" <?php echo $carousel_position == 1 ? 'selected' : ''; ?>>1</option>
+						<option value="2" <?php echo $carousel_position == 2 ? 'selected' : ''; ?>>2</option>
+						<option value="3" <?php echo $carousel_position == 3 ? 'selected' : ''; ?>>3</option>
+						<option value="4" <?php echo $carousel_position == 4 ? 'selected' : ''; ?>>4</option>
+						<option value="5" <?php echo $carousel_position == 5 ? 'selected' : ''; ?>>5</option>
+						<option value="6" <?php echo $carousel_position == 6 ? 'selected' : ''; ?>>6</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h2 style="padding: 0; margin: 30px 0 10px; font-weight: 700; font-size: 20px;">Featured Products</h2>
+				</td>
+			</tr>
 			<tr>
 				<td>
 					<label for="_featured"><?php echo esc_html( __( 'Feature Cutlery', 'packitrightnow_com' ) ); ?></label>
@@ -110,10 +145,14 @@ class CutleryMetaBox {
 		}
 
 		# Catch the default checkbox behavior.
+		$carousel = $_POST['_carousel'] == 'on' ? true : false;
+		$carousel_position = sanitize_text_field( $_POST['_carousel_position'] );
 		$featured = $_POST['_featured'] == 'on' ? true : false;
 		$featured_position = sanitize_text_field( $_POST['_featured_position'] );
 
 		# Sanitize the input and update the meta field in the database.
+		update_post_meta( $post_id, '_carousel', $carousel );
+		update_post_meta( $post_id, '_carousel_position', $carousel_position );
 		update_post_meta( $post_id, '_featured', $featured );
 		update_post_meta( $post_id, '_featured_position', $featured_position );
 	}

@@ -78,6 +78,21 @@ function get_post_ids( $post_type, $taxonomy, $term_slug ) {
 	return $query->posts;
 }
 
+function get_recent_posts() {
+	$query_args = array(
+		'post_type' => array(
+			ACCESSORY_POST_TYPE,
+			CLOTHING_POST_TYPE,
+			CUTLERY_POST_TYPE,
+			GLOVE_POST_TYPE,
+			PACKAGE_POST_TYPE
+		),
+		'posts_per_page' => 6
+	);
+
+	return new \WP_Query( $query_args );
+}
+
 /**
  * Get posts by meta query of carousel image.
  *
@@ -95,27 +110,14 @@ function get_carousel_posts() {
 			PACKAGE_POST_TYPE
 		),
 		'posts_per_page' => 6,
+		'meta_key' => '_carousel_position',
+		'orderby' => 'meta_value',
+		'order' => 'ASC',
 		'meta_query' => array(
-			'relation' => 'OR',
-			'accessory_clause' => array(
-				'key' => 'accessory_carousel_image_thumbnail_id',
-				'compare' => 'EXISTS'
-			),
-			'clothing_clause' => array(
-				'key' => 'clothing_carousel_image_thumbnail_id',
-				'compare' => 'EXISTS'
-			),
-			'cutlery_clause' => array(
-				'key' => 'cutlery_carousel_image_thumbnail_id',
-				'compare' => 'EXISTS'
-			),
-			'glove_clause' => array(
-				'key' => 'glove_carousel_image_thumbnail_id',
-				'compare' => 'EXISTS'
-			),
-			'package_clause' => array(
-				'key' => 'package_carousel_image_thumbnail_id',
-				'compare' => 'EXISTS'
+			array(
+				'key' => '_carousel',
+				'value' => true,
+				'compare' => '='
 			)
 		)
 	);
@@ -123,18 +125,7 @@ function get_carousel_posts() {
 	$query = new \WP_Query( $query_args );
 
 	if ( $query->post_count == 0 ) {
-		$query_args = array(
-			'post_type' => array(
-				ACCESSORY_POST_TYPE,
-				CLOTHING_POST_TYPE,
-				CUTLERY_POST_TYPE,
-				GLOVE_POST_TYPE,
-				PACKAGE_POST_TYPE
-			),
-			'posts_per_page' => 6
-		);
-
-		$query = new \WP_Query( $query_args );
+		$query = get_recent_posts();
 	}
 
 	return $query;
