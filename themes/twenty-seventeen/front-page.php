@@ -14,6 +14,9 @@ $carousel_posts = get_carousel_posts();
 # Get featured products.
 $featured_products = get_featured_products();
 
+# Get excerpt from the about page.
+$about_excerpt = get_about_excerpt();
+
 get_header(); ?>
 
 <section class="front-page container">
@@ -59,13 +62,14 @@ get_header(); ?>
 		</div>
 	<?php } ?>
 
-	<div class="about">
-		<h2>About Us</h2>
-		<p>
-			Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-			Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligula porta felis euismod semper.
-		</p>
-	</div>
+	<?php if ( $about_excerpt ) { ?>
+		<div class="about">
+			<h2>About Us</h2>
+			<p>
+				<?php echo $about_excerpt; ?>
+			</p>
+		</div>
+	<?php } ?>
 
 </section>
 

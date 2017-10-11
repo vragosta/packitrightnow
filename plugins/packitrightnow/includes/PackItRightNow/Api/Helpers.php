@@ -172,3 +172,8 @@ function get_featured_products() {
 
 	return $query;
 }
+
+function get_about_excerpt() {
+	$page = get_page_by_path( 'about' );
+	return $page->post_excerpt;
+}
