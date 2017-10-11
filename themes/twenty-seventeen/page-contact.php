@@ -30,6 +30,14 @@ get_header(); ?>
 			<p>If you'd like to contact me, please fill out the following form...</p>
 		<?php } ?>
 
+		<div class="error field-container row">
+			<div class="form-group col-xs-12">
+				<div class="alert-danger">
+					<p>All fields must be filled out.</p>
+				</div>
+			</div>
+		</div>
+
 		<div class="field-container row">
 			<div class="form-group col-md-6">
 				<label for="firstname">First Name *</label>

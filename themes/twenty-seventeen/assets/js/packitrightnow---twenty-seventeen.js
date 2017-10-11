@@ -1,7 +1,7 @@
 /**
- * VincentRagosta - Twenty Sixteen - v0.1.0
- * https://vincentragosta.com
- * Copyright (c) 2016; * Licensed GPL-2.0+
+ * Pack It Right Now - Twenty Sixteen - v0.1.0
+ * http://www.packitrightnow.com
+ * Copyright (c) 2017; * Licensed GPL-2.0+
  */
 'use strict';
 
@@ -104,6 +104,46 @@
 		},
 
 		/**
+		 * Sends contact information to contact endpoint for processing.
+		 *
+		 * @since 0.1.0
+		 * @uses click(), val(), ajax(), stringify()
+		 * @return void
+		 */
+		sendContactInformation: function() {
+			$( '.contact-btn' ).click(function() {
+				var firstname = $( '#firstname' ).val(),
+					lastname  = $( '#lastname' ).val(),
+					email     = $( '#email' ).val(),
+					subject   = $( '#subject' ).val(),
+					message   = $( '#message' ).val(),
+					data      = {
+						'firstname' : firstname,
+						'lastname' : lastname,
+						'email' : email,
+						'subject' : subject,
+						'message' : message
+					};
+
+					if ( ! firstname || ! lastname || ! email || ! subject || ! message ) {
+						$( '.error' ).addClass( 'show-message' );
+					} else {
+						$.ajax( {
+							url: PackItRightNow.options.apiUrl  + '/contact/',
+							type: 'post',
+							headers: {
+								'X-WP-Nonce': PackItRightNow.options.nonce
+							},
+							data: JSON.stringify( data ),
+							dataType: 'json',
+						} ).then(function( response ) {
+							location.reload();
+						} );
+					}
+			});
+		},
+
+		/**
 		 * VincentRagosta class initializer.
 		 *
 		 * @since 0.1.0
@@ -114,6 +154,7 @@
 			this.setupMenuToggle();
 			this.productsToggle();
 			this.setCarouselSettings();
+			this.sendContactInformation();
 		}
 	};
 

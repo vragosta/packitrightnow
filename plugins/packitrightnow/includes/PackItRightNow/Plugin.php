@@ -16,6 +16,7 @@ use PackItRightNow\Admin\Metaboxes\ClothingMetaBox;
 use PackItRightNow\Admin\Metaboxes\CutleryMetaBox;
 use PackItRightNow\Admin\Metaboxes\GloveMetaBox;
 use PackItRightNow\Admin\Metaboxes\PackageMetaBox;
+use PackItRightNow\REST\V1\Contact;
 
 /**
  * Plugin is the main entry point into the PackItRightNow plugin
@@ -71,6 +72,9 @@ class Plugin {
 
 		$this->post_type_support = new PostTypeSupport();
 		$this->post_type_support->register();
+
+		$contact_api = new Contact();
+		$contact_api->register();
 	}
 
 	function init_admin() {

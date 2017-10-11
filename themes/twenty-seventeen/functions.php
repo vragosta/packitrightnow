@@ -90,7 +90,7 @@ function scripts() {
 	);
 
 	wp_localize_script(
-		'packitrightnow_com',
+		'packitrightnow',
 		'PackItRightNow', array(
 			'themeUrl' => PACKITRIGHTNOW_TEMPLATE_URL,
 			'options'  => array(
