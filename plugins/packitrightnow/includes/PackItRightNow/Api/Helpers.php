@@ -165,6 +165,9 @@ function get_featured_products() {
 			GLOVE_POST_TYPE,
 			PACKAGE_POST_TYPE
 		),
+		'meta_key' => '_featured_position',
+		'orderby' => 'meta_value',
+		'order' => 'ASC',
 		'meta_query' => array(
 			array(
 				'key'     => '_featured',

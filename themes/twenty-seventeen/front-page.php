@@ -42,12 +42,16 @@ get_header(); ?>
 				<?php while ( $featured_products->have_posts() ) { ?>
 					<?php $featured_products->the_post(); ?>
 					<?php $image_source = get_featured_image( $post->ID ); ?>
+					<?php $post_type = get_post_type_object( $post->post_type ); ?>
 
-						<div class="col-xs-12 col-sm-4">
+					<div class="featured-product-item col-xs-12 col-sm-4">
+						<a href="<?php echo strtolower( $post_type->label ); ?>">
 							<figure class="image">
 								<div class="source" style="background-image: url( <?php echo esc_url( $image_source ); ?> );"></div>
 							</figure>
-						</div>
+							<h4><?php echo esc_html( $post_type->label ); ?></h4>
+						</a>
+					</div>
 
 				<?php } ?>
 				<?php wp_reset_postdata(); ?>

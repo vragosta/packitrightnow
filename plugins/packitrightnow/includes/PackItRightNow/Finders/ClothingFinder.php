@@ -37,4 +37,8 @@ class ClothingFinder {
 		return $value == true ? true : false;
 	}
 
+	public function get_featured_position() {
+		return get_post_meta( $this->post_id, '_featured_position', true );
+	}
+
 }

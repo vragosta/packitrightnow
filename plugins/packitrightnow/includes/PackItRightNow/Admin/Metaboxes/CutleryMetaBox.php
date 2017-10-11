@@ -48,6 +48,7 @@ class CutleryMetaBox {
 		# Call AccessoryFinder class methods.
 		$finder = new CutleryFinder( $post->ID );
 		$is_featured = $finder->is_featured();
+		$featured_position = $finder->get_featured_position();
 
 		?>
 
@@ -58,6 +59,20 @@ class CutleryMetaBox {
 				</td>
 				<td>
 					<input name="_featured" type="checkbox" <?php echo $is_featured == true ? 'checked': ''; ?> />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="_featured_position"><?php echo esc_html( __( 'Feature Products Position', 'packitrightnow_com' ) ); ?></label>
+				</td>
+				<td>
+					<select name="_featured_position" style="width: 100%;">
+						<option value="1" <?php echo $featured_position == 1 ? 'selected' : ''; ?>>1</option>
+						<option value="2" <?php echo $featured_position == 2 ? 'selected' : ''; ?>>2</option>
+						<option value="3" <?php echo $featured_position == 3 ? 'selected' : ''; ?>>3</option>
+						<option value="4" <?php echo $featured_position == 4 ? 'selected' : ''; ?>>4</option>
+						<option value="5" <?php echo $featured_position == 5 ? 'selected' : ''; ?>>5</option>
+					</select>
 				</td>
 			</tr>
 		</table><?php
@@ -96,9 +111,11 @@ class CutleryMetaBox {
 
 		# Catch the default checkbox behavior.
 		$featured = $_POST['_featured'] == 'on' ? true : false;
+		$featured_position = sanitize_text_field( $_POST['_featured_position'] );
 
 		# Sanitize the input and update the meta field in the database.
 		update_post_meta( $post_id, '_featured', $featured );
+		update_post_meta( $post_id, '_featured_position', $featured_position );
 	}
 
 }
