@@ -1,0 +1,19 @@
+/**
+ * PackItRightNow - Twenty Seventeen
+ * Contact CSS
+ */
+
+.image {
+	padding-bottom: 100%;
+	position: relative;
+}
+
+.image .source {
+	background-position: center bottom;
+	background-size: contain;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}

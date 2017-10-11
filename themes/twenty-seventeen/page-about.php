@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for displaying all pages.
+ * Template for displaying the about page.
  *
  * @package PackItRightNow - Twenty Seventeen
  * @since 0.1.0

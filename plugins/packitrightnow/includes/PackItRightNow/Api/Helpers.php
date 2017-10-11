@@ -147,6 +147,23 @@ function get_carousel_image( $post ) {
 	return NULL;
 }
 
+/**
+ * Get carousel image.
+ *
+ * @since 0.1.0
+ * @param object $post
+ * @uses class_exists, has_post_thumbnail, get_post_thumbnail_url
+ * @return string
+ */
+function get_google_maps_image( $post ) {
+	if ( class_exists( 'MultiPostThumbnails' ) && MultiPostThumbnails::has_post_thumbnail( $post->post_type, 'google_maps_image', $post->ID ) ) {
+		return MultiPostThumbnails::get_post_thumbnail_url( $post->post_type, 'google_maps_image', $post->ID, 'full' );
+	}
+
+	return NULL;
+}
+
+// TODO
 function get_featured_products() {
 	$query_params = array(
 		'post_type' => array(

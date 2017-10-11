@@ -11,6 +11,7 @@
 @import "general/_header.css";
 @import "general/_archive.css";
 @import "general/_footer.css";
+@import "general/_image.css";
 
 /*--- Components ---*/
 @import "components/_menu.css";
@@ -20,3 +21,4 @@
 
 /*--- Templates ---*/
 @import "templates/_front-page.css";
+@import "templates/_contact.css";
