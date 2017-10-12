@@ -21,7 +21,6 @@ use PackItRightNow\Admin\Metaboxes\ClothingMetaBox;
 use PackItRightNow\Admin\Metaboxes\CutleryMetaBox;
 use PackItRightNow\Admin\Metaboxes\GloveMetaBox;
 use PackItRightNow\Admin\Metaboxes\PackageMetaBox;
-use PackItRightNow\Admin\Metaboxes\TaxonomyMetaBox;
 use PackItRightNow\REST\V1\Contact;
 
 /**
@@ -48,10 +47,6 @@ class Plugin {
 		return self::$instance;
 	}
 
-	public $taxonomy_factory;
-	public $post_type_factory;
-	public $router;
-
 	public function enable() {
 		add_action( 'init', array( $this, 'init' ) );
 		add_action( 'admin_init', array( $this, 'init_admin' ) );
@@ -65,14 +60,14 @@ class Plugin {
 	 * Taxonomies must be registered before the Post Types etc.
 	 */
 	function init() {
-		$this->taxonomy_factory = new TaxonomyFactory();
-		$this->taxonomy_factory->build_all();
+		$taxonomy_factory = new TaxonomyFactory();
+		$taxonomy_factory->build_all();
 
-		$this->post_type_factory = new PostTypeFactory();
-		$this->post_type_factory->build_all();
+		$post_type_factory = new PostTypeFactory();
+		$post_type_factory->build_all();
 
-		$this->router = new Router();
-		$this->router->register();
+		$router = new Router();
+		$router->register();
 
 		$contact_api = new Contact();
 		$contact_api->register();
@@ -96,9 +91,6 @@ class Plugin {
 
 		$package_meta_box = new PackageMetaBox();
 		$package_meta_box->register();
-
-		$taxonomy_meta_box = new TaxonomyMetaBox();
-		$taxonomy_meta_box->register();
 
 		$post_type_support = new PostTypeSupport();
 		$post_type_support->register();
