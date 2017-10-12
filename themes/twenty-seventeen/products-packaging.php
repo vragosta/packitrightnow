@@ -11,8 +11,9 @@ namespace PackItRightNow;
 # Get post type description.
 $description = get_post_type_description( PACKAGE_POST_TYPE );
 
-# Get all taxonomies of the glove post type.
-$taxonomies = get_taxonomies_by_post_type( PACKAGE_POST_TYPE );
+# Get the type taxonomy.
+$taxonomy = get_taxonomy( PACKAGE_TYPE_TAXONOMY );
+$terms = get_terms( PACKAGE_TYPE_TAXONOMY );
 
 get_header(); ?>
 
@@ -27,40 +28,27 @@ get_header(); ?>
 			</div>
 			<div class="col-xs-12 col-sm-6">
 				<ul>
-					<?php foreach( $taxonomies as $taxonomy ) { ?>
-						<li><a href="#<?php echo esc_attr( $taxonomy->name ); ?>"><?php echo esc_html( $taxonomy->label ); ?></a></li>
+					<?php foreach( $terms as $term ) { ?>
+						<li><a href="#<?php echo esc_attr( $term->slug ); ?>"><?php echo esc_html( $term->name ); ?></a></li>
 					<?php } ?>
 				</ul>
 			</div>
 		</div>
 	</div>
 
-	<?php foreach( $taxonomies as $taxonomy ) { ?>
-		<?php $terms = get_terms( $taxonomy->name ); ?>
+	<div class="content row">
 
-		<div class="content row">
-			<div class="taxonomy-header row">
-				<div class="container">
-					<div class="col-xs-12">
-						<h2 id="<?php echo esc_attr( $taxonomy->name ); ?>" class="anchor"><?php echo esc_html( $taxonomy->label ); ?></h2>
-					</div>
-				</div>
-			</div>
+		<?php if ( ! empty( $terms ) ) { ?>
 
 			<?php foreach( $terms as $term ) { ?>
-				<?php $post_ids = get_post_ids( PACKAGE_POST_TYPE, $taxonomy->name, $term->slug ); ?>
+				<?php $post_ids = get_post_ids( PACKAGE_POST_TYPE, PACKAGE_TYPE_TAXONOMY, $term->slug ); ?>
 
 				<?php if ( ! empty( $post_ids ) ) { ?>
 
-					<div class="content-header row">
+					<div class="taxonomy-header row">
 						<div class="container">
-							<div class="col-xs-12 col-sm-6">
-								<h3><?php echo esc_html( $term->name ); ?></h3>
-							</div>
-							<div class="col-xs-12 col-sm-6">
-								<?php if ( $term->description ) { ?>
-									<p><?php echo esc_html( $term->description ); ?></p>
-								<?php } ?>
+							<div class="col-xs-12">
+								<h2 id="<?php echo esc_attr( $term->slug ); ?>" class="anchor"><?php echo esc_html( $term->name ); ?></h2>
 							</div>
 						</div>
 					</div>
@@ -78,18 +66,17 @@ get_header(); ?>
 								<h4><?php echo esc_html( $title ); ?></h4>
 							</div>
 
-						<?php } ?>
+						<?php } /*--- end foreach $post_ids ---*/ ?>
 
 					</div>
 
-				<?php } ?>
+				<?php } /*--- end if $post_ids ---*/ ?>
 
-			<?php } ?>
+			<?php } /*--- end foreach $terms ---*/ ?>
 
-		</div>
+		<?php } /*--- end if $terms ---*/ ?>
 
-	<?php } ?>
-
+	</div>
 </div>
 
 <?php get_footer(); ?>

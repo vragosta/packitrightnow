@@ -126,10 +126,6 @@
 	}
 }
 
-.archive .content-header:not(:last-child) {
-	margin-bottom: 60px;
-}
-
 .archive .content-header > div {
 	display: flex;
 	align-items: center;
@@ -150,8 +146,8 @@
 	}
 }
 
-.archive .taxonomy-header + .container {
-	margin-top: 60px;
+.archive .content-post-ids {
+	margin: 60px 0;
 }
 
 .archive .content-item {

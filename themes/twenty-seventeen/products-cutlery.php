@@ -90,31 +90,35 @@ get_header(); ?>
 
 			<?php } else { ?>
 
-				<div class="container">
+				<?php if ( ! empty( $terms ) ) { ?>
 
-					<?php foreach( $terms as $term ) { ?>
-						<?php $post_ids = get_post_ids( CUTLERY_POST_TYPE, $taxonomy->name, $term->slug ); ?>
+					<div class="container">
 
-						<?php if ( ! empty( $post_ids ) ) { ?>
+						<?php foreach( $terms as $term ) { ?>
+							<?php $post_ids = get_post_ids( CUTLERY_POST_TYPE, $taxonomy->name, $term->slug ); ?>
 
-							<?php foreach( $post_ids as $post_id ) { ?>
-								<?php $featured_image = get_featured_image( $post_id ); ?>
-								<?php $title = get_the_title( $post_id ); ?>
+							<?php if ( ! empty( $post_ids ) ) { ?>
 
-								<div class="content-item col-xs-12 col-sm-4">
-									<figure class="image">
-										<div class="source" style="background-image: url( <?php echo esc_url( $featured_image ); ?> );"></div>
-									</figure>
-									<h4><?php echo esc_html( $title ); ?></h4>
-								</div>
+								<?php foreach( $post_ids as $post_id ) { ?>
+									<?php $featured_image = get_featured_image( $post_id ); ?>
+									<?php $title = get_the_title( $post_id ); ?>
+
+									<div class="content-item col-xs-12 col-sm-4">
+										<figure class="image">
+											<div class="source" style="background-image: url( <?php echo esc_url( $featured_image ); ?> );"></div>
+										</figure>
+										<h4><?php echo esc_html( $title ); ?></h4>
+									</div>
+
+								<?php } ?>
 
 							<?php } ?>
 
 						<?php } ?>
 
-					<?php } ?>
+					</div>
 
-				</div>
+				<?php } ?>
 
 			<?php } ?>
 

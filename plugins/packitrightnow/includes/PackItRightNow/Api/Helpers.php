@@ -78,6 +78,42 @@ function get_post_ids( $post_type, $taxonomy, $term_slug ) {
 	return $query->posts;
 }
 
+/**
+ * Count post ids based upon post type, taxonomy and term slug.
+ *
+ * @since 0.1.0
+ * @param string $post_type
+ * @param string $taxonomy
+ * @param string $term_slug
+ * @uses wp_query
+ * @return object
+ */
+// function count_post_ids( $post_type, $taxonomy, $term_slug ) {
+// 	$query_params = array(
+// 		'post_type' => $post_type,
+// 		'fields' => 'ids',
+// 		'posts_per_page' => -1,
+// 		'order' => 'ASC',
+// 		'tax_query' => array(
+// 			array(
+// 				'taxonomy' => $taxonomy,
+// 				'field' => 'slug',
+// 				'terms' => array( $term_slug ),
+// 			),
+// 		)
+// 	);
+//
+// 	$query = new \WP_Query( $query_params );
+// 	return $query->post_count;
+// }
+
+/**
+ * Get the six most recent posts.
+ *
+ * @since 0.1.0
+ * @uses wp_query
+ * @return object
+ */
 function get_recent_posts() {
 	$query_args = array(
 		'post_type' => array(
@@ -155,13 +191,13 @@ function get_carousel_image( $post ) {
  * @uses class_exists, has_post_thumbnail, get_post_thumbnail_url
  * @return string
  */
-function get_google_maps_image( $post ) {
-	if ( class_exists( 'MultiPostThumbnails' ) && MultiPostThumbnails::has_post_thumbnail( $post->post_type, 'google_maps_image', $post->ID ) ) {
-		return MultiPostThumbnails::get_post_thumbnail_url( $post->post_type, 'google_maps_image', $post->ID, 'full' );
-	}
-
-	return NULL;
-}
+// function get_google_maps_image( $post ) {
+// 	if ( class_exists( 'MultiPostThumbnails' ) && MultiPostThumbnails::has_post_thumbnail( $post->post_type, 'google_maps_image', $post->ID ) ) {
+// 		return MultiPostThumbnails::get_post_thumbnail_url( $post->post_type, 'google_maps_image', $post->ID, 'full' );
+// 	}
+//
+// 	return NULL;
+// }
 
 // TODO
 function get_featured_products() {
@@ -190,7 +226,24 @@ function get_featured_products() {
 	return $query;
 }
 
+// TODO
 function get_about_excerpt() {
 	$page = get_page_by_path( 'about' );
 	return $page->post_excerpt;
+}
+
+// TODO
+function get_parent_terms( $taxonomy_name ) {
+	return get_terms( array(
+		'taxonomy' => $taxonomy_name,
+		'parent' => 0,
+	) );
+}
+
+// TODO
+function get_child_terms( $taxonomy_name, $parent_term_id ) {
+	return get_terms( array(
+		'taxonomy' => $taxonomy_name,
+		'parent' => $parent_term_id
+	) );
 }

@@ -10,13 +10,18 @@ use PackItRightNow\Finders\CutleryFinder;
 use PackItRightNow\Finders\GloveFinder;
 use PackItRightNow\Finders\PackageFinder;
 use PackItRightNow\Admin\PostTypeSupport;
+use PackItRightNow\Admin\AccessoryColumnSupport;
+use PackItRightNow\Admin\ClothingColumnSupport;
+use PackItRightNow\Admin\CutleryColumnSupport;
+use PackItRightNow\Admin\GloveColumnSupport;
+use PackItRightNow\Admin\PackageColumnSupport;
 use PackItRightNow\Admin\MetaBoxes\PostMetaFieldsMetaBox;
 use PackItRightNow\Admin\Metaboxes\AccessoryMetaBox;
 use PackItRightNow\Admin\Metaboxes\ClothingMetaBox;
 use PackItRightNow\Admin\Metaboxes\CutleryMetaBox;
 use PackItRightNow\Admin\Metaboxes\GloveMetaBox;
 use PackItRightNow\Admin\Metaboxes\PackageMetaBox;
-// use PackItRightNow\Admin\Metaboxes\TaxonomyMetaBox;
+use PackItRightNow\Admin\Metaboxes\TaxonomyMetaBox;
 use PackItRightNow\REST\V1\Contact;
 
 /**
@@ -46,8 +51,6 @@ class Plugin {
 	public $taxonomy_factory;
 	public $post_type_factory;
 	public $router;
-	public $post_type_support;
-
 
 	public function enable() {
 		add_action( 'init', array( $this, 'init' ) );
@@ -71,9 +74,6 @@ class Plugin {
 		$this->router = new Router();
 		$this->router->register();
 
-		$this->post_type_support = new PostTypeSupport();
-		$this->post_type_support->register();
-
 		$contact_api = new Contact();
 		$contact_api->register();
 	}
@@ -96,6 +96,27 @@ class Plugin {
 
 		$package_meta_box = new PackageMetaBox();
 		$package_meta_box->register();
+
+		$taxonomy_meta_box = new TaxonomyMetaBox();
+		$taxonomy_meta_box->register();
+
+		$post_type_support = new PostTypeSupport();
+		$post_type_support->register();
+
+		$accessory_column_support = new AccessoryColumnSupport();
+		$accessory_column_support->register();
+
+		$clothing_column_support = new ClothingColumnSupport();
+		$clothing_column_support->register();
+
+		$cutlery_column_support = new CutleryColumnSupport();
+		$cutlery_column_support->register();
+
+		$glove_column_support = new GloveColumnSupport();
+		$glove_column_support->register();
+
+		$package_column_support = new PackageColumnSupport();
+		$package_column_support->register();
 	}
 
 	function get_accessory_finder( $post_id ) {

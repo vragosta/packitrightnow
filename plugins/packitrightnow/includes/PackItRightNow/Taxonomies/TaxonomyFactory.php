@@ -11,48 +11,22 @@ class TaxonomyFactory {
 			return $this->taxonomies[ $taxonomy ];
 		} else {
 			switch ( $taxonomy ) {
-				case FACEGEAR_TAXONOMY:
-					$instance = new FaceGearTaxonomy();
+				case ACCESSORY_TYPE_TAXONOMY:
+					$instance = new AccessoryTypeTaxonomy();
 					break;
-				case HEADGEAR_TAXONOMY:
-					$instance = new HeadGearTaxonomy();
+				case CLOTHING_TYPE_TAXONOMY:
+					$instance = new ClothingTypeTaxonomy();
 					break;
-				case APRON_TAXONOMY:
-					$instance = new ApronTaxonomy();
+				case CUTLERY_TYPE_TAXONOMY:
+					$instance = new CutleryTypeTaxonomy();
 					break;
-				case OVERCOAT_TAXONOMY:
-					$instance = new OvercoatTaxonomy();
+				case GLOVE_TYPE_TAXONOMY:
+					$instance = new GloveTypeTaxonomy();
 					break;
-				case RAINGEAR_TAXONOMY:
-					$instance = new RainGearTaxonomy();
+				case PACKAGE_TYPE_TAXONOMY:
+					$instance = new PackageTypeTaxonomy();
 					break;
-				case KIT_PIECE_TAXONOMY:
-					$instance = new KitPieceTaxonomy();
-					break;
-				case KIT_TAXONOMY:
-					$instance = new KitTaxonomy();
-					break;
-				case CHEMICAL_TAXONOMY:
-					$instance = new ChemicalTaxonomy();
-					break;
-				case LATEX_TAXONOMY:
-					$instance = new LatexTaxonomy();
-					break;
-				case NITRILE_TAXONOMY:
-					$instance = new NitrileTaxonomy();
-					break;
-				case POLY_TAXONOMY:
-					$instance = new PolyTaxonomy();
-					break;
-				case VINYL_TAXONOMY:
-					$instance = new VinylTaxonomy();
-					break;
-				case WORK_TAXONOMY:
-					$instance = new WorkTaxonomy();
-					break;
-				case MISCELLANEOUS_TAXONOMY:
-					$instance = new MiscellaneousTaxonomy();
-					break;
+
 
 				default:
 					throw new \Exception(
@@ -79,20 +53,11 @@ class TaxonomyFactory {
 
 	public function get_supported_taxonomies() {
 		$taxonomies = array(
-			FACEGEAR_TAXONOMY,
-			HEADGEAR_TAXONOMY,
-			APRON_TAXONOMY,
-			OVERCOAT_TAXONOMY,
-			RAINGEAR_TAXONOMY,
-			KIT_PIECE_TAXONOMY,
-			KIT_TAXONOMY,
-			CHEMICAL_TAXONOMY,
-			LATEX_TAXONOMY,
-			NITRILE_TAXONOMY,
-			POLY_TAXONOMY,
-			VINYL_TAXONOMY,
-			WORK_TAXONOMY,
-			MISCELLANEOUS_TAXONOMY
+			ACCESSORY_TYPE_TAXONOMY,
+			CLOTHING_TYPE_TAXONOMY,
+			CUTLERY_TYPE_TAXONOMY,
+			GLOVE_TYPE_TAXONOMY,
+			PACKAGE_TYPE_TAXONOMY,
 		);
 
 		$taxonomies = apply_filters( 'packitrightnow_taxonomies', $taxonomies );
