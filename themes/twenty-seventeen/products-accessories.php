@@ -11,13 +11,13 @@ namespace PackItRightNow;
 # Get post type description.
 $description = get_post_type_description( ACCESSORY_POST_TYPE );
 
-# Get the accessory type taxonomy.
+# Get the taxonomy.
 $taxonomy = get_taxonomy( ACCESSORY_TYPE_TAXONOMY );
 $parent_terms = get_parent_terms( ACCESSORY_TYPE_TAXONOMY );
 
 get_header(); ?>
 
-<div class="archive accessory">
+<div class="archive <?php echo ACCESSORY_POST_TYPE; ?>">
 	<div class="preface row">
 		<div class="container">
 			<div class="col-xs-12 col-sm-6">
