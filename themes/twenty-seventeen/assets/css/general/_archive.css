@@ -150,6 +150,10 @@
 	}
 }
 
+.archive .taxonomy-header + .container {
+	margin-top: 60px;
+}
+
 .archive .content-item {
 	padding-bottom: 60px;
 }
