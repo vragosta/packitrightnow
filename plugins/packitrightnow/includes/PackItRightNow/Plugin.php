@@ -96,9 +96,6 @@ class Plugin {
 
 		$package_meta_box = new PackageMetaBox();
 		$package_meta_box->register();
-
-		// $taxonomy_meta_box = new TaxonomyMetaBox();
-		// $taxonomy_meta_box->register();
 	}
 
 	function get_accessory_finder( $post_id ) {
