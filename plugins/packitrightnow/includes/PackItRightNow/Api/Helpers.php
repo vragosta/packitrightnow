@@ -210,6 +210,7 @@ function get_parent_terms( $taxonomy_name ) {
 	return get_terms( array(
 		'taxonomy' => $taxonomy_name,
 		'parent' => 0,
+		'hide_empty' => false,
 	) );
 }
 

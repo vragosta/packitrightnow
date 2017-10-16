@@ -21,6 +21,7 @@ use PackItRightNow\Admin\Metaboxes\ClothingMetaBox;
 use PackItRightNow\Admin\Metaboxes\CutleryMetaBox;
 use PackItRightNow\Admin\Metaboxes\GloveMetaBox;
 use PackItRightNow\Admin\Metaboxes\PackageMetaBox;
+use PackItRightNow\Admin\Metaboxes\TaxonomyMetaBox;
 use PackItRightNow\REST\V1\Contact;
 
 /**
@@ -91,6 +92,9 @@ class Plugin {
 
 		$package_meta_box = new PackageMetaBox();
 		$package_meta_box->register();
+
+		$taxonomy_meta_box = new TaxonomyMetaBox();
+		$taxonomy_meta_box->register();
 
 		$post_type_support = new PostTypeSupport();
 		$post_type_support->register();
