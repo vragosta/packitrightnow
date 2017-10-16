@@ -1,0 +1,40 @@
+/**
+ * PackItRightNow - Twenty Seventeen
+ * Archive CSS
+ */
+
+/*--- Archive styles used on both parent and child templates ---*/
+.archive {
+	padding: 60px 15px 0;
+}
+
+.archive .preface {
+	background-color: #f2fff7;
+}
+
+.archive .preface .container {
+	padding: 100px 0;
+}
+
+@media only screen and ( max-width: 767px ) {
+	.archive .preface .container {
+		padding: 60px 0;
+	}
+}
+
+.archive .preface h2 {
+	font-size: 32px;
+	font-weight: 700;
+	margin: 0;
+}
+
+.archive .preface h2 + p {
+	font-size: 16px;
+	margin: 20px 0 0;
+}
+
+@media only screen and ( max-width: 767px ) {
+	.archive .preface h2 + p {
+		margin: 20px 0;
+	}
+}

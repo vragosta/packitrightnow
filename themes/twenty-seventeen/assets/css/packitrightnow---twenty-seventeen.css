@@ -7,18 +7,20 @@
  */
 
 /*--- General ---*/
-@import "general/_site.css";
-@import "general/_header.css";
-@import "general/_archive.css";
-@import "general/_footer.css";
 @import "general/_image.css";
+@import "general/_site.css";
 
 /*--- Components ---*/
 @import "components/_menu.css";
 @import "components/_mobile-menu.css";
 @import "components/_carousel.css";
 @import "components/_featured-products.css";
+@import "components/_contact.css";
+@import "components/_archive-parent.css";
+@import "components/_archive-child.css";
 
 /*--- Templates ---*/
+@import "templates/_archive.css";
+@import "templates/_footer.css";
 @import "templates/_front-page.css";
-@import "templates/_contact.css";
+@import "templates/_header.css";

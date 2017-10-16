@@ -75,7 +75,7 @@ class Router {
 	public $routes;
 
 	public function get_version() {
-		return '0.0.2';
+		return '0.0.4';
 	}
 
 	public function register() {
@@ -126,6 +126,10 @@ class Router {
 
 			case 'products/packaging':
 				$template_file = 'products-packaging.php';
+				break;
+
+			case 'accessory':
+				$template_file = 'accessory.php';
 				break;
 
 			default:
@@ -186,6 +190,7 @@ class Router {
 			 * Cutlery : /cutlery/
 			 * Gloves : /gloves/
 			 * Packaging : /packaging/
+			 * Accessory: /accessories/([^/]+)
 			 */
 			array(
 				'products/accessories',
@@ -226,6 +231,15 @@ class Router {
 					'packaging' => true,
 				),
 			),
+
+			array(
+				'accessory',
+				'^accessories/([^/]+)/?$',
+				array(
+					'accessory' => '$matches[1]',
+				),
+			),
+
 
 		);
 

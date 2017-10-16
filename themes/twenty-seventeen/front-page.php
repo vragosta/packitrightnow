@@ -48,7 +48,7 @@ get_header(); ?>
 					<?php $post_type = get_post_type_object( $post->post_type ); ?>
 
 					<div class="featured-product-item col-xs-12 col-sm-4">
-						<a href="<?php echo strtolower( $post_type->label ); ?>">
+						<a href="<?php echo home_url( strtolower( $post_type->label ) ); ?>">
 							<figure class="image">
 								<div class="source" style="background-image: url( <?php echo esc_url( $image_source ); ?> );"></div>
 							</figure>

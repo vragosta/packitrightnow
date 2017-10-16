@@ -227,3 +227,14 @@ function get_child_terms( $taxonomy_name, $parent_term_id ) {
 		'parent' => $parent_term_id
 	) );
 }
+
+/**
+ * Get the term featured image.
+ *
+ * @since 0.1.0
+ * @uses get_terms
+ * @return object
+ */
+function get_term_image( $id ) {
+	return get_term_meta( $id, '_featured_image_url', true );
+}

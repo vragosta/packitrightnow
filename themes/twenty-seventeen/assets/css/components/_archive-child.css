@@ -1,0 +1,131 @@
+/**
+ * PackItRightNow - Twenty Seventeen
+ * Archive Child CSS
+ */
+
+.archive.child .preface .container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media only screen and ( max-width: 767px ) {
+	.archive.child .preface .container {
+		flex-direction: column;
+	}
+}
+
+.archive.child .preface ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 50%;
+	float: right;
+}
+
+@media only screen and ( max-width: 767px ) {
+	.archive.child .preface ul {
+		width: 100%;
+		float: none;
+	}
+}
+
+.archive.child .preface ul li {
+	font-size: 20px;
+	line-height: 1;
+}
+
+/*@media only screen and ( min-width: 768px ) {
+	.archive.child.gloves .preface ul li {
+		font-size: 18px;
+	}
+}*/
+
+/*.archive .taxonomy-header {
+	background-color: #157702;
+	border-top: 2px solid #333;
+	border-bottom: 2px solid #333;
+	margin: 0;
+}*/
+
+/*.archive .taxonomy-header .container {
+	padding: 20px 0;
+}*/
+
+/*--- Offset the fixed header when bookmark linking ---*/
+/*.archive .content .anchor {
+	padding-top: 83px;
+	margin-top: -83px;
+}*/
+
+/*.archive .content h2 {
+	font-size: 24px;
+	font-weight: 500;
+	margin: 0;
+	color: #f2fff7;
+}*/
+
+/*.archive .content-header {
+	padding: 60px 0;
+	margin: 0;
+	width: 100%;
+	background-color: #f2fff7;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}*/
+
+/*.archive .taxonomy-header + .content-header {
+	border-top: none;
+}*/
+
+/*@media only screen and ( max-width: 767px ) {
+	.archive .content-header {
+		padding: 60px 0;
+	}
+}*/
+
+/*.archive .content-header .container {
+	display: flex;
+}*/
+
+/*@media only screen and ( max-width: 767px ) {
+	.archive .content-header .container {
+		flex-direction: column;
+		padding: 0;
+	}
+}*/
+
+/*.archive .content-header > div {
+	display: flex;
+	align-items: center;
+}*/
+
+/*.archive .content-header h3 {
+	font-size: 32px;
+	margin: 0;
+}*/
+
+/*.archive .content-header p {
+	font-size: 16px;
+}*/
+
+/*@media only screen and ( max-width: 767px ) {
+	.archive .content-header p {
+		margin-top: 20px;
+	}
+}*/
+
+/*.archive .content-post-ids {
+	margin: 60px auto;
+}*/
+
+/*.archive .content-item {
+	padding-bottom: 60px;
+}*/
+
+/*.archive .content h4 {
+	margin-bottom: 0;
+	margin-top: 30px;
+	font-size: 20px;
+	text-align: center;
+}*/
