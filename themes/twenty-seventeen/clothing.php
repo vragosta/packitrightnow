@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for displaying the accessory child archive.
+ * Template for displaying the clothing child archive.
  *
  * @package PackItRightNow - Twenty Seventeen
  * @since 0.1.0
@@ -8,13 +8,13 @@
 
 namespace PackItRightNow;
 
-$accessory_slug = get_query_var( 'accessory' );
-$parent_term = get_term_by( 'slug', $accessory_slug, ACCESSORY_TYPE_TAXONOMY );
-$child_terms = get_child_terms( ACCESSORY_TYPE_TAXONOMY, $parent_term->term_id );
+$clothing_slug = get_query_var( 'clothing' );
+$parent_term = get_term_by( 'slug', $clothing_slug, CLOTHING_TYPE_TAXONOMY );
+$child_terms = get_child_terms( CLOTHING_TYPE_TAXONOMY, $parent_term->term_id );
 
 get_header(); ?>
 
-<div class="archive child <?php echo ACCESSORY_POST_TYPE; ?>">
+<div class="archive child <?php echo CLOTHING_POST_TYPE; ?>">
 	<div class="preface row">
 		<div class="container">
 			<div class="col-xs-12 col-sm-6">
@@ -51,7 +51,7 @@ get_header(); ?>
 					</div>
 				</div>
 
-				<?php $post_ids = get_post_ids( ACCESSORY_POST_TYPE, ACCESSORY_TYPE_TAXONOMY, $child_term->slug ); ?>
+				<?php $post_ids = get_post_ids( CLOTHING_POST_TYPE, CLOTHING_TYPE_TAXONOMY, $child_term->slug ); ?>
 				<?php if ( ! empty( $post_ids ) ) { ?>
 
 					<div class="content-post-ids <?php echo esc_attr( $child_term->slug ); ?> container">

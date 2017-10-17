@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for displaying the cutlery archive.
+ * Template for displaying the cutlery parent archive.
  *
  * @package PackItRightNow - Twenty Seventeen
  * @since 0.1.0

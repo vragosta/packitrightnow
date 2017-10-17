@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for displaying the packaging archive.
+ * Template for displaying the packaging parent archive.
  *
  * @package PackItRightNow - Twenty Seventeen
  * @since 0.1.0

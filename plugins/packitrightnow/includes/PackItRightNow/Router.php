@@ -75,7 +75,7 @@ class Router {
 	public $routes;
 
 	public function get_version() {
-		return '0.0.4';
+		return '0.0.5';
 	}
 
 	public function register() {
@@ -130,6 +130,22 @@ class Router {
 
 			case 'accessory':
 				$template_file = 'accessory.php';
+				break;
+
+			case 'clothing':
+				$template_file = 'clothing.php';
+				break;
+
+			case 'cutlery':
+				$template_file = 'cutlery.php';
+				break;
+
+			case 'glove':
+				$template_file = 'glove.php';
+				break;
+
+			case 'package':
+				$template_file = 'package.php';
 				break;
 
 			default:
@@ -191,6 +207,10 @@ class Router {
 			 * Gloves : /gloves/
 			 * Packaging : /packaging/
 			 * Accessory: /accessories/([^/]+)
+			 * Clothing: /clothing/([^/]+)
+			 * Cutlery: /cutlery/([^/]+)
+			 * Glove: /gloves/([^/]+)
+			 * Package: /packaging/([^/]+)
 			 */
 			array(
 				'products/accessories',
@@ -240,6 +260,37 @@ class Router {
 				),
 			),
 
+			array(
+				'clothing',
+				'^clothing/([^/]+)/?$',
+				array(
+					'clothing' => '$matches[1]',
+				),
+			),
+
+			array(
+				'cutlery',
+				'^cutlery/([^/]+)/?$',
+				array(
+					'cutlery' => '$matches[1]',
+				),
+			),
+
+			array(
+				'glove',
+				'^gloves/([^/]+)/?$',
+				array(
+					'glove' => '$matches[1]',
+				),
+			),
+
+			array(
+				'package',
+				'^packaging/([^/]+)/?$',
+				array(
+					'package' => '$matches[1]',
+				),
+			),
 
 		);
 
