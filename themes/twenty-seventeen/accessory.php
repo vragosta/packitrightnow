@@ -43,3 +43,50 @@ get_header(); ?>
 
 		</div>
 	</div>
+
+	<?php if ( $child_terms ) { ?>
+		<div class="content row">
+
+			<?php foreach( $child_terms as $child_term ) { ?>
+
+				<div class="taxonomy-header <?php echo esc_attr( $child_term->slug ); ?> row">
+					<div class="container">
+						<div class="col-xs-12">
+							<h2 id="<?php echo esc_attr( $child_term->slug ); ?>" class="anchor"><?php echo esc_html( $child_term->name ); ?></h2>
+						</div>
+					</div>
+				</div>
+
+				<?php $post_ids = get_post_ids( ACCESSORY_POST_TYPE, ACCESSORY_TYPE_TAXONOMY, $child_term->slug ); ?>
+
+				<?php
+					// echo '<pre>';
+					// var_dump( $post_ids );
+					// echo '</pre>';
+					// exit();
+				?>
+
+				<?php if ( ! empty( $post_ids ) ) { ?>
+					<div class="content-post-ids <?php echo esc_attr( $child_term->slug ); ?> container">
+						<?php foreach( $post_ids as $post_id ) { ?>
+							<?php $featured_image = get_featured_image( $post_id ); ?>
+							<?php $title = get_the_title( $post_id ); ?>
+
+							<div class="content-item col-xs-12 col-sm-4">
+							  <figure class="image">
+								<div class="source" style="background-image: url( <?php echo esc_url( $featured_image ); ?> );"></div>
+							  </figure>
+							  <h4><?php echo esc_html( $title ); ?></h4>
+							</div>
+
+						<?php } /*--- end foreach $post_ids ---*/ ?>
+					</div>
+				<?php } ?>
+
+			<?php } ?>
+
+		</div>
+	<?php } ?>
+</div>
+
+<?php get_footer(); ?>
