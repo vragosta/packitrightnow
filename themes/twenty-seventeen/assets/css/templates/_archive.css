@@ -12,8 +12,16 @@
 	background-color: #f2fff7;
 }
 
+.archive .preface.no-children {
+	border-bottom: 2px solid #333;
+}
+
 .archive .preface .container {
 	padding: 100px 0;
+}
+
+.archive .preface.no-children .container {
+	justify-content: flex-start;
 }
 
 @media only screen and ( max-width: 767px ) {

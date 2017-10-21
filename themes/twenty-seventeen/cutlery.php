@@ -15,13 +15,15 @@ $child_terms = get_child_terms( CUTLERY_TYPE_TAXONOMY, $parent_term->term_id );
 get_header(); ?>
 
 <div class="archive child <?php echo CUTLERY_POST_TYPE; ?>">
-	<div class="preface row">
+	<div class="preface row <?php echo empty( $child_terms ) ? 'no-children' : ''; ?>">
 		<div class="container">
 			<div class="col-xs-12 col-sm-6">
 				<h2><?php echo esc_html( $parent_term->name ); ?></h2>
+
 				<?php if ( ! is_null( $parent_term->description ) ) { ?>
 					<p><?php echo esc_html( $parent_term->description ); ?></p>
 				<?php } /*--- end if $parent_term->description ---*/ ?>
+
 			</div>
 
 			<?php if ( ! empty( $child_terms ) ) { ?>
@@ -39,9 +41,9 @@ get_header(); ?>
 		</div>
 	</div>
 
-	<?php if ( $child_terms ) { ?>
-		<div class="content row">
 
+	<div class="content row">
+		<?php if ( $child_terms ) { ?>
 			<?php foreach( $child_terms as $child_term ) { ?>
 				<div class="taxonomy-header <?php echo esc_attr( $child_term->slug ); ?> row">
 					<div class="container">
@@ -71,9 +73,28 @@ get_header(); ?>
 
 				<?php } /*--- end if $post_ids ---*/ ?>
 			<?php } /*--- end foreach $child_terms ---*/ ?>
+		<?php } else { ?>
+			<?php $post_ids = get_post_ids( CUTLERY_POST_TYPE, CUTLERY_TYPE_TAXONOMY, $parent_term->slug ); ?>
+			<?php if ( ! empty( $post_ids ) ) { ?>
 
-		</div>
-	<?php } /*--- end if $child_terms ---*/ ?>
+				<div class="content-post-ids <?php echo esc_attr( $parent_term->slug ); ?> container">
+					<?php foreach( $post_ids as $post_id ) { ?>
+						<?php $featured_image = get_featured_image( $post_id ); ?>
+						<?php $title = get_the_title( $post_id ); ?>
+
+						<div class="content-item col-xs-12 col-sm-4">
+						  <figure class="image">
+							<div class="source" style="background-image: url( <?php echo esc_url( $featured_image ); ?> );"></div>
+						  </figure>
+						  <h4><?php echo esc_html( $title ); ?></h4>
+						</div>
+
+					<?php } /*--- end foreach $post_ids ---*/ ?>
+				</div>
+
+			<?php } /*--- end if $post_ids ---*/ ?>
+		<?php } /*--- end if $child_terms ---*/ ?>
+	</div>
 </div>
 
 <?php get_footer(); ?>

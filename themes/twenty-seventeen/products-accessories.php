@@ -22,9 +22,11 @@ get_header(); ?>
 		<div class="container">
 			<div class="col-xs-12 col-sm-6">
 				<h2>Accessories</h2>
+
 				<?php if ( ! is_null( $description ) ) { ?>
 					<p><?php echo esc_html( $description ); ?></p>
 				<?php } /*--- end if $description ---*/ ?>
+
 			</div>
 		</div>
 	</div>
@@ -44,6 +46,7 @@ get_header(); ?>
 						</a>
 					</div>
 				<?php } /*--- end if $image_source ---*/ ?>
+
 			<?php } /*--- end foreach $parent_terms ---*/ ?>
 		</div>
 	<?php } /*--- end if $parent_terms ---*/ ?>
