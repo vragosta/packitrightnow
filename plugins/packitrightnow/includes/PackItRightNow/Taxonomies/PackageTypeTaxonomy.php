@@ -14,7 +14,7 @@ class PackageTypeTaxonomy extends BaseTaxonomy {
 		return array(
 			'name'                       => __( 'Package Types', 'packitrightnow_com' ),
 			'singular_name'              => __( 'Package Type', 'packitrightnow_com' ),
-			'menu_name'                  => __( 'Package Type', 'packitrightnow_com' ),
+			'menu_name'                  => __( 'Package Types', 'packitrightnow_com' ),
 			'all_items'                  => __( 'All Package Types', 'packitrightnow_com' ),
 			'parent_item'                => __( 'Parent Package Type', 'packitrightnow_com' ),
 			'parent_item_colon'          => __( 'Parent Package Type:', 'packitrightnow_com' ),

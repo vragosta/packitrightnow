@@ -14,7 +14,7 @@ class GloveTypeTaxonomy extends BaseTaxonomy {
 		return array(
 			'name'                       => __( 'Glove Types', 'packitrightnow_com' ),
 			'singular_name'              => __( 'Glove Type', 'packitrightnow_com' ),
-			'menu_name'                  => __( 'Glove Type', 'packitrightnow_com' ),
+			'menu_name'                  => __( 'Glove Types', 'packitrightnow_com' ),
 			'all_items'                  => __( 'All Glove Types', 'packitrightnow_com' ),
 			'parent_item'                => __( 'Parent Glove Type', 'packitrightnow_com' ),
 			'parent_item_colon'          => __( 'Parent Glove Type:', 'packitrightnow_com' ),

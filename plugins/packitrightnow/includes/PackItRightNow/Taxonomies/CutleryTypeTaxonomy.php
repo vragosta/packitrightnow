@@ -14,7 +14,7 @@ class CutleryTypeTaxonomy extends BaseTaxonomy {
 		return array(
 			'name'                       => __( 'Cutlery Types', 'packitrightnow_com' ),
 			'singular_name'              => __( 'Cutlery Type', 'packitrightnow_com' ),
-			'menu_name'                  => __( 'Cutlery Type', 'packitrightnow_com' ),
+			'menu_name'                  => __( 'Cutlery Types', 'packitrightnow_com' ),
 			'all_items'                  => __( 'All Cutlery Types', 'packitrightnow_com' ),
 			'parent_item'                => __( 'Parent Cutlery Type', 'packitrightnow_com' ),
 			'parent_item_colon'          => __( 'Parent Cutlery Type:', 'packitrightnow_com' ),

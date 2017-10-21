@@ -14,7 +14,7 @@ class ClothingTypeTaxonomy extends BaseTaxonomy {
 		return array(
 			'name'                       => __( 'Clothing Types', 'packitrightnow_com' ),
 			'singular_name'              => __( 'Clothing Type', 'packitrightnow_com' ),
-			'menu_name'                  => __( 'Clothing Type', 'packitrightnow_com' ),
+			'menu_name'                  => __( 'Clothing Types', 'packitrightnow_com' ),
 			'all_items'                  => __( 'All Clothing Types', 'packitrightnow_com' ),
 			'parent_item'                => __( 'Parent Clothing Type', 'packitrightnow_com' ),
 			'parent_item_colon'          => __( 'Parent Clothing Type:', 'packitrightnow_com' ),
