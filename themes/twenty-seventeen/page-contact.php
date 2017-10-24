@@ -10,7 +10,6 @@ namespace PackItRightNow;
 
 $excerpt = get_the_excerpt();
 $image_source = get_featured_image( $post->ID );
-$google_maps_image_source = get_google_maps_image( $post );
 
 get_header(); ?>
 
