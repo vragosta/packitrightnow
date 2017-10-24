@@ -10,6 +10,12 @@ namespace PackItRightNow;
 
 get_header();
 
-echo $post->post_content;
+?>
 
-get_footer(); ?>
+<div class="content row">
+	<div class="container">
+		<?php echo $post->post_content; ?>
+	</div>
+</div>
+
+<?php get_footer(); ?>
