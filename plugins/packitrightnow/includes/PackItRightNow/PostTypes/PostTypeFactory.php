@@ -41,9 +41,6 @@ class PostTypeFactory {
 				case CUTLERY_POST_TYPE:
 					$instance = new CutleryPostType();
 					break;
-				case GLOVE_POST_TYPE:
-					$instance = new GlovePostType();
-					break;
 				case PACKAGE_POST_TYPE:
 					$instance = new PackagePostType();
 					break;
@@ -90,7 +87,6 @@ class PostTypeFactory {
 			ACCESSORY_POST_TYPE,
 			CLOTHING_POST_TYPE,
 			CUTLERY_POST_TYPE,
-			GLOVE_POST_TYPE,
 			PACKAGE_POST_TYPE
 		);
 

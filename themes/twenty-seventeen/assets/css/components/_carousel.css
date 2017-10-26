@@ -17,6 +17,7 @@
 	top: 45%;
 	font-size: 40px;
 	color: #333;
+	cursor: pointer;
 }
 
 @media only screen and ( max-width: 767px ) {
