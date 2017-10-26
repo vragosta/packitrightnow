@@ -12,17 +12,16 @@ namespace PackItRightNow;
 
 <header class="header">
 	<div class="container">
-		<a href="<?php echo home_url(); ?>" class="logo"><h1>Pack It Right Now LLC.</h1></a>
+		<a href="<?php echo home_url(); ?>" class="logo"><h1>Pack It Right LLC.</h1></a>
 		<nav class="menu">
 			<div class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					Products
 				</a>
 				<div class="dropdown-menu">
-					<a class="dropdown-item" href="<?php echo home_url( '/accessories/' ); ?>">Accessories</a>
+					<a class="dropdown-item" href="<?php echo home_url( '/accessories/' ); ?>">PPE Accessories</a>
 					<a class="dropdown-item" href="<?php echo home_url( '/clothing/' ); ?>">Clothing</a>
 					<a class="dropdown-item" href="<?php echo home_url( '/cutlery/' ); ?>">Cutlery</a>
-					<a class="dropdown-item" href="<?php echo home_url( '/gloves/' ); ?>">Gloves</a>
 					<a class="dropdown-item" href="<?php echo home_url( '/packaging/' ); ?>">Packaging</a>
 				</div>
 			</div>
