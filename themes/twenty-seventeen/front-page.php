@@ -37,12 +37,12 @@ get_header(); ?>
 							</figure>
 						</div>
 
-					<?php } ?>
+					<?php } /*--- end while $carousel_posts ---*/ ?>
 					<?php wp_reset_postdata(); ?>
 				</div>
 			</div>
 		</div>
-	<?php } ?>
+	<?php } /*--- end if $carousel_posts ---*/ ?>
 
 	<?php if ( $featured_products->have_posts() ) { ?>
 		<div class="featured-products">
@@ -62,19 +62,19 @@ get_header(); ?>
 							</a>
 						</div>
 
-					<?php } ?>
+					<?php } /*--- end while $featured_products ---*/ ?>
 					<?php wp_reset_postdata(); ?>
 				</div>
 			</div>
 		</div>
-	<?php } ?>
+	<?php } /*--- end if $featured_products ---*/ ?>
 
 	<?php if ( $about_excerpt ) { ?>
 		<div class="about">
 			<h2>About Us</h2>
 			<p><?php echo $about_excerpt; ?></p>
 		</div>
-	<?php } ?>
+	<?php } /*--- end if $about_excerpt ---*/ ?>
 
 </section>
 

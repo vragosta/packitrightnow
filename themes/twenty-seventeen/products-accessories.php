@@ -43,11 +43,11 @@ get_header(); ?>
 									</a>
 								</li>
 
-							<?php } /*--- end if $parent_terms ---*/?>
+							<?php } /*--- end foreach $parent_terms ---*/ ?>
 						</ul>
 					</div>
 				</div>
-			<?php } ?>
+			<?php } /*--- end if $parent_terms ---*/ ?>
 
 		</div>
 	</div>

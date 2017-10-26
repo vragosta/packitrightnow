@@ -75,7 +75,7 @@ class Router {
 	public $routes;
 
 	public function get_version() {
-		return '0.0.5';
+		return '0.0.6';
 	}
 
 	public function register() {
@@ -120,32 +120,8 @@ class Router {
 				$template_file = 'products-cutlery.php';
 				break;
 
-			case 'products/gloves':
-				$template_file = 'products-gloves.php';
-				break;
-
 			case 'products/packaging':
 				$template_file = 'products-packaging.php';
-				break;
-
-			case 'accessory':
-				$template_file = 'accessory.php';
-				break;
-
-			case 'clothing':
-				$template_file = 'clothing.php';
-				break;
-
-			case 'cutlery':
-				$template_file = 'cutlery.php';
-				break;
-
-			case 'glove':
-				$template_file = 'glove.php';
-				break;
-
-			case 'package':
-				$template_file = 'package.php';
 				break;
 
 			default:
@@ -204,13 +180,7 @@ class Router {
 			 * Accessories : /accessories/
 			 * Clothing : /clothing/
 			 * Cutlery : /cutlery/
-			 * Gloves : /gloves/
 			 * Packaging : /packaging/
-			 * Accessory: /accessories/([^/]+)
-			 * Clothing: /clothing/([^/]+)
-			 * Cutlery: /cutlery/([^/]+)
-			 * Glove: /gloves/([^/]+)
-			 * Package: /packaging/([^/]+)
 			 */
 			array(
 				'products/accessories',
@@ -237,58 +207,10 @@ class Router {
 			),
 
 			array(
-				'products/gloves',
-				'^gloves/?$',
-				array(
-					'gloves' => true,
-				),
-			),
-
-			array(
 				'products/packaging',
 				'^packaging/?$',
 				array(
 					'packaging' => true,
-				),
-			),
-
-			array(
-				'accessory',
-				'^accessories/([^/]+)/?$',
-				array(
-					'accessory' => '$matches[1]',
-				),
-			),
-
-			array(
-				'clothing',
-				'^clothing/([^/]+)/?$',
-				array(
-					'clothing' => '$matches[1]',
-				),
-			),
-
-			array(
-				'cutlery',
-				'^cutlery/([^/]+)/?$',
-				array(
-					'cutlery' => '$matches[1]',
-				),
-			),
-
-			array(
-				'glove',
-				'^gloves/([^/]+)/?$',
-				array(
-					'glove' => '$matches[1]',
-				),
-			),
-
-			array(
-				'package',
-				'^packaging/([^/]+)/?$',
-				array(
-					'package' => '$matches[1]',
 				),
 			),
 
