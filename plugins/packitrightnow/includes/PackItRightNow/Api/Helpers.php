@@ -131,10 +131,6 @@ function get_carousel_posts() {
 
 	$query = new \WP_Query( $query_args );
 
-	if ( $query->post_count == 0 ) {
-		$query = get_recent_posts();
-	}
-
 	return $query;
 }
 

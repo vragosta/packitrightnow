@@ -97,8 +97,8 @@
 				slidesToShow: 1,
 				autoplay: true,
 				autoplaySpeed: 3000,
-				prevArrow: false,
-				nextArrow: false
+				prevArrow: $( 'i.ion-chevron-left' ),
+				nextArrow: $( 'i.ion-chevron-right' )
 			} );
 		},
 

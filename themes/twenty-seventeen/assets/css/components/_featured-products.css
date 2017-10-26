@@ -8,10 +8,16 @@
 }
 
 .featured-products h2 {
-	text-transform: uppercase;
 	text-align: center;
-	font-weight: 700;
+	font-weight: 300;
 	margin-bottom: 30px;
+	background-color: #157702;
+	margin: 0 0 100px 0;
+	color: #fff;
+	padding: 15px 0;
+	border-top: 2px solid #333;
+	border-bottom: 2px solid #333;
+
 }
 
 .featured-products .featured-product-item {
@@ -27,4 +33,16 @@
 	margin-top: 30px;
 	font-size: 20px;
 	text-align: center;
+}
+
+@media only screen and ( max-width: 991px ) and ( min-width: 768px ) {
+	.featured-products h4 {
+		font-size: 16px;
+	}
+}
+
+@media only screen and ( max-width: 479px ) {
+	.featured-products h4 {
+		font-size: 14px;
+	}
 }
