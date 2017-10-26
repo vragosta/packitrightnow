@@ -184,6 +184,10 @@ function get_featured_products() {
 
 	$query = new \WP_Query( $query_params );
 
+	if ( $query->post_count == 0 ) {
+		$query = get_recent_posts();
+	}
+
 	return $query;
 }
 

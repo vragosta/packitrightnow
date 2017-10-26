@@ -19,7 +19,7 @@ $about_excerpt = get_about_excerpt();
 
 get_header(); ?>
 
-<section class="front-page container">
+<section class="front-page">
 
 	<?php if ( $carousel_posts->have_posts() ) { ?>
 		<div class="carousel">
@@ -40,24 +40,25 @@ get_header(); ?>
 
 	<?php if ( $featured_products->have_posts() ) { ?>
 		<div class="featured-products">
-			<h2>Featured Products</h2>
-			<div class="row">
-				<?php while ( $featured_products->have_posts() ) { ?>
-					<?php $featured_products->the_post(); ?>
-					<?php $image_source = get_featured_image( $post->ID ); ?>
-					<?php $post_type = get_post_type_object( $post->post_type ); ?>
+			<div class="container">
+				<h2>Featured Products</h2>
+				<div class="row">
+					<?php while ( $featured_products->have_posts() ) { ?>
+						<?php $featured_products->the_post(); ?>
+						<?php $image_source = get_featured_image( $post->ID ); ?>
 
-					<div class="featured-product-item col-xs-12 col-sm-3">
-						<a href="<?php echo home_url( strtolower( $post_type->label ) ); ?>">
-							<figure class="image">
-								<div class="source" style="background-image: url( <?php echo esc_url( $image_source ); ?> );"></div>
-							</figure>
-							<h4><?php echo esc_html( $post_type->label ); ?></h4>
-						</a>
-					</div>
+						<div class="featured-product-item col-xs-12 col-sm-3">
+							<a href="<?php echo home_url( strtolower( $post_type->label ) ); ?>">
+								<figure class="image">
+									<div class="source" style="background-image: url( <?php echo esc_url( $image_source ); ?> );"></div>
+								</figure>
+								<h4><?php echo esc_html( $post->post_title ); ?></h4>
+							</a>
+						</div>
 
-				<?php } ?>
-				<?php wp_reset_postdata(); ?>
+					<?php } ?>
+					<?php wp_reset_postdata(); ?>
+				</div>
 			</div>
 		</div>
 	<?php } ?>
