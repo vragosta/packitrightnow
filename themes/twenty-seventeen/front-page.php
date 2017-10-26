@@ -51,6 +51,7 @@ get_header(); ?>
 				<div class="row">
 					<?php while ( $featured_products->have_posts() ) { ?>
 						<?php $featured_products->the_post(); ?>
+						<?php $post_type = get_post_type_object( $post->post_type ); ?>
 						<?php $image_source = get_featured_image( $post->ID ); ?>
 
 						<div class="featured-product-item col-xs-6 col-sm-3">
