@@ -17,8 +17,8 @@ class TaxonomyFactory {
 				case CLOTHING_TYPE_TAXONOMY:
 					$instance = new ClothingTypeTaxonomy();
 					break;
-				case CUTLERY_TYPE_TAXONOMY:
-					$instance = new CutleryTypeTaxonomy();
+				case KITCHEN_TYPE_TAXONOMY:
+					$instance = new KitchenTypeTaxonomy();
 					break;
 				case GLOVE_TYPE_TAXONOMY:
 					$instance = new GloveTypeTaxonomy();
@@ -55,7 +55,7 @@ class TaxonomyFactory {
 		$taxonomies = array(
 			ACCESSORY_TYPE_TAXONOMY,
 			CLOTHING_TYPE_TAXONOMY,
-			CUTLERY_TYPE_TAXONOMY,
+			KITCHEN_TYPE_TAXONOMY,
 			GLOVE_TYPE_TAXONOMY,
 			PACKAGE_TYPE_TAXONOMY,
 		);

@@ -21,7 +21,7 @@ get_header(); ?>
 	<div class="preface row">
 		<div class="container">
 			<div class="heading col-xs-12 col-sm-6">
-				<h2>PPE Accessories</h2>
+				<h2>Packaging</h2>
 
 				<?php if ( ! is_null( $description ) ) { ?>
 					<p><?php echo esc_html( $description ); ?></p>

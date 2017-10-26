@@ -3,27 +3,27 @@
 namespace PackItRightNow\PostTypes;
 
 /**
- * CutleryPostType is a custom post type object for storing projects
+ * KitchenPostType is a custom post type object for storing projects
  * in WordPress.
  */
-class CutleryPostType extends BasePostType {
+class KitchenPostType extends BasePostType {
 	public function get_name() {
-		return CUTLERY_POST_TYPE;
+		return KITCHEN_POST_TYPE;
 	}
 
 	public function get_labels() {
 		return array(
-			'name'               => __( 'Cutlery', 'packitrightnow_com' ),
-			'singular_name'      => __( 'Cutlery', 'packitrightnow_com' ),
-			'menu_name'          => __( 'Cutlery', 'packitrightnow_com' ),
-			'parent_item_colon'  => __( 'Parent Cutlery:', 'packitrightnow_com' ),
-			'all_items'          => __( 'All Cutlery', 'packitrightnow_com' ),
-			'view_item'          => __( 'View Cutlery', 'packitrightnow_com' ),
-			'add_new_item'       => __( 'Add New Cutlery', 'packitrightnow_com' ),
+			'name'               => __( 'Kitchen', 'packitrightnow_com' ),
+			'singular_name'      => __( 'Kitchen', 'packitrightnow_com' ),
+			'menu_name'          => __( 'Kitchen', 'packitrightnow_com' ),
+			'parent_item_colon'  => __( 'Parent Kitchen:', 'packitrightnow_com' ),
+			'all_items'          => __( 'All Kitchen', 'packitrightnow_com' ),
+			'view_item'          => __( 'View Kitchen', 'packitrightnow_com' ),
+			'add_new_item'       => __( 'Add New Kitchen', 'packitrightnow_com' ),
 			'add_new'            => __( 'Add New', 'packitrightnow_com' ),
-			'edit_item'          => __( 'Edit Cutlery', 'packitrightnow_com' ),
-			'update_item'        => __( 'Update Cutlery', 'packitrightnow_com' ),
-			'search_items'       => __( 'Search Cutlery', 'packitrightnow_com' ),
+			'edit_item'          => __( 'Edit Kitchen', 'packitrightnow_com' ),
+			'update_item'        => __( 'Update Kitchen', 'packitrightnow_com' ),
+			'search_items'       => __( 'Search Kitchen', 'packitrightnow_com' ),
 			'not_found'          => __( 'Not found', 'packitrightnow_com' ),
 			'not_found_in_trash' => __( 'Not found in Trash', 'packitrightnow_com' )
 		);

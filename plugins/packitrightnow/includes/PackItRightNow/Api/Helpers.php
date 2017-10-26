@@ -90,7 +90,7 @@ function get_recent_posts() {
 		'post_type' => array(
 			ACCESSORY_POST_TYPE,
 			CLOTHING_POST_TYPE,
-			CUTLERY_POST_TYPE,
+			KITCHEN_POST_TYPE,
 			GLOVE_POST_TYPE,
 			PACKAGE_POST_TYPE
 		),
@@ -112,7 +112,7 @@ function get_carousel_posts() {
 		'post_type' => array(
 			ACCESSORY_POST_TYPE,
 			CLOTHING_POST_TYPE,
-			CUTLERY_POST_TYPE,
+			KITCHEN_POST_TYPE,
 			GLOVE_POST_TYPE,
 			PACKAGE_POST_TYPE
 		),
@@ -162,7 +162,7 @@ function get_featured_products() {
 		'post_type' => array(
 			ACCESSORY_POST_TYPE,
 			CLOTHING_POST_TYPE,
-			CUTLERY_POST_TYPE,
+			KITCHEN_POST_TYPE,
 			GLOVE_POST_TYPE,
 			PACKAGE_POST_TYPE
 		),

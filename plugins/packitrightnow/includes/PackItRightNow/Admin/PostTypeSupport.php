@@ -14,7 +14,7 @@ class PostTypeSupport {
 		$post_types = array(
 			ACCESSORY_POST_TYPE,
 			CLOTHING_POST_TYPE,
-			CUTLERY_POST_TYPE,
+			KITCHEN_POST_TYPE,
 			GLOVE_POST_TYPE,
 			PACKAGE_POST_TYPE
 		);

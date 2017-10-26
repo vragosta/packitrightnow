@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for displaying the cutlery parent archive.
+ * Template for displaying the kitchen parent archive.
  *
  * @package PackItRightNow - Twenty Seventeen
  * @since 0.1.0
@@ -9,19 +9,19 @@
 namespace PackItRightNow;
 
 # Get post type description.
-$description = get_post_type_description( CUTLERY_POST_TYPE );
+$description = get_post_type_description( KITCHEN_POST_TYPE );
 
 # Get the taxonomy.
-$taxonomy = get_taxonomy( CUTLERY_TYPE_TAXONOMY );
-$parent_terms = get_parent_terms( CUTLERY_TYPE_TAXONOMY );
+$taxonomy = get_taxonomy( KITCHEN_TYPE_TAXONOMY );
+$parent_terms = get_parent_terms( KITCHEN_TYPE_TAXONOMY );
 
 get_header(); ?>
 
-<div class="archive <?php echo CUTLERY_POST_TYPE; ?>">
+<div class="archive <?php echo KITCHEN_POST_TYPE; ?>">
 	<div class="preface row">
 		<div class="container">
 			<div class="heading col-xs-12 col-sm-6">
-				<h2>Cutlery</h2>
+				<h2>Kitchen</h2>
 
 				<?php if ( ! is_null( $description ) ) { ?>
 					<p><?php echo esc_html( $description ); ?></p>
@@ -56,7 +56,7 @@ get_header(); ?>
 		<div class="tab-content">
 			<?php $count = 0; ?>
 			<?php foreach( $parent_terms as $parent_term ) { ?>
-				<?php $child_terms = get_child_terms( CUTLERY_TYPE_TAXONOMY, $parent_term->term_id ); ?>
+				<?php $child_terms = get_child_terms( KITCHEN_TYPE_TAXONOMY, $parent_term->term_id ); ?>
 
 				<div id="<?php echo esc_attr( $parent_term->slug ); ?>" class="tab-pane fade in <?php echo $count++ == 0 ? 'active' : ''; ?> <?php echo empty( $child_terms ) ? 'no-children' : ''; ?>">
 					<div class="preface row">
@@ -77,7 +77,7 @@ get_header(); ?>
 
 					<?php if ( ! empty( $child_terms ) ) { ?>
 						<?php foreach( $child_terms as $child_term ) { ?>
-							<?php $post_ids = get_post_ids( CUTLERY_POST_TYPE, CUTLERY_TYPE_TAXONOMY, $child_term->slug ); ?>
+							<?php $post_ids = get_post_ids( KITCHEN_POST_TYPE, KITCHEN_TYPE_TAXONOMY, $child_term->slug ); ?>
 
 							<?php if ( ! empty( $post_ids ) ) { ?>
 
@@ -106,7 +106,7 @@ get_header(); ?>
 							<?php } /*--- end if $post_ids ---*/ ?>
 						<?php } /*--- end foreach $child_terms ---*/ ?>
 					<?php } else { ?>
-						<?php $post_ids = get_post_ids( CUTLERY_POST_TYPE, CUTLERY_TYPE_TAXONOMY, $parent_term->slug ); ?>
+						<?php $post_ids = get_post_ids( KITCHEN_POST_TYPE, KITCHEN_TYPE_TAXONOMY, $parent_term->slug ); ?>
 						<?php if ( ! empty( $post_ids ) ) { ?>
 
 							<div class="content <?php echo esc_attr( $parent_term->slug ); ?> container">

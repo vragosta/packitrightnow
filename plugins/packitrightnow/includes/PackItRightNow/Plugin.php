@@ -6,19 +6,19 @@ use PackItRightNow\Taxonomies\TaxonomyFactory;
 use PackItRightNow\PostTypes\PostTypeFactory;
 use PackItRightNow\Finders\AccessoryFinder;
 use PackItRightNow\Finders\ClothingFinder;
-use PackItRightNow\Finders\CutleryFinder;
+use PackItRightNow\Finders\KitchenFinder;
 use PackItRightNow\Finders\GloveFinder;
 use PackItRightNow\Finders\PackageFinder;
 use PackItRightNow\Admin\PostTypeSupport;
 use PackItRightNow\Admin\AccessoryColumnSupport;
 use PackItRightNow\Admin\ClothingColumnSupport;
-use PackItRightNow\Admin\CutleryColumnSupport;
+use PackItRightNow\Admin\KitchenColumnSupport;
 use PackItRightNow\Admin\GloveColumnSupport;
 use PackItRightNow\Admin\PackageColumnSupport;
 use PackItRightNow\Admin\MetaBoxes\PostMetaFieldsMetaBox;
 use PackItRightNow\Admin\Metaboxes\AccessoryMetaBox;
 use PackItRightNow\Admin\Metaboxes\ClothingMetaBox;
-use PackItRightNow\Admin\Metaboxes\CutleryMetaBox;
+use PackItRightNow\Admin\Metaboxes\KitchenMetaBox;
 use PackItRightNow\Admin\Metaboxes\GloveMetaBox;
 use PackItRightNow\Admin\Metaboxes\PackageMetaBox;
 use PackItRightNow\Admin\Metaboxes\TaxonomyMetaBox;
@@ -84,8 +84,8 @@ class Plugin {
 		$clothing_meta_box = new ClothingMetaBox();
 		$clothing_meta_box->register();
 
-		$cutlery_meta_box = new CutleryMetaBox();
-		$cutlery_meta_box->register();
+		$kitchen_meta_box = new KitchenMetaBox();
+		$kitchen_meta_box->register();
 
 		$glove_meta_box = new GloveMetaBox();
 		$glove_meta_box->register();
@@ -105,8 +105,8 @@ class Plugin {
 		$clothing_column_support = new ClothingColumnSupport();
 		$clothing_column_support->register();
 
-		$cutlery_column_support = new CutleryColumnSupport();
-		$cutlery_column_support->register();
+		$kitchen_column_support = new KitchenColumnSupport();
+		$kitchen_column_support->register();
 
 		$glove_column_support = new GloveColumnSupport();
 		$glove_column_support->register();
@@ -123,8 +123,8 @@ class Plugin {
 		return new ClothingFinder( $post_id );
 	}
 
-	function get_cutlery_finder( $post_id ) {
-		return new CutleryFinder( $post_id );
+	function get_kitchen_finder( $post_id ) {
+		return new KitchenFinder( $post_id );
 	}
 
 	function get_glove_finder( $post_id ) {

@@ -2,9 +2,9 @@
 
 namespace PackItRightNow\Admin\MetaBoxes;
 
-use PackItRightNow\Finders\CutleryFinder;
+use PackItRightNow\Finders\KitchenFinder;
 
-class CutleryMetaBox {
+class KitchenMetaBox {
 
 	/**
 	 * Registers metabox with WordPress.
@@ -14,8 +14,8 @@ class CutleryMetaBox {
 	 * @return void
 	 */
 	function register() {
-		add_action( 'add_meta_boxes', array( $this, 'packitrightnow_cutlery_metaboxes' ) );
-		add_action( 'save_post', array( $this, 'packitrightnow_cutlery_save_data' ) );
+		add_action( 'add_meta_boxes', array( $this, 'packitrightnow_kitchen_metaboxes' ) );
+		add_action( 'save_post', array( $this, 'packitrightnow_kitchen_save_data' ) );
 	}
 
 	/**
@@ -25,12 +25,12 @@ class CutleryMetaBox {
 	 * @uses   add_meta_box()
 	 * @return void
 	 */
-	function packitrightnow_cutlery_metaboxes() {
+	function packitrightnow_kitchen_metaboxes() {
 		add_meta_box(
 			'configuration',
 			__( 'Configuration', 'packitrightnow_com' ),
-			array( $this, 'packitrightnow_cutlery_callback' ),
-			CUTLERY_POST_TYPE
+			array( $this, 'packitrightnow_kitchen_callback' ),
+			KITCHEN_POST_TYPE
 		);
 	}
 
@@ -41,12 +41,12 @@ class CutleryMetaBox {
 	 * @uses   wp_nonce_field(), get_post_meta(), __(), esc_textarea()
 	 * @return void
 	 */
-	function packitrightnow_cutlery_callback( $post ) {
+	function packitrightnow_kitchen_callback( $post ) {
 		# Add a nonce field so we can check for it later.
-		wp_nonce_field( 'packitrightnow_cutlery_save_data', 'packitrightnow_cutlery_nonce' );
+		wp_nonce_field( 'packitrightnow_kitchen_save_data', 'packitrightnow_kitchen_nonce' );
 
 		# Call AccessoryFinder class methods.
-		$finder = new CutleryFinder( $post->ID );
+		$finder = new KitchenFinder( $post->ID );
 		$is_carousel = $finder->is_carousel();
 		$carousel_position = $finder->get_carousel_position();
 		$is_featured = $finder->is_featured();
@@ -90,7 +90,7 @@ class CutleryMetaBox {
 			</tr>
 			<tr>
 				<td>
-					<label for="_featured"><?php echo esc_html( __( 'Feature Cutlery', 'packitrightnow_com' ) ); ?></label>
+					<label for="_featured"><?php echo esc_html( __( 'Feature Kitchen', 'packitrightnow_com' ) ); ?></label>
 				</td>
 				<td>
 					<input name="_featured" type="checkbox" <?php echo $is_featured == true ? 'checked': ''; ?> />
@@ -120,17 +120,17 @@ class CutleryMetaBox {
 	 * @uses   isset(), wp_verify_nonce(), defined(), current_user_can(), sanitize_text_field(), update_post_meta()
 	 * @return void
 	 */
-	function packitrightnow_cutlery_save_data( $post_id ) {
+	function packitrightnow_kitchen_save_data( $post_id ) {
 		/**
 		 * We need to verify this came from our screen and with proper authorization,
 		 * because the save_post action can be triggered at other times.
 		 */
-		if ( ! isset( $_POST['packitrightnow_cutlery_nonce'] ) ) {
+		if ( ! isset( $_POST['packitrightnow_kitchen_nonce'] ) ) {
 			return;
 		}
 
 		# Verify that the nonce is valid.
-		if ( ! wp_verify_nonce( $_POST['packitrightnow_cutlery_nonce'], 'packitrightnow_cutlery_save_data' ) ) {
+		if ( ! wp_verify_nonce( $_POST['packitrightnow_kitchen_nonce'], 'packitrightnow_kitchen_save_data' ) ) {
 			return;
 		}
 

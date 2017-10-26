@@ -8,7 +8,7 @@ namespace PackItRightNow;
  *
  * 1. Accessories Endpoint
  * 2. Clothing Endpoint
- * 3. Cutlery Endpoint
+ * 3. Kitchen Endpoint
  * 4. Gloves Endpoint
  * 5. Packaging Endpoint
  *
@@ -75,7 +75,7 @@ class Router {
 	public $routes;
 
 	public function get_version() {
-		return '0.0.6';
+		return '0.0.7';
 	}
 
 	public function register() {
@@ -116,8 +116,8 @@ class Router {
 				$template_file = 'products-clothing.php';
 				break;
 
-			case 'products/cutlery':
-				$template_file = 'products-cutlery.php';
+			case 'products/kitchen':
+				$template_file = 'products-kitchen.php';
 				break;
 
 			case 'products/packaging':
@@ -179,7 +179,7 @@ class Router {
 			 *
 			 * Accessories : /accessories/
 			 * Clothing : /clothing/
-			 * Cutlery : /cutlery/
+			 * Kitchen : /kitchen/
 			 * Packaging : /packaging/
 			 */
 			array(
@@ -199,10 +199,10 @@ class Router {
 			),
 
 			array(
-				'products/cutlery',
-				'^cutlery/?$',
+				'products/kitchen',
+				'^kitchen/?$',
 				array(
-					'cutlery' => true,
+					'kitchen' => true,
 				),
 			),
 

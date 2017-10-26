@@ -11,13 +11,13 @@ define( 'POST_POST_TYPE' , 'post' );
 define( 'PAGE_POST_TYPE' , 'page' );
 define( 'ACCESSORY_POST_TYPE', 'accessory' );
 define( 'CLOTHING_POST_TYPE', 'clothing' );
-define( 'CUTLERY_POST_TYPE', 'cutlery' );
+define( 'KITCHEN_POST_TYPE', 'kitchen' );
 define( 'GLOVE_POST_TYPE', 'glove' );
 define( 'PACKAGE_POST_TYPE', 'package' );
 
 # Taxonomies
 define( 'ACCESSORY_TYPE_TAXONOMY', 'accessory-type' );
 define( 'CLOTHING_TYPE_TAXONOMY', 'clothing-type' );
-define( 'CUTLERY_TYPE_TAXONOMY', 'cutlery-type' );
+define( 'KITCHEN_TYPE_TAXONOMY', 'kitchen-type' );
 define( 'GLOVE_TYPE_TAXONOMY', 'glove-type' );
 define( 'PACKAGE_TYPE_TAXONOMY', 'package-type' );

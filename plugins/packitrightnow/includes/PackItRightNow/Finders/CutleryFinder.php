@@ -3,16 +3,16 @@
 namespace PackItRightNow\Finders;
 
 /**
- * CutleryFinder is a central place to find and filter projects in the theme.
+ * KitchenFinder is a central place to find and filter projects in the theme.
  * API Helpers are provider in the \PackItRightNow namespace to commonly
  * used methods below.
  *
  * Usage:
  *
- * $finder = new CutleryFinder();
+ * $finder = new KitchenFinder();
  * $finder->get_foo();
  */
-class CutleryFinder {
+class KitchenFinder {
 
 	public $post_id;
 	public $post;
