@@ -71,7 +71,7 @@ get_header(); ?>
 	<?php } /*--- end if $featured_products ---*/ ?>
 
 	<?php if ( $about_excerpt ) { ?>
-		<div class="about">
+		<div class="about-excerpt">
 			<h2>About Us</h2>
 			<p><?php echo $about_excerpt; ?></p>
 		</div>
