@@ -14,6 +14,7 @@ define( 'CLOTHING_POST_TYPE', 'clothing' );
 define( 'KITCHEN_POST_TYPE', 'kitchen' );
 define( 'GLOVE_POST_TYPE', 'glove' );
 define( 'PACKAGE_POST_TYPE', 'package' );
+define( 'MISCELLANEOUS_POST_TYPE', 'miscellaneous' );
 
 # Taxonomies
 define( 'ACCESSORY_TYPE_TAXONOMY', 'accessory-type' );
@@ -21,3 +22,4 @@ define( 'CLOTHING_TYPE_TAXONOMY', 'clothing-type' );
 define( 'KITCHEN_TYPE_TAXONOMY', 'kitchen-type' );
 define( 'GLOVE_TYPE_TAXONOMY', 'glove-type' );
 define( 'PACKAGE_TYPE_TAXONOMY', 'package-type' );
+define( 'MISCELLANEOUS_TYPE_TAXONOMY', 'miscellaneous-type' );

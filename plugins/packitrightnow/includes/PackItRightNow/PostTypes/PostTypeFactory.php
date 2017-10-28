@@ -44,6 +44,9 @@ class PostTypeFactory {
 				case PACKAGE_POST_TYPE:
 					$instance = new PackagePostType();
 					break;
+				case MISCELLANEOUS_POST_TYPE:
+					$instance = new MiscellaneousPostType();
+					break;
 
 				default:
 					throw new \Exception(
@@ -87,7 +90,8 @@ class PostTypeFactory {
 			ACCESSORY_POST_TYPE,
 			CLOTHING_POST_TYPE,
 			KITCHEN_POST_TYPE,
-			PACKAGE_POST_TYPE
+			PACKAGE_POST_TYPE,
+			MISCELLANEOUS_POST_TYPE,
 		);
 
 		$post_types = apply_filters( 'packitrightnow_post_types', $post_types );

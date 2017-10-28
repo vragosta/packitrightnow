@@ -75,7 +75,7 @@ class Router {
 	public $routes;
 
 	public function get_version() {
-		return '0.0.7';
+		return '0.0.8';
 	}
 
 	public function register() {
@@ -122,6 +122,10 @@ class Router {
 
 			case 'products/packaging':
 				$template_file = 'products-packaging.php';
+				break;
+
+			case 'products/miscellaneous':
+				$template_file = 'products-miscellaneous.php';
 				break;
 
 			default:
@@ -211,6 +215,14 @@ class Router {
 				'^packaging/?$',
 				array(
 					'packaging' => true,
+				),
+			),
+
+			array(
+				'products/miscellaneous',
+				'^miscellaneous/?$',
+				array(
+					'miscellaneous' => true,
 				),
 			),
 

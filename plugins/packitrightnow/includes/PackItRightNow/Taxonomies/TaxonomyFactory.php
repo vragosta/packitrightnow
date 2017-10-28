@@ -26,7 +26,9 @@ class TaxonomyFactory {
 				case PACKAGE_TYPE_TAXONOMY:
 					$instance = new PackageTypeTaxonomy();
 					break;
-
+				case MISCELLANEOUS_TYPE_TAXONOMY:
+					$instance = new MiscellaneousTypeTaxonomy();
+					break;
 
 				default:
 					throw new \Exception(
@@ -58,6 +60,7 @@ class TaxonomyFactory {
 			KITCHEN_TYPE_TAXONOMY,
 			GLOVE_TYPE_TAXONOMY,
 			PACKAGE_TYPE_TAXONOMY,
+			MISCELLANEOUS_TYPE_TAXONOMY,
 		);
 
 		$taxonomies = apply_filters( 'packitrightnow_taxonomies', $taxonomies );
