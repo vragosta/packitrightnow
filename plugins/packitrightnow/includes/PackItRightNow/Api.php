@@ -24,3 +24,6 @@ function get_plugin() {
 
 require_once( __DIR__ . '/Api/Partial.php' );
 require_once( __DIR__ . '/Api/Helpers.php' );
+require_once( __DIR__ . '/Api/Terms.php' );
+require_once( __DIR__ . '/Api/Taxonomies.php' );
+require_once( __DIR__ . '/Api/PostTypes.php' );
