@@ -15,6 +15,19 @@ $description = get_post_type_description( ACCESSORY_POST_TYPE );
 $taxonomy = get_taxonomy( ACCESSORY_TYPE_TAXONOMY );
 $parent_terms = get_parent_terms( ACCESSORY_TYPE_TAXONOMY );
 
+#
+$query_var = get_query_var( 'term' );
+$query_term = get_term_by( 'slug', $query_var, ACCESSORY_TYPE_TAXONOMY );
+$query_parent_term = $query_term->parent ? get_term( $query_term->parent, ACCESSORY_TYPE_TAXONOMY ) : $query_term ;
+
+// echo '<pre>';
+// var_dump( $query_var );
+// var_dump( $query_term );
+// var_dump( $query_term->parent );
+// var_dump( $query_parent_term );
+// echo '</pre>';
+// exit();
+
 get_header(); ?>
 
 <div class="archive <?php echo ACCESSORY_POST_TYPE; ?>">
@@ -37,7 +50,7 @@ get_header(); ?>
 							<?php foreach( $parent_terms as $parent_term ) { ?>
 								<?php $slug = esc_attr( $parent_term->slug ); ?>
 
-								<li <?php echo $count++ == 0 ? 'class="active"' : ''; ?>>
+								<li <?php echo $parent_term->slug === $query_parent_term->slug || empty( $query_var ) && $count++ == 0 ? 'class="active"' : ''; ?>>
 									<a data-toggle="pill" href="<?php echo "#{$slug}"; ?>">
 										<?php echo esc_html( $parent_term->name ); ?>
 									</a>
@@ -58,7 +71,7 @@ get_header(); ?>
 			<?php foreach( $parent_terms as $parent_term ) { ?>
 				<?php $child_terms = get_child_terms( ACCESSORY_TYPE_TAXONOMY, $parent_term->term_id ); ?>
 
-				<div id="<?php echo esc_attr( $parent_term->slug ); ?>" class="tab-pane fade in <?php echo $count++ == 0 ? 'active' : ''; ?> <?php echo empty( $child_terms ) ? 'no-children' : ''; ?>">
+				<div id="<?php echo esc_attr( $parent_term->slug ); ?>" class="tab-pane fade in <?php echo $parent_term->slug === $query_parent_term->slug || empty( $query_var ) && $count++ == 0 ? 'active' : ''; ?> <?php echo empty( $child_terms ) ? 'no-children' : ''; ?>">
 					<div class="preface row">
 						<div class="container">
 

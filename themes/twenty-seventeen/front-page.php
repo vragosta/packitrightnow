@@ -53,9 +53,11 @@ get_header(); ?>
 						<?php $featured_products->the_post(); ?>
 						<?php $post_type = get_post_type_object( $post->post_type ); ?>
 						<?php $image_source = get_featured_image( $post->ID ); ?>
+						<?php $taxonomy = reset( get_post_taxonomies( $post->ID ) ); ?>
+						<?php $term = reset( wp_get_post_terms( $post->ID, $taxonomy ) ); ?>
 
 						<div class="featured-product-item col-xs-6 col-sm-3">
-							<a href="<?php echo home_url( strtolower( $post_type->label ) ); ?>">
+							<a href="<?php echo home_url( strtolower( esc_attr( $post_type->label ) ) . '?term=' . esc_attr( $term->slug ) ); ?>">
 								<figure class="image">
 									<div class="source" style="background-image: url( <?php echo esc_url( $image_source ); ?> );"></div>
 								</figure>
