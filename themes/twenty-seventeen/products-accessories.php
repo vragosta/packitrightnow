@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for displaying the accessory parent archive.
+ * Template for displaying the accessory archive.
  *
  * @package PackItRightNow - Twenty Seventeen
  * @since 0.1.0

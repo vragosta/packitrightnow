@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for displaying the clothing parent archive.
+ * Template for displaying the clothing archive.
  *
  * @package PackItRightNow - Twenty Seventeen
  * @since 0.1.0
