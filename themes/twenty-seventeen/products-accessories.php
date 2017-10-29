@@ -97,7 +97,7 @@ get_header(); ?>
 								<div class="child-terms">
 									<div class="heading row">
 										<div class="container">
-											<h2><?php echo esc_html( $child_term->name ); ?></h2>
+											<h2 id="<?php echo esc_attr( $child_term->slug ); ?>" class="anchor"><?php echo esc_html( $child_term->name ); ?></h2>
 										</div>
 									</div>
 									<div class="content <?php echo esc_attr( $child_term->slug ); ?> container">

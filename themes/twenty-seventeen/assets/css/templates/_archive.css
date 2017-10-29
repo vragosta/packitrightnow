@@ -96,6 +96,11 @@
 	color: #fff;
 }
 
+.archive .child-terms .heading .anchor {
+	margin-top: -75px;
+	padding-top: 75px;
+}
+
 .archive .child-terms .content,
 .archive .no-children > .content {
 	padding: 100px 0;

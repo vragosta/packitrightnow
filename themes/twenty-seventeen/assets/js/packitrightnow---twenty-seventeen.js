@@ -145,6 +145,46 @@
 		},
 
 		/**
+		 * Enables scroll to product section heading.
+		 * NOTE: From featured products
+		 *
+		 * @since 0.1.0
+		 * @uses getParameterByName, animate, offset
+		 * @return void
+		 */
+		scrollToProduct: function() {
+			var queryParam = this.getParameterByName( 'term' );
+
+			if ( queryParam && $( '#' + queryParam ).length ) {
+				$( 'html, body' ).animate({
+					scrollTop: $( '#' + queryParam ).offset().top
+				}, 2000);
+			}
+		},
+
+		/**
+		 * Gets url parameters.
+		 * NOTE: Source: https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+		 *
+		 * @since 0.1.0
+		 * @uses replace, exec
+		 * @return void
+		 */
+		getParameterByName: function( name, url ) {
+			if ( ! url ) url = window.location.href;
+
+			name = name.replace( /[\[\]]/g, "\\$&" );
+
+			var regex = new RegExp( "[?&]" + name + "(=([^&#]*)|&|#|$)" ),
+				results = regex.exec( url );
+
+			if ( ! results ) return null;
+			if ( ! results[2] ) return '';
+
+			return decodeURIComponent( results[2].replace( /\+/g, " " ) );
+		},
+
+		/**
 		 * VincentRagosta class initializer.
 		 *
 		 * @since 0.1.0
@@ -156,6 +196,7 @@
 			this.productsToggle();
 			this.setCarouselSettings();
 			this.sendContactInformation();
+			this.scrollToProduct();
 		}
 	};
 
