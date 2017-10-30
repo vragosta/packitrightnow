@@ -15,6 +15,7 @@ define( 'KITCHEN_POST_TYPE', 'kitchen' );
 define( 'GLOVE_POST_TYPE', 'glove' );
 define( 'PACKAGE_POST_TYPE', 'package' );
 define( 'MISCELLANEOUS_POST_TYPE', 'miscellaneous' );
+define( 'CAROUSEL_POST_POST_TYPE', 'carousel-post' );
 
 # Taxonomies
 define( 'ACCESSORY_TYPE_TAXONOMY', 'accessory-type' );

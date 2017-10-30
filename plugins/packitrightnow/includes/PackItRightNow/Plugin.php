@@ -4,22 +4,21 @@ namespace PackItRightNow;
 
 use PackItRightNow\Taxonomies\TaxonomyFactory;
 use PackItRightNow\PostTypes\PostTypeFactory;
+use PackItRightNow\Finders\CarouselPostFinder;
 use PackItRightNow\Finders\AccessoryFinder;
 use PackItRightNow\Finders\ClothingFinder;
 use PackItRightNow\Finders\KitchenFinder;
-use PackItRightNow\Finders\GloveFinder;
 use PackItRightNow\Finders\PackageFinder;
-use PackItRightNow\Admin\PostTypeSupport;
+use PackItRightNow\Admin\CarouselPostPostTypeSupport;
 use PackItRightNow\Admin\AccessoryColumnSupport;
 use PackItRightNow\Admin\ClothingColumnSupport;
 use PackItRightNow\Admin\KitchenColumnSupport;
-use PackItRightNow\Admin\GloveColumnSupport;
 use PackItRightNow\Admin\PackageColumnSupport;
 use PackItRightNow\Admin\MetaBoxes\PostMetaFieldsMetaBox;
+use PackItRightNow\Admin\Metaboxes\CarouselPostMetaBox;
 use PackItRightNow\Admin\Metaboxes\AccessoryMetaBox;
 use PackItRightNow\Admin\Metaboxes\ClothingMetaBox;
 use PackItRightNow\Admin\Metaboxes\KitchenMetaBox;
-use PackItRightNow\Admin\Metaboxes\GloveMetaBox;
 use PackItRightNow\Admin\Metaboxes\PackageMetaBox;
 use PackItRightNow\Admin\Metaboxes\TaxonomyMetaBox;
 use PackItRightNow\REST\V1\Contact;
@@ -78,6 +77,9 @@ class Plugin {
 		$postmeta_meta_box = new PostMetaFieldsMetaBox();
 		$postmeta_meta_box->register();
 
+		$carousel_post_meta_box = new CarouselPostMetaBox();
+		$carousel_post_meta_box->register();
+
 		$accessory_meta_box = new AccessoryMetaBox();
 		$accessory_meta_box->register();
 
@@ -87,17 +89,14 @@ class Plugin {
 		$kitchen_meta_box = new KitchenMetaBox();
 		$kitchen_meta_box->register();
 
-		$glove_meta_box = new GloveMetaBox();
-		$glove_meta_box->register();
-
 		$package_meta_box = new PackageMetaBox();
 		$package_meta_box->register();
 
 		$taxonomy_meta_box = new TaxonomyMetaBox();
 		$taxonomy_meta_box->register();
 
-		$post_type_support = new PostTypeSupport();
-		$post_type_support->register();
+		$carousel_post_post_type_support = new CarouselPostPostTypeSupport();
+		$carousel_post_post_type_support->register();
 
 		$accessory_column_support = new AccessoryColumnSupport();
 		$accessory_column_support->register();
@@ -107,9 +106,6 @@ class Plugin {
 
 		$kitchen_column_support = new KitchenColumnSupport();
 		$kitchen_column_support->register();
-
-		$glove_column_support = new GloveColumnSupport();
-		$glove_column_support->register();
 
 		$package_column_support = new PackageColumnSupport();
 		$package_column_support->register();
@@ -127,11 +123,11 @@ class Plugin {
 		return new KitchenFinder( $post_id );
 	}
 
-	function get_glove_finder( $post_id ) {
-		return new GloveFinder( $post_id );
-	}
-
 	function get_package_finder( $post_id ) {
 		return new PackageFinder( $post_id );
+	}
+
+	function get_carousel_post_finder( $post_id ) {
+		return new CarouselPostFinder( $post_id );
 	}
 }

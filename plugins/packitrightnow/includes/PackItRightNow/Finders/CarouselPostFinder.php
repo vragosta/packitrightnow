@@ -3,16 +3,16 @@
 namespace PackItRightNow\Finders;
 
 /**
- * GloveFinder is a central place to find and filter projects in the theme.
+ * CarouselPostFinder is a central place to find and filter projects in the theme.
  * API Helpers are provider in the \PackItRightNow namespace to commonly
  * used methods below.
  *
  * Usage:
  *
- * $finder = new GloveFinder();
+ * $finder = new CarouselPostFinder();
  * $finder->get_foo();
  */
-class GloveFinder {
+class CarouselPostFinder {
 
 	public $post_id;
 	public $post;
@@ -32,22 +32,8 @@ class GloveFinder {
 		return $this->post;
 	}
 
-	public function is_carousel() {
-		$value = get_post_meta( $this->post_id, '_carousel', true );
-		return $value == true ? true : false;
-	}
-
-	public function get_carousel_position() {
+	public function get_position() {
 		return get_post_meta( $this->post_id, '_carousel_position', true );
-	}
-
-	public function is_featured() {
-		$value = get_post_meta( $this->post_id, '_featured', true );
-		return $value == true ? true : false;
-	}
-
-	public function get_featured_position() {
-		return get_post_meta( $this->post_id, '_featured_position', true );
 	}
 
 }

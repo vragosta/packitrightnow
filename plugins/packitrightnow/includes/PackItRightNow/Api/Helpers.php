@@ -12,24 +12,8 @@ use MultiPostThumbnails;
  * @uses wp_get_attachment_image_src, get_post_thumbnail_id
  * @return string
  */
-function get_featured_image( $post_id ) {
-	return wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'medium' )[0];
-}
-
-/**
- * Get carousel image.
- *
- * @since 0.1.0
- * @param object $post
- * @uses class_exists, has_post_thumbnail, get_post_thumbnail_url
- * @return string
- */
-function get_carousel_image( $post ) {
-	if ( class_exists( 'MultiPostThumbnails' ) && MultiPostThumbnails::has_post_thumbnail( $post->post_type, 'carousel_image', $post->ID ) ) {
-		return MultiPostThumbnails::get_post_thumbnail_url( $post->post_type, 'carousel_image', $post->ID, 'large' );
-	}
-
-	return NULL;
+function get_featured_image( $post_id, $size = 'medium' ) {
+	return wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), $size )[0];
 }
 
 /**

@@ -11,6 +11,11 @@ namespace PackItRightNow;
 # Get carousel images.
 $carousel_posts = get_carousel_posts();
 
+// echo '<pre>';
+// var_dump( $carousel_posts->posts );
+// echo '</pre>';
+// exit();
+
 # Get featured products.
 $featured_products = get_featured_products();
 
@@ -29,7 +34,7 @@ get_header(); ?>
 				<div class="carousel">
 					<?php while ( $carousel_posts->have_posts() ) { ?>
 						<?php $carousel_posts->the_post(); ?>
-						<?php $image_source = get_carousel_image( $post ); ?>
+						<?php $image_source = get_featured_image( $post, 'large' ); ?>
 
 						<div>
 							<figure class="image">

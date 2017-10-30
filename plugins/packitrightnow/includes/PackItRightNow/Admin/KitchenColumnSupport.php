@@ -17,7 +17,6 @@ class KitchenColumnSupport {
 
 		$defaults['kitchen_id']  = __( 'Kitchen ID', 'packitrightnow_com' );
 		$defaults['feature']  = __( 'Feature', 'packitrightnow_com' );
-		$defaults['carousel'] = __( 'Carousel', 'packitrightnow_com' );
 		$defaults['types'] = __( 'Kitchen Types', 'packitrightnow_com' );
 
 		return $defaults;
@@ -43,16 +42,6 @@ class KitchenColumnSupport {
 				$feature = $finder->is_featured();
 
 				if ( $feature ) {
-					echo 'Yes';
-				} else {
-					echo '';
-				}
-				break;
-
-			case 'carousel':
-				$carousel = $finder->is_carousel();
-
-				if ( $carousel ) {
 					echo 'Yes';
 				} else {
 					echo '';

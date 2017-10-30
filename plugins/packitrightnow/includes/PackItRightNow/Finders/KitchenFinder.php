@@ -32,15 +32,6 @@ class KitchenFinder {
 		return $this->post;
 	}
 
-	public function is_carousel() {
-		$value = get_post_meta( $this->post_id, '_carousel', true );
-		return $value == true ? true : false;
-	}
-
-	public function get_carousel_position() {
-		return get_post_meta( $this->post_id, '_carousel_position', true );
-	}
-
 	public function is_featured() {
 		$value = get_post_meta( $this->post_id, '_featured', true );
 		return $value == true ? true : false;

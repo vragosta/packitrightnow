@@ -58,7 +58,7 @@ function get_recent_posts() {
 			CLOTHING_POST_TYPE,
 			KITCHEN_POST_TYPE,
 			GLOVE_POST_TYPE,
-			PACKAGE_POST_TYPE
+			PACKAGE_POST_TYPE,
 		),
 		'posts_per_page' => 6
 	);
@@ -75,27 +75,24 @@ function get_recent_posts() {
  */
 function get_carousel_posts() {
 	$query_args = array(
-		'post_type' => array(
-			ACCESSORY_POST_TYPE,
-			CLOTHING_POST_TYPE,
-			KITCHEN_POST_TYPE,
-			GLOVE_POST_TYPE,
-			PACKAGE_POST_TYPE
-		),
+		'post_type' => CAROUSEL_POST_POST_TYPE,
 		'posts_per_page' => 6,
 		'meta_key' => '_carousel_position',
 		'orderby' => 'meta_value',
 		'order' => 'ASC',
-		'meta_query' => array(
-			array(
-				'key' => '_carousel',
-				'value' => true,
-				'compare' => '='
-			)
-		)
 	);
 
 	$query = new \WP_Query( $query_args );
+
+	if ( $query->post_count == 0 ) {
+		$query_args = array(
+			'post_type' => CAROUSEL_POST_POST_TYPE,
+			'posts_per_page' => 6,
+			'order' => 'ASC',
+		);
+
+		$query = new \WP_Query( $query_args );
+	}
 
 	return $query;
 }

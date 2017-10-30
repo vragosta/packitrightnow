@@ -47,6 +47,9 @@ class PostTypeFactory {
 				case MISCELLANEOUS_POST_TYPE:
 					$instance = new MiscellaneousPostType();
 					break;
+				case CAROUSEL_POST_POST_TYPE:
+					$instance = new CarouselPostPostType();
+					break;
 
 				default:
 					throw new \Exception(
@@ -87,6 +90,7 @@ class PostTypeFactory {
 		$post_types = array(
 			POST_POST_TYPE,
 			PAGE_POST_TYPE,
+			CAROUSEL_POST_POST_TYPE,
 			ACCESSORY_POST_TYPE,
 			CLOTHING_POST_TYPE,
 			KITCHEN_POST_TYPE,
