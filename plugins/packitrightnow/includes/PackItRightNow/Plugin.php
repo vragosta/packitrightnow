@@ -9,7 +9,7 @@ use PackItRightNow\Finders\AccessoryFinder;
 use PackItRightNow\Finders\ClothingFinder;
 use PackItRightNow\Finders\KitchenFinder;
 use PackItRightNow\Finders\PackageFinder;
-use PackItRightNow\Admin\CarouselPostPostTypeSupport;
+use PackItRightNow\Admin\CarouselPostColumnSupport;
 use PackItRightNow\Admin\AccessoryColumnSupport;
 use PackItRightNow\Admin\ClothingColumnSupport;
 use PackItRightNow\Admin\KitchenColumnSupport;
@@ -95,8 +95,8 @@ class Plugin {
 		$taxonomy_meta_box = new TaxonomyMetaBox();
 		$taxonomy_meta_box->register();
 
-		$carousel_post_post_type_support = new CarouselPostPostTypeSupport();
-		$carousel_post_post_type_support->register();
+		$carousel_post_column_support = new CarouselPostColumnSupport();
+		$carousel_post_column_support->register();
 
 		$accessory_column_support = new AccessoryColumnSupport();
 		$accessory_column_support->register();
