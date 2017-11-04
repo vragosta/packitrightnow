@@ -12,8 +12,8 @@ get_header();
 
 ?>
 
-<div class="content row">
-	<div class="container">
+<div class="content container">
+	<div class="col-xs-12">
 		<?php echo $post->post_content; ?>
 	</div>
 </div>

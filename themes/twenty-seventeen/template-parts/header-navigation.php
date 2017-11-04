@@ -12,7 +12,9 @@ namespace PackItRightNow;
 
 <header class="header">
 	<div class="container">
-		<a href="<?php echo home_url(); ?>" class="logo"><h1>Pack It Right LLC.</h1></a>
+		<a href="<?php echo home_url(); ?>" class="logo">
+			<h1>Pack It Right LLC.</h1>
+		</a>
 		<nav class="menu">
 			<div class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
