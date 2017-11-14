@@ -13,7 +13,7 @@
 
 .archive > .preface,
 .archive .no-children .preface {
-	border-bottom: 2px solid #157702;
+	border-bottom: 2px solid #333;
 }
 
 .archive .preface .container {
@@ -59,6 +59,10 @@
 	font-size: 18px;
 }
 
+.archive .tab-content .preface {
+	background-color: #fff;
+}
+
 .archive .tab-content .preface .container {
 	display: flex;
 }
@@ -84,16 +88,16 @@
 }
 
 .archive .child-terms .heading {
-	background-color: #157702;
+	background-color: #f2fff7;
 	border-top: 2px solid #333;
 	border-bottom: 2px solid #333;
 	padding: 15px 0;
 }
 
 .archive .child-terms .heading h2 {
-	font-weight: 300;
+	font-weight: 500;
 	margin: 0;
-	color: #fff;
+	color: #333;
 }
 
 .archive .child-terms .heading .anchor {

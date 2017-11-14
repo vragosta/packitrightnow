@@ -4,11 +4,10 @@
  */
 
 .header {
-	background-color: #157702;
+	background-color: #f2fff7;
 	position: fixed;
 	z-index: 10;
 	width: 100%;
-	border-top: 2px solid #333;
 	border-bottom: 2px solid #333;
 }
 
