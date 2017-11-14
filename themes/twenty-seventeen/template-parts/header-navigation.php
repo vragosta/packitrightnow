@@ -13,7 +13,8 @@ namespace PackItRightNow;
 <header class="header">
 	<div class="container">
 		<a href="<?php echo home_url(); ?>" class="logo">
-			<h1>Pack It Right LLC.</h1>
+			<!-- <h1>Pack It Right LLC.</h1> -->
+			<img src="<?php echo PACKITRIGHTNOW_TEMPLATE_URL . '/assets/images/PIR_LOGO_2017_LARGER_WHITE_BOX.png'; ?>" style="width: 120px" />
 		</a>
 		<nav class="menu">
 			<div class="dropdown">
