@@ -11,11 +11,6 @@ namespace PackItRightNow;
 # Get carousel images.
 $carousel_posts = get_carousel_posts();
 
-// echo '<pre>';
-// var_dump( $carousel_posts->posts );
-// echo '</pre>';
-// exit();
-
 # Get featured products.
 $featured_products = get_featured_products();
 
@@ -28,23 +23,19 @@ get_header(); ?>
 
 	<?php if ( $carousel_posts->have_posts() ) { ?>
 		<div class="carousel-container row">
-			<div class="container">
-				<i class="ion-chevron-left"></i>
-				<i class="ion-chevron-right"></i>
-				<div class="carousel">
-					<?php while ( $carousel_posts->have_posts() ) { ?>
-						<?php $carousel_posts->the_post(); ?>
-						<?php $image_source = get_featured_image( $post, 'large' ); ?>
+			<div class="carousel">
+				<?php while ( $carousel_posts->have_posts() ) { ?>
+					<?php $carousel_posts->the_post(); ?>
+					<?php $image_source = get_featured_image( $post, 'full' ); ?>
 
-						<div>
-							<figure class="image">
-								<div class="source" style="background-image: url( <?php echo esc_url( $image_source ); ?> );"></div>
-							</figure>
-						</div>
+					<div>
+						<figure class="image">
+							<div class="source" style="background-image: url( <?php echo esc_url( $image_source ); ?> );"></div>
+						</figure>
+					</div>
 
-					<?php } /*--- end while $carousel_posts ---*/ ?>
-					<?php wp_reset_postdata(); ?>
-				</div>
+				<?php } /*--- end while $carousel_posts ---*/ ?>
+				<?php wp_reset_postdata(); ?>
 			</div>
 		</div>
 	<?php } /*--- end if $carousel_posts ---*/ ?>

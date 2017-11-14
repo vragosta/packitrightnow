@@ -12,30 +12,8 @@
 	position: relative;
 }
 
-.carousel-container i {
-	position: absolute;
-	top: 45%;
-	font-size: 40px;
-	color: #333;
-	cursor: pointer;
-}
-
-@media only screen and ( max-width: 767px ) {
-	.carousel-container i {
-		display: none;
-	}
-}
-
-.carousel-container i.ion-chevron-left {
-	left: -45px;
-}
-
-.carousel-container i.ion-chevron-right {
-	right: -45px;
-}
-
 .carousel .image {
-	padding-bottom: 40%;
+	padding-bottom: 32%;
 	min-height: 355px;
 }
 
