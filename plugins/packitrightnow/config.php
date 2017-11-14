@@ -24,3 +24,4 @@ define( 'KITCHEN_TYPE_TAXONOMY', 'kitchen-type' );
 define( 'GLOVE_TYPE_TAXONOMY', 'glove-type' );
 define( 'PACKAGE_TYPE_TAXONOMY', 'package-type' );
 define( 'MISCELLANEOUS_TYPE_TAXONOMY', 'miscellaneous-type' );
+define( 'ALUMINUM_TYPE_TAXONOMY', 'aluminum-type' );

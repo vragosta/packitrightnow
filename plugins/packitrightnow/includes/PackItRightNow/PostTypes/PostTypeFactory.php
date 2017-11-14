@@ -47,6 +47,9 @@ class PostTypeFactory {
 				case MISCELLANEOUS_POST_TYPE:
 					$instance = new MiscellaneousPostType();
 					break;
+				case ALUMINUM_POST_TYPE:
+					$instance = new AluminumPostType();
+					break;
 				case CAROUSEL_POST_POST_TYPE:
 					$instance = new CarouselPostPostType();
 					break;
@@ -96,6 +99,7 @@ class PostTypeFactory {
 			KITCHEN_POST_TYPE,
 			PACKAGE_POST_TYPE,
 			MISCELLANEOUS_POST_TYPE,
+			ALUMINUM_POST_TYPE
 		);
 
 		$post_types = apply_filters( 'packitrightnow_post_types', $post_types );
