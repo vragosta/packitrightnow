@@ -1,6 +1,6 @@
 <?php
 /**
- * Main header navigation for both desktop and mobile designs.
+ * Main header navigation for all templates except front page.
  *
  * @package PackItRightNow - Twenty Seventeen
  * @since 0.1.0

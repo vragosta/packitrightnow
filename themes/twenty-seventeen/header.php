@@ -14,4 +14,10 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-	<?php \PackItRightNow\get_partial( 'template-parts/header-navigation' ); ?>
+	<?php
+		if ( is_front_page() ) {
+			\PackItRightNow\get_partial( 'template-parts/header-navigation-front-page' );
+		} else {
+			\PackItRightNow\get_partial( 'template-parts/header-navigation' );
+		}
+	?>

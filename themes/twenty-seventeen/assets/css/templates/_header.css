@@ -8,10 +8,13 @@
 	position: fixed;
 	z-index: 10;
 	width: 100%;
+}
+
+.header:not(.front-page) {
 	border-bottom: 2px solid #333;
 }
 
-.header .container {
+.header:not(.front-page) .container {
 	position: relative;
 	display: flex;
 	justify-content: flex-end;
@@ -23,7 +26,7 @@
 	display: none;
 }
 
-.header .logo {
+.header:not(.front-page) .logo {
 	position: absolute;
 	left: 15px;
 }
@@ -41,7 +44,7 @@
 	}
 }
 
-.header i {
+.header .dropdown {
 	opacity: 0;
 	visibility: hidden;
 	position: absolute;
@@ -54,8 +57,72 @@
 }
 
 @media only screen and ( max-width: 991px ) {
-	.header i {
+	.header .dropdown {
 		opacity: 1;
 		visibility: visible;
 	}
+}
+
+/*--- Menu specific ---*/
+.header.front-page .container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.header.front-page .header-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out;
+}
+
+@media only screen and ( max-width: 767px ) {
+	.header.front-page .header-information {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+.header.front-page .header-information p {
+	margin: 0;
+	font-size: 16px;
+}
+
+.header.front-page .header-information p a {
+	font-size: 20px;
+	font-family: 'Cormorant Garamond', serif;
+	color: #157702;
+}
+
+.header.front-page .header-information p a:hover {
+	color: #333;
+}
+
+.header.front-page .menu-container {
+	border-top: 2px solid #333;
+	border-bottom: 2px solid #333;
+	background-color: #157702;
+	height: 60px;
+	position: relative;
+}
+
+.header.front-page .menu {
+	height: 100%;
+}
+
+.header.front-page .menu > a,
+.header.front-page .menu .dropdown-toggle {
+	color: #fff;
+}
+
+.header.front-page .menu > a:hover {
+	background-color: #f2fff7;
+	color: #157702;
+}
+
+.header.front-page .dropdown {
+	top: 7px;
+	right: 30px;
 }
