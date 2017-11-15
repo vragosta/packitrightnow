@@ -133,3 +133,23 @@ function get_featured_products() {
 
 	return $query;
 }
+
+// TODO
+function get_supported_post_types() {
+	$post_types_array = array();
+
+	$post_types = array(
+		ACCESSORY_POST_TYPE,
+		ALUMINUM_POST_TYPE,
+		CLOTHING_POST_TYPE,
+		KITCHEN_POST_TYPE,
+		PACKAGE_POST_TYPE,
+		MISCELLANEOUS_POST_TYPE,
+	);
+
+	foreach( $post_types as $post_type ) {
+		$post_types_array[] = get_post_type_object( $post_type );
+	}
+
+	return $post_types_array;
+}

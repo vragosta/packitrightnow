@@ -10,6 +10,7 @@ define( 'PACKITRIGHTNOW_PLUGIN_URL' , plugin_dir_url( __FILE__ ) );
 define( 'POST_POST_TYPE' , 'post' );
 define( 'PAGE_POST_TYPE' , 'page' );
 define( 'ACCESSORY_POST_TYPE', 'accessory' );
+define( 'ALUMINUM_POST_TYPE', 'aluminum' );
 define( 'CLOTHING_POST_TYPE', 'clothing' );
 define( 'KITCHEN_POST_TYPE', 'kitchen' );
 define( 'GLOVE_POST_TYPE', 'glove' );

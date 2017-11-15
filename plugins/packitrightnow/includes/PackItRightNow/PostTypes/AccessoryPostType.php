@@ -13,7 +13,7 @@ class AccessoryPostType extends BasePostType {
 
 	public function get_labels() {
 		return array(
-			'name'               => __( 'Accessories', 'packitrightnow_com' ),
+			'name'               => __( 'PPE Accessories', 'packitrightnow_com' ),
 			'singular_name'      => __( 'Accessory', 'packitrightnow_com' ),
 			'menu_name'          => __( 'Accessories', 'packitrightnow_com' ),
 			'parent_item_colon'  => __( 'Parent Accessory:', 'packitrightnow_com' ),

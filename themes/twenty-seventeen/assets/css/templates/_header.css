@@ -10,66 +10,17 @@
 	width: 100%;
 }
 
-.header:not(.front-page) {
-	border-bottom: 2px solid #333;
-}
-
-.header:not(.front-page) .container {
-	position: relative;
-	display: flex;
-	justify-content: flex-end;
-	height: 60.75px;
-}
-
-.header .container:before,
-.header .container:after {
-	display: none;
-}
-
-.header:not(.front-page) .logo {
-	position: absolute;
-	left: 15px;
-}
-
-.header h1 {
-	color: #fff;
-	font-size: 1.8em;
-	font-weight: 300;
-}
-
-@media only screen and ( max-width: 767px ) {
-	.header h1 {
-		font-size: 1.5em;
-		margin: .91em 0;
-	}
-}
-
-.header .dropdown {
-	opacity: 0;
-	visibility: hidden;
-	position: absolute;
-	color: #fff;
-	font-size: 3em;
-	top: 10px;
-	right: 15px;
-	cursor: pointer;
-	transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
-}
-
-@media only screen and ( max-width: 991px ) {
-	.header .dropdown {
-		opacity: 1;
-		visibility: visible;
-	}
-}
-
-/*--- Menu specific ---*/
-.header.front-page .container {
+.header > .container {
 	display: flex;
 	justify-content: space-between;
 }
 
-.header.front-page .header-information {
+.header > .container:before,
+.header > .container:after {
+	display: none;
+}
+
+.header .header-information {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,50 +30,50 @@
 }
 
 @media only screen and ( max-width: 767px ) {
-	.header.front-page .header-information {
+	.header .header-information {
 		opacity: 0;
 		visibility: hidden;
 	}
 }
 
-.header.front-page .header-information p {
+.header .header-information p {
 	margin: 0;
 	font-size: 16px;
 }
 
-.header.front-page .header-information p a {
+.header .header-information p a {
 	font-size: 20px;
 	font-family: 'Cormorant Garamond', serif;
 	color: #157702;
 }
 
-.header.front-page .header-information p a:hover {
+.header .header-information p a:hover {
 	color: #333;
 }
 
-.header.front-page .menu-container {
+.header i.dropdown {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	color: #fff;
+	font-size: 3em;
+	top: 7px;
+	right: 30px;
+	cursor: pointer;
+	transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
+}
+
+@media only screen and ( max-width: 991px ) {
+	.header i.dropdown {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.header .menu-container {
 	border-top: 2px solid #333;
 	border-bottom: 2px solid #333;
 	background-color: #157702;
 	height: 60px;
 	position: relative;
-}
-
-.header.front-page .menu {
-	height: 100%;
-}
-
-.header.front-page .menu > a,
-.header.front-page .menu .dropdown-toggle {
-	color: #fff;
-}
-
-.header.front-page .menu > a:hover {
-	background-color: #f2fff7;
-	color: #157702;
-}
-
-.header.front-page .dropdown {
-	top: 7px;
-	right: 30px;
 }
