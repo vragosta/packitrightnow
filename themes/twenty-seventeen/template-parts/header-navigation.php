@@ -9,12 +9,6 @@
 namespace PackItRightNow;
 
 $post_types = get_supported_post_types();
-$accessory_parent_terms = get_parent_terms( ACCESSORY_TYPE_TAXONOMY );
-
-// echo '<pre>';
-// var_dump( $post_types );
-// echo '</pre>';
-// exit();
 
 ?>
 
@@ -34,25 +28,22 @@ $accessory_parent_terms = get_parent_terms( ACCESSORY_TYPE_TAXONOMY );
 			<a href="<?php echo home_url(); ?>">Home</a>
 
 			<?php foreach( $post_types as $post_type ) { ?>
+				<?php $taxonomy = reset( get_taxonomies_by_post_type( $post_type->name ) ); ?>
+				<?php $parent_terms = get_parent_terms( $taxonomy->name ); ?>
+
 				<div class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<?php echo esc_html( $post_type->label ); ?>
 					</a>
 					<div class="dropdown-menu">
-						<?php foreach( $accessory_parent_terms as $term ) { ?>
+						<?php foreach( $parent_terms as $term ) { ?>
 							<a class="dropdown-item" href="<?php echo home_url( $term->slug ); ?>"><?php echo esc_html( $term->name ); ?></a>
 						<?php } ?>
 					</div>
 				</div>
+
 			<?php } ?>
 
-
-
-			<!-- <a href="<?php echo home_url( '/aluminum/' ); ?>">Aluminum</a>
-			<a href="<?php echo home_url( '/clothing/' ); ?>">Clothing</a>
-			<a href="<?php echo home_url( '/kitchen/' ); ?>">Kitchen</a>
-			<a href="<?php echo home_url( '/packaging/' ); ?>">Packaging</a>
-			<a href="<?php echo home_url( '/miscellaneous/' ); ?>">Miscellaneous</a> -->
 			<a href="<?php echo home_url( '/about/' ); ?>">About Us</a>
 			<a href="<?php echo home_url( '/contact/' ); ?>">Contact Us</a>
 		</nav>

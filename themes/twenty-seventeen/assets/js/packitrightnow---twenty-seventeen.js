@@ -63,12 +63,20 @@
 			 * Toggles 'change-color' class.
 			 */
 			$( '.dropdown-toggle' ).on( 'click', function() {
-				if ( $( '.dropdown' ).hasClass( 'open' ) ) {
+				// console.log( $( this ).text() );
+				if ( $( '.dropdown' ).hasClass( 'change-color' ) ) {
 					$( '.dropdown' ).removeClass( 'change-color' );
 					$( '.dropdown-toggle' ).removeClass( 'change-color' );
+				}
+
+				if ( $( this ).parents( '.dropdown' ).hasClass( 'open' ) ) {
+					// console.log( true );
+					$( this ).parents( '.dropdown' ).removeClass( 'change-color' );
+					$( this ).removeClass( 'change-color' );
 				} else {
-					$( '.dropdown' ).addClass( 'change-color' );
-					$( '.dropdown-toggle' ).addClass( 'change-color' );
+					// console.log( false );
+					$( this ).parents( '.dropdown' ).addClass( 'change-color' );
+					$( this ).addClass( 'change-color' );
 				}
 			});
 

@@ -14,6 +14,9 @@ class TaxonomyFactory {
 				case ACCESSORY_TYPE_TAXONOMY:
 					$instance = new AccessoryTypeTaxonomy();
 					break;
+				case ALUMINUM_TYPE_TAXONOMY:
+					$instance = new AluminumTypeTaxonomy();
+					break;
 				case CLOTHING_TYPE_TAXONOMY:
 					$instance = new ClothingTypeTaxonomy();
 					break;
@@ -56,6 +59,7 @@ class TaxonomyFactory {
 	public function get_supported_taxonomies() {
 		$taxonomies = array(
 			ACCESSORY_TYPE_TAXONOMY,
+			ALUMINUM_TYPE_TAXONOMY,
 			CLOTHING_TYPE_TAXONOMY,
 			KITCHEN_TYPE_TAXONOMY,
 			GLOVE_TYPE_TAXONOMY,
