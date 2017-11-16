@@ -59,6 +59,11 @@
 	font-size: 18px;
 }
 
+.archive .tab-content .tab-pane.anchor {
+	margin-top: -210px;
+	padding-top: 210px;
+}
+
 .archive .tab-content .preface {
 	background-color: #fff;
 }
@@ -101,8 +106,8 @@
 }
 
 .archive .child-terms .heading .anchor {
-	margin-top: -75px;
-	padding-top: 75px;
+	margin-top: -225px;
+	padding-top: 225px;
 }
 
 .archive .child-terms .content,

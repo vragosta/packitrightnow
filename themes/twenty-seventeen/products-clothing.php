@@ -15,6 +15,11 @@ $description = get_post_type_description( CLOTHING_POST_TYPE );
 $taxonomy = get_taxonomy( CLOTHING_TYPE_TAXONOMY );
 $parent_terms = get_parent_terms( CLOTHING_TYPE_TAXONOMY );
 
+// echo '<pre>';
+// var_dump( $parent_terms );
+// echo '</pre>';
+// exit();
+
 get_header(); ?>
 
 <div class="archive <?php echo CLOTHING_POST_TYPE; ?>">
@@ -58,7 +63,7 @@ get_header(); ?>
 			<?php foreach( $parent_terms as $parent_term ) { ?>
 				<?php $child_terms = get_child_terms( CLOTHING_TYPE_TAXONOMY, $parent_term->term_id ); ?>
 
-				<div id="<?php echo esc_attr( $parent_term->slug ); ?>" class="tab-pane fade in <?php echo $count++ == 0 ? 'active' : ''; ?> <?php echo empty( $child_terms ) ? 'no-children' : ''; ?>">
+				<div id="<?php echo esc_attr( $parent_term->slug ); ?>" class="tab-pane fade in anchor <?php echo $count++ == 0 ? 'active' : ''; ?> <?php echo empty( $child_terms ) ? 'no-children' : ''; ?>">
 					<div class="preface row">
 						<div class="container">
 
