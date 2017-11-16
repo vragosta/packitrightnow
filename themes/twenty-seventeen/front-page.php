@@ -53,7 +53,7 @@ get_header(); ?>
 						<?php $term = reset( wp_get_post_terms( $post->ID, $taxonomy ) ); ?>
 
 						<div class="featured-product-item col-xs-6 col-sm-3">
-							<a href="<?php echo home_url( strtolower( esc_attr( $post_type->label ) ) . '?term=' . esc_attr( $term->slug ) ); ?>">
+							<a href="<?php echo home_url( strtolower( esc_attr( $post_type->labels->menu_name ) ) . '?term=' . esc_attr( $term->slug ) ); ?>">
 								<figure class="image">
 									<div class="source" style="background-image: url( <?php echo esc_url( $image_source ); ?> );"></div>
 								</figure>

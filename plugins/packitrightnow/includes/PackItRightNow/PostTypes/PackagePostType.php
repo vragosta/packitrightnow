@@ -13,9 +13,9 @@ class PackagePostType extends BasePostType {
 
 	public function get_labels() {
 		return array(
-			'name'               => __( 'Packages', 'packitrightnow_com' ),
+			'name'               => __( 'Packaging', 'packitrightnow_com' ),
 			'singular_name'      => __( 'Package', 'packitrightnow_com' ),
-			'menu_name'          => __( 'Packages', 'packitrightnow_com' ),
+			'menu_name'          => __( 'Packaging', 'packitrightnow_com' ),
 			'parent_item_colon'  => __( 'Parent Package:', 'packitrightnow_com' ),
 			'all_items'          => __( 'All Packages', 'packitrightnow_com' ),
 			'view_item'          => __( 'View Package', 'packitrightnow_com' ),

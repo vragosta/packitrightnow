@@ -37,7 +37,7 @@ $post_types = get_supported_post_types();
 					</a>
 					<div class="dropdown-menu">
 						<?php foreach( $parent_terms as $term ) { ?>
-							<a class="dropdown-item" href="<?php echo home_url( $term->slug ); ?>"><?php echo esc_html( $term->name ); ?></a>
+							<a class="dropdown-item" href="<?php echo home_url( strtolower( esc_attr( $post_type->labels->menu_name ) ) . '?term=' . esc_attr( $term->slug ) ); ?>"><?php echo esc_html( $term->name ); ?></a>
 						<?php } ?>
 					</div>
 				</div>

@@ -19,7 +19,6 @@
 }
 
 .menu a {
-	/*color: #157702;*/
 	color: #fff;
 	display: flex;
 	align-items: center;
@@ -51,10 +50,6 @@
 .menu .dropdown-toggle.change-color {
 	color: #157702;
 }
-
-/*.menu .dropdown-toggle.change-color:hover {
-	color: #fff;
-}*/
 
 .menu .dropdown-menu {
 	margin-top: -1px;

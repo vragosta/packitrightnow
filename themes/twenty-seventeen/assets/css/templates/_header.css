@@ -21,9 +21,9 @@
 }
 
 .header .header-information {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	opacity: 1;
 	visibility: visible;
 	transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out;
@@ -51,7 +51,7 @@
 	color: #333;
 }
 
-.header i.dropdown {
+.header i.drop-down {
 	opacity: 0;
 	visibility: hidden;
 	position: absolute;
@@ -64,7 +64,7 @@
 }
 
 @media only screen and ( max-width: 991px ) {
-	.header i.dropdown {
+	.header i.drop-down {
 		opacity: 1;
 		visibility: visible;
 	}

@@ -4,7 +4,7 @@
  */
 
 .archive {
-	padding: 65px 15px 0;
+	padding: 210px 15px 0;
 }
 
 .archive .preface {
@@ -88,16 +88,16 @@
 }
 
 .archive .child-terms .heading {
-	background-color: #f2fff7;
+	background-color: #157702;
 	border-top: 2px solid #333;
 	border-bottom: 2px solid #333;
 	padding: 15px 0;
 }
 
 .archive .child-terms .heading h2 {
-	font-weight: 500;
+	font-weight: 300;
 	margin: 0;
-	color: #333;
+	color: #fff;
 }
 
 .archive .child-terms .heading .anchor {

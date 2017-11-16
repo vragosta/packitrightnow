@@ -62,20 +62,17 @@
 			 * Listens for click on dropdown-toggle button.
 			 * Toggles 'change-color' class.
 			 */
-			$( '.dropdown-toggle' ).on( 'click', function() {
-				// console.log( $( this ).text() );
+			$( '.dropdown' ).on( 'click', function() {
 				if ( $( '.dropdown' ).hasClass( 'change-color' ) ) {
 					$( '.dropdown' ).removeClass( 'change-color' );
 					$( '.dropdown-toggle' ).removeClass( 'change-color' );
 				}
 
-				if ( $( this ).parents( '.dropdown' ).hasClass( 'open' ) ) {
-					// console.log( true );
-					$( this ).parents( '.dropdown' ).removeClass( 'change-color' );
+				if ( $( this ).find( '.dropdown-toggle' ).hasClass( 'open' ) ) {
+					$( this ).find( '.dropdown-toggle' ).removeClass( 'change-color' );
 					$( this ).removeClass( 'change-color' );
 				} else {
-					// console.log( false );
-					$( this ).parents( '.dropdown' ).addClass( 'change-color' );
+					$( this ).find( '.dropdown-toggle' ).addClass( 'change-color' );
 					$( this ).addClass( 'change-color' );
 				}
 			});
