@@ -21,6 +21,7 @@ use PackItRightNow\Admin\Metaboxes\ClothingMetaBox;
 use PackItRightNow\Admin\Metaboxes\KitchenMetaBox;
 use PackItRightNow\Admin\Metaboxes\PackageMetaBox;
 use PackItRightNow\Admin\Metaboxes\TaxonomyMetaBox;
+use PackItRightNow\Admin\Metaboxes\UserMetaBox;
 use PackItRightNow\REST\V1\Contact;
 
 /**
@@ -94,6 +95,9 @@ class Plugin {
 
 		$taxonomy_meta_box = new TaxonomyMetaBox();
 		$taxonomy_meta_box->register();
+
+		$user_meta_box = new UserMetaBox();
+		$user_meta_box->register();
 
 		$carousel_post_column_support = new CarouselPostColumnSupport();
 		$carousel_post_column_support->register();

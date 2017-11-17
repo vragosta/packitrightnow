@@ -8,6 +8,9 @@
 
 namespace PackItRightNow;
 
+$admin_user = get_user_by( 'login', 'jserianni' );
+$phone = get_user_meta( $admin_user->ID, '_phone', true );
+
 $post_types = get_supported_post_types();
 
 ?>
@@ -19,7 +22,7 @@ $post_types = get_supported_post_types();
 		</a>
 
 		<div class="header-information">
-			<p>Call : <a href="tel:718-252-8816">(718)-547-8578</a></p>
+			<p>Call : <a href="tel:<?php echo esc_attr( $phone ); ?>"><?php echo esc_html( $phone ); ?></a></p>
 			<p>Email : <a href="mailto:packitrightnow@gmail.com">packitrightnow@gmail.com</a></p>
 		</div>
 	</div>
