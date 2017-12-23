@@ -34,16 +34,18 @@ $post_types = get_supported_post_types();
 				<?php $taxonomy = reset( get_taxonomies_by_post_type( $post_type->name ) ); ?>
 				<?php $parent_terms = get_parent_terms( $taxonomy->name ); ?>
 
-				<div class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<?php echo esc_html( $post_type->label ); ?>
-					</a>
-					<div class="dropdown-menu">
-						<?php foreach( $parent_terms as $term ) { ?>
-							<a class="dropdown-item" href="<?php echo home_url( strtolower( esc_attr( $post_type->labels->menu_name ) ) . '?term=' . esc_attr( $term->slug ) ); ?>"><?php echo esc_html( $term->name ); ?></a>
-						<?php } ?>
+				<?php if ( ! empty( $parent_terms ) ) { ?>
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<?php echo esc_html( $post_type->label ); ?>
+						</a>
+						<div class="dropdown-menu">
+							<?php foreach( $parent_terms as $term ) { ?>
+								<a class="dropdown-item" href="<?php echo home_url( strtolower( esc_attr( $post_type->labels->menu_name ) ) . '?term=' . esc_attr( $term->slug ) ); ?>"><?php echo esc_html( $term->name ); ?></a>
+							<?php } ?>
+						</div>
 					</div>
-				</div>
+				<?php } ?>
 
 			<?php } ?>
 
