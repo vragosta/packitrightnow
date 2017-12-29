@@ -1,0 +1,69 @@
+/**
+ * PackItRightNow - Twenty Seventeen
+ * Contact CSS
+ */
+
+.contact {
+	& {
+		padding: 250px 0 60px;
+		max-width: 800px;
+	}
+
+	.image {
+		padding-bottom: 40%;
+		margin-bottom: 30px;
+	}
+
+	.image .source {
+		background-position: center;
+	}
+
+	.error {
+		& {
+			display: none;
+		}
+
+		&.show-message {
+			display: block;
+		}
+	}
+
+	.alert-danger,
+	.alert-success {
+		padding: 10px;
+		border-radius: 4px;
+	}
+
+	p,
+	a,
+	label {
+		margin: 0;
+		font-size: 16px;
+		font-weight: 300;
+	}
+
+	.excerpt {
+		& {
+			text-align: center;
+			margin-bottom: 30px;
+		}
+
+		& + p {
+			margin-bottom: 10px;
+		}
+	}
+
+	.contact-btn {
+		& {
+			background-color: #157702;
+			border: none;
+			font-size: 16px;
+			font-weight: 300;
+			transition: opacity 0.15s ease-in-out;
+		}
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}

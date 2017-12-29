@@ -1,0 +1,157 @@
+/**
+ * PackItRightNow - Twenty Seventeen
+ * Archive CSS
+ */
+
+.archive {
+	& {
+		padding: 210px 15px 0;
+	}
+
+	.preface {
+		& {
+			background-color: #f2fff7;
+		}
+
+		.container {
+			padding: 100px 0;
+
+			@media only screen and ( max-width: 767px ) {
+				padding: 60px 0;
+			}
+		}
+
+		.heading h2 {
+			font-size: 32px;
+			font-weight: 700;
+			margin: 0;
+		}
+
+		p {
+			font-size: 16px;
+		}
+	}
+
+	.no-children {
+		.preface {
+			border-bottom: 2px solid #333;
+		}
+
+		& > .content {
+			padding: 100px 0;
+		}
+	}
+
+	& > .preface {
+		& {
+			border-bottom: 2px solid #333;
+		}
+
+		p {
+			margin: 20px 0 0;
+		}
+
+		.content {
+			& {
+				margin-top: 30px;
+			}
+
+			li {
+				&.active a {
+					background-color: #157702;
+					font-weight: 300;
+				}
+
+				a {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+
+	.tab-content {
+		.tab-pane.anchor {
+			margin-top: -210px;
+			padding-top: 210px;
+		}
+
+		.preface {
+			& {
+				background-color: #fff;
+			}
+
+			.container {
+				display: flex;
+
+				@media only screen and ( max-width: 767px ) {
+					flex-direction: column;
+				}
+			}
+
+			.heading {
+				align-self: center;
+			}
+
+			p {
+				margin: 0;
+
+				@media only screen and ( max-width: 767px ) {
+					margin: 20px 0 0;
+				}
+			}
+		}
+	}
+
+	.child-terms {
+		.heading {
+			& {
+				background-color: #157702;
+				border-top: 2px solid #333;
+				border-bottom: 2px solid #333;
+				padding: 15px 0;
+			}
+
+			h2 {
+				font-weight: 300;
+				margin: 0;
+				color: #fff;
+			}
+
+			.anchor {
+				margin-top: -225px;
+				padding-top: 225px;
+			}
+		}
+
+		.content {
+			& {
+				padding: 100px 0;
+			}
+
+			&:last-child {
+				padding: 100px 0 40px;
+			}
+		}
+
+		.content-item {
+			& {
+				padding-bottom: 60px;
+			}
+
+			h4 {
+				margin-bottom: 0;
+				margin-top: 30px;
+				font-size: 20px;
+				text-align: center;
+
+				@media only screen and ( max-width: 991px ) and ( min-width: 768px ) {
+					font-size: 16px;
+				}
+
+				@media only screen and ( max-width:: 479px ) {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
