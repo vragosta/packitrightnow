@@ -1,6 +1,6 @@
 /**
  * PackItRightNow - Twenty Seventeen
- * Archive CSS
+ * Archive SCSS
  */
 
 .archive {
@@ -10,7 +10,7 @@
 
 	.preface {
 		& {
-			background-color: #f2fff7;
+			background-color: $hint-of-green;
 		}
 
 		.container {
@@ -34,7 +34,7 @@
 
 	.no-children {
 		.preface {
-			border-bottom: 2px solid #333;
+			border-bottom: 2px solid $mine-shaft;
 		}
 
 		& > .content {
@@ -44,7 +44,7 @@
 
 	& > .preface {
 		& {
-			border-bottom: 2px solid #333;
+			border-bottom: 2px solid $mine-shaft;
 		}
 
 		p {
@@ -58,7 +58,7 @@
 
 			li {
 				&.active a {
-					background-color: #157702;
+					background-color: $japanese-laurel;
 					font-weight: 300;
 				}
 
@@ -77,7 +77,7 @@
 
 		.preface {
 			& {
-				background-color: #fff;
+				background-color: $white;
 			}
 
 			.container {
@@ -105,16 +105,16 @@
 	.child-terms {
 		.heading {
 			& {
-				background-color: #157702;
-				border-top: 2px solid #333;
-				border-bottom: 2px solid #333;
+				background-color: $japanese-laurel;
+				border-top: 2px solid $mine-shaft;
+				border-bottom: 2px solid $mine-shaft;
 				padding: 15px 0;
 			}
 
 			h2 {
 				font-weight: 300;
 				margin: 0;
-				color: #fff;
+				color: $white;
 			}
 
 			.anchor {

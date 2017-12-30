@@ -1,13 +1,13 @@
 /**
  * PackItRightNow - Twenty Seventeen
- * Footer CSS
+ * Footer SCSS
  */
 
 .footer {
 	& {
-		border-top: 1px solid #333;
+		border-top: 1px solid $mine-shaft;
 		padding: 60px 20px;
-		background-color: #f2fff7;
+		background-color: $hint-of-green;
 	}
 
 	.menu {
@@ -22,7 +22,7 @@
 		}
 
 		a {
-			color: #333;
+			color: $mine-shaft;
 		}
 	}
 

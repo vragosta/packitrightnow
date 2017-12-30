@@ -1,11 +1,11 @@
 /**
  * PackItRightNow - Twenty Seventeen
- * Carousel CSS
+ * Carousel SCSS
  */
 
 .carousel-container {
 	& {
-		background-color: #f2fff7;
+		background-color: $hint-of-green;
 		padding-top: 210px;
 	}
 

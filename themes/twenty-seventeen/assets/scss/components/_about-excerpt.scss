@@ -1,6 +1,6 @@
 /**
  * PackItRightNow - Twenty Seventeen
- * About Excerpt CSS
+ * About Excerpt SCSS
  */
 
 .about-excerpt {
@@ -12,12 +12,12 @@
 		text-align: center;
 		font-weight: 300;
 		margin-bottom: 30px;
-		background-color: #157702;
+		background-color: $japanese-laurel;
 		margin: 0 0 100px 0;
-		color: #fff;
+		color: $white;
 		padding: 15px 0;
-		border-top: 2px solid #333;
-		border-bottom: 2px solid #333;
+		border-top: 2px solid $mine-shaft;
+		border-bottom: 2px solid $mine-shaft;
 	}
 
 	p {

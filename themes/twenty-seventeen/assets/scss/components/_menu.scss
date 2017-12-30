@@ -1,6 +1,6 @@
 /**
  * PackItRightNow - Twenty Seventeen
- * Menu CSS
+ * Menu SCSS
  */
 
 .menu {
@@ -19,7 +19,7 @@
 
 	a {
 		& {
-			color: #fff;
+			color: $white;
 			display: flex;
 			align-items: center;
 			padding: 0 20px;
@@ -29,8 +29,8 @@
 		}
 
 		&:hover {
-			color: #157702;
-			background-color: #f2fff7;
+			color: $japanese-laurel;
+			background-color: $hint-of-green;
 		}
 	}
 
@@ -44,13 +44,13 @@
 
 		/* Class appended to element on click */
 		&.change-color {
-			background-color: #f2fff7;
+			background-color: $hint-of-green;
 		}
 	}
 
 	/* Class appended to element on click */
 	.dropdown-toggle.change-color {
-		color: #157702;
+		color: $japanese-laurel;
 	}
 
 	.dropdown-menu {
@@ -58,18 +58,18 @@
 			margin-top: -1px;
 			border-radius: 0;
 			border: none;
-			background-color: #f2fff7;
+			background-color: $hint-of-green;
 		}
 
 		a {
 			& {
-				color: #157702;
+				color: $japanese-laurel;
 				transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 			}
 
 			&:hover {
-				background-color: #157702;
-				color: #fff;
+				background-color: $japanese-laurel;
+				color: $white;
 			}
 		}
 	}

@@ -1,11 +1,11 @@
 /**
  * PackItRightNow - Twenty Seventeen
- * Header CSS
+ * Header SCSS
  */
 
 .header {
 	& {
-		background-color: #f2fff7;
+		background-color: $hint-of-green;
 		position: fixed;
 		z-index: 10;
 		width: 100%;
@@ -48,11 +48,11 @@
 				& {
 					font-size: 20px;
 					font-family: 'Cormorant Garamond', serif;
-					color: #157702;
+					color: $japanese-laurel;
 				}
 
 				&:hover {
-					color: #333;
+					color: $mine-shaft;
 				}
 			}
 		}
@@ -62,7 +62,7 @@
 		opacity: 0;
 		visibility: hidden;
 		position: absolute;
-		color: #fff;
+		color: $white;
 		font-size: 3em;
 		top: 7px;
 		right: 30px;
@@ -76,9 +76,9 @@
 	}
 
 	.menu-container {
-		border-top: 2px solid #333;
-		border-bottom: 2px solid #333;
-		background-color: #157702;
+		border-top: 2px solid $mine-shaft;
+		border-bottom: 2px solid $mine-shaft;
+		background-color: $japanese-laurel;
 		height: 60px;
 		position: relative;
 	}

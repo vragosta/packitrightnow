@@ -1,6 +1,6 @@
 /**
  * PackItRightNow - Twenty Seventeen
- * Mobile Menu CSS
+ * Mobile Menu SCSS
  */
 
 #mobile-menu {
@@ -53,7 +53,7 @@
 
 			&:hover {
 				background-color: transparent;
-				color: #157702;
+				color: $japanese-laurel;
 			}
 		}
 	}

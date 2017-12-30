@@ -1,6 +1,6 @@
 /**
  * PackItRightNow - Twenty Seventeen
- * Contact CSS
+ * Contact SCSS
  */
 
 .contact {
@@ -55,7 +55,7 @@
 
 	.contact-btn {
 		& {
-			background-color: #157702;
+			background-color: $japanese-laurel;
 			border: none;
 			font-size: 16px;
 			font-weight: 300;
