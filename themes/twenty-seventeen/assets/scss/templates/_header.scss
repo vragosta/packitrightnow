@@ -1,0 +1,85 @@
+/**
+ * PackItRightNow - Twenty Seventeen
+ * Header CSS
+ */
+
+.header {
+	& {
+		background-color: #f2fff7;
+		position: fixed;
+		z-index: 10;
+		width: 100%;
+	}
+
+	& > .container {
+		& {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+
+	.header-information {
+		& {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			opacity: 1;
+			visibility: visible;
+			transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out;
+
+			@media only screen and ( max-width: 767px ) {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+
+		p {
+			& {
+				margin: 0;
+				font-size: 16px;
+			}
+
+			a {
+				& {
+					font-size: 20px;
+					font-family: 'Cormorant Garamond', serif;
+					color: #157702;
+				}
+
+				&:hover {
+					color: #333;
+				}
+			}
+		}
+	}
+
+	i.dropdown {
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		color: #fff;
+		font-size: 3em;
+		top: 7px;
+		right: 30px;
+		cursor: pointer;
+		transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
+
+		@media only screen and ( max-width: 991px ) {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	.menu-container {
+		border-top: 2px solid #333;
+		border-bottom: 2px solid #333;
+		background-color: #157702;
+		height: 60px;
+		position: relative;
+	}
+}
