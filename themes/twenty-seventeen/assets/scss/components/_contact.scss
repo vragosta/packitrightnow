@@ -39,7 +39,7 @@
 	label {
 		margin: 0;
 		font-size: 16px;
-		font-weight: 300;
+		font-weight: $font-weight-light;
 	}
 
 	.excerpt {
@@ -58,7 +58,7 @@
 			background-color: $japanese-laurel;
 			border: none;
 			font-size: 16px;
-			font-weight: 300;
+			font-weight: $font-weight-light;
 			transition: opacity 0.15s ease-in-out;
 		}
 
