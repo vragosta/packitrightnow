@@ -16,7 +16,7 @@
 		.container {
 			padding: 100px 0;
 
-			@media only screen and ( max-width: 767px ) {
+			@media only screen and #{$break-mobile-max} {
 				padding: 60px 0;
 			}
 		}
@@ -83,7 +83,7 @@
 			.container {
 				display: flex;
 
-				@media only screen and ( max-width: 767px ) {
+				@media only screen and #{$break-mobile-max} {
 					flex-direction: column;
 				}
 			}
@@ -95,7 +95,7 @@
 			p {
 				margin: 0;
 
-				@media only screen and ( max-width: 767px ) {
+				@media only screen and #{$break-mobile-max} {
 					margin: 20px 0 0;
 				}
 			}
@@ -144,11 +144,11 @@
 				font-size: 20px;
 				text-align: center;
 
-				@media only screen and ( max-width: 991px ) and ( min-width: 768px ) {
+				@media only screen and #{$break-tablet-max} and #{$break-tablet-min} {
 					font-size: 16px;
 				}
 
-				@media only screen and ( max-width: 479px ) {
+				@media only screen and #{$break-xs-max} {
 					font-size: 14px;
 				}
 			}
