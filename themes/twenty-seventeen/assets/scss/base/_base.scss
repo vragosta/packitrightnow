@@ -3,6 +3,11 @@
  * Site SCSS
  */
 
+html,
+body {
+	overflow-x: hidden;
+}
+
 body {
 	font-family: $stack-lato;
 	color: $mine-shaft;

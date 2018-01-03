@@ -37,6 +37,10 @@
  * PackItRightNow - Twenty Seventeen
  * Site SCSS
  */
+html,
+body {
+  overflow-x: hidden; }
+
 body {
   font-family: "Lato", sans-serif;
   color: #333; }
