@@ -14,6 +14,7 @@ use PackItRightNow\Admin\AccessoryColumnSupport;
 use PackItRightNow\Admin\ClothingColumnSupport;
 use PackItRightNow\Admin\KitchenColumnSupport;
 use PackItRightNow\Admin\PackageColumnSupport;
+use PackItRightNow\Admin\AnalyticsSupport;
 use PackItRightNow\Admin\MetaBoxes\PostMetaFieldsMetaBox;
 use PackItRightNow\Admin\Metaboxes\CarouselPostMetaBox;
 use PackItRightNow\Admin\Metaboxes\AccessoryMetaBox;
@@ -72,6 +73,9 @@ class Plugin {
 
 		$contact_api = new Contact();
 		$contact_api->register();
+
+		$analytics_support = new AnalyticsSupport();
+		$analytics_support->register();
 	}
 
 	function init_admin() {
