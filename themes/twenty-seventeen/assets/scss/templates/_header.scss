@@ -1,0 +1,85 @@
+/**
+ * PackItRightNow - Twenty Seventeen
+ * Header SCSS
+ */
+
+.header {
+	& {
+		background-color: $hint-of-green;
+		position: fixed;
+		z-index: 10;
+		width: 100%;
+	}
+
+	& > .container {
+		& {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+
+	.header-information {
+		& {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			opacity: 1;
+			visibility: visible;
+			transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out;
+
+			@media only screen and #{$break-mobile-max} {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+
+		p {
+			& {
+				margin: 0;
+				font-size: 16px;
+			}
+
+			a {
+				& {
+					font-size: 20px;
+					font-family: $stack-cormorant-garamond;
+					color: $japanese-laurel;
+				}
+
+				&:hover {
+					color: $mine-shaft;
+				}
+			}
+		}
+	}
+
+	i.drop-down {
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		color: $white;
+		font-size: 3em;
+		top: 7px;
+		right: 30px;
+		cursor: pointer;
+		transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
+
+		@media only screen and #{$break-tablet-max} {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	.menu-container {
+		border-top: 2px solid $mine-shaft;
+		border-bottom: 2px solid $mine-shaft;
+		background-color: $japanese-laurel;
+		height: 60px;
+		position: relative;
+	}
+}

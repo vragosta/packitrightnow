@@ -1,0 +1,76 @@
+/**
+ * PackItRightNow - Twenty Seventeen
+ * Menu SCSS
+ */
+
+.menu {
+	& {
+		display: flex;
+		opacity: 1;
+		visibility: visible;
+		transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
+		height: 100%;
+
+		@media only screen and #{$break-tablet-max} {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	a {
+		& {
+			color: $white;
+			display: flex;
+			align-items: center;
+			padding: 0 20px;
+			font-size: 16px;
+			font-weight: $font-weight-light;
+			transition: background-color .2s ease-in-out, color .2s ease-in-out;
+		}
+
+		&:hover {
+			color: $japanese-laurel;
+			background-color: $hint-of-green;
+		}
+	}
+
+	/* Dropdown */
+	.dropdown {
+		& {
+			display: flex;
+			cursor: pointer;
+			transition: background-color 0.2s ease-in-out;
+		}
+
+		/* Class appended to element on click */
+		&.change-color {
+			background-color: $hint-of-green;
+		}
+	}
+
+	/* Class appended to element on click */
+	.dropdown-toggle.change-color {
+		color: $japanese-laurel;
+	}
+
+	.dropdown-menu {
+		& {
+			margin-top: -1px;
+			border-radius: 0;
+			border: none;
+			background-color: $hint-of-green;
+		}
+
+		a {
+			& {
+				color: $japanese-laurel;
+				transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+			}
+
+			&:hover {
+				background-color: $japanese-laurel;
+				color: $white;
+			}
+		}
+	}
+}

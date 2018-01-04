@@ -1,0 +1,30 @@
+/**
+ * PackItRightNow - Twenty Seventeen
+ * About Excerpt SCSS
+ */
+
+.about-excerpt {
+	& {
+		padding-bottom: 100px;
+	}
+
+	h2 {
+		text-align: center;
+		font-weight: $font-weight-light;
+		margin-bottom: 30px;
+		background-color: $japanese-laurel;
+		margin: 0 0 100px 0;
+		color: $white;
+		padding: 15px 0;
+		border-top: 2px solid $mine-shaft;
+		border-bottom: 2px solid $mine-shaft;
+	}
+
+	p {
+		text-align: center;
+		font-size: 16px;
+		line-height: 1.5;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+}

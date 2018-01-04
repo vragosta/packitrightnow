@@ -1,0 +1,33 @@
+/**
+ * PackItRightNow - Twenty Seventeen
+ * Site SCSS
+ */
+
+html,
+body {
+	overflow-x: hidden;
+}
+
+body {
+	font-family: $stack-lato;
+	color: $mine-shaft;
+}
+
+h2 {
+	color: $mine-shaft;
+}
+
+a {
+	& {
+		color: $mine-shaft;
+		transition: color 0.2s ease-in-out;
+	}
+
+	&:hover,
+	&:focus,
+	&:active,
+	&:focus:active {
+		color: $japanese-laurel;
+		text-decoration: none;
+	}
+}

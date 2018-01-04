@@ -1,0 +1,44 @@
+/**
+ * PackItRightNow - Twenty Seventeen
+ * Footer SCSS
+ */
+
+.footer {
+	& {
+		border-top: 1px solid $mine-shaft;
+		padding: 60px 20px;
+		background-color: $hint-of-green;
+	}
+
+	.menu {
+		& {
+			justify-content: center;
+			margin-bottom: 30px;
+
+			@media only screen and #{$break-tablet-max} {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
+		a {
+			color: $mine-shaft;
+		}
+	}
+
+	p {
+		text-align: center;
+		font-weight: $font-weight-light;
+		margin: 0 0 30px 0;
+	}
+
+	.sponsors {
+		& {
+			text-align: center;
+		}
+
+		img {
+			width: 50px;
+		}
+	}
+}

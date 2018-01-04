@@ -1,4 +1,7 @@
 <?php
+
+namespace PackItRightNow\REST\V1;
+
 /**
  * Contact Form API Class
  *
@@ -8,16 +11,13 @@
  *   /contact
  *     - CREATABLE
  */
-
-namespace PackItRightNow\REST\V1;
-
 class Contact extends \WP_REST_Controller {
 
 	/**
 	 * Register the routes for the objects of the controller.
 	 *
-	 * @param  void
-	 * @uses   add_action, reigster_rest_route
+	 * @param void
+	 * @uses add_action(), register_rest_route()
 	 * @return void
 	 */
 	public function register() {
@@ -34,9 +34,10 @@ class Contact extends \WP_REST_Controller {
 	/**
 	 * Sends email to client.
 	 *
-	 * @param  wp_rest_request $request
-	 * @uses   json_decode, get_body, wp_rest_response, sprintf, wp_mail
-	 * @return wp_rest_response
+	 * @since 1.0.0
+	 * @param WP_REST_Request $request
+	 * @uses json_decode(), get_body(), wp_rest_response(), sprintf(), wp_mail(), wp_send_json_success()
+	 * @return WP_REST_Response
 	 */
 	public function send_email( $request ) {
 		$sender = json_decode( $request->get_body() );
@@ -45,7 +46,7 @@ class Contact extends \WP_REST_Controller {
 			return new WP_REST_Response( 'There was an error with the request.', 500 );
 		}
 
-		$to      = 'vincentpasqualeragosta@gmail.com';
+		$to      = 'packitrightnow+inquiries@gmail.com';
 		$subject = $sender->subject;
 		$message = $sender->message;
 

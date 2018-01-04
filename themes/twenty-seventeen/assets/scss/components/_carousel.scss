@@ -1,0 +1,29 @@
+/**
+ * PackItRightNow - Twenty Seventeen
+ * Carousel SCSS
+ */
+
+.carousel-container {
+	& {
+		background-color: $hint-of-green;
+		padding-top: 210px;
+	}
+
+	.container {
+		position: relative;
+	}
+}
+
+.carousel {
+	.image {
+		& {
+			padding-bottom: 25%;
+			min-height: 355px;
+		}
+
+		.source {
+			background-size: cover;
+			background-position: center;
+		}
+	}
+}

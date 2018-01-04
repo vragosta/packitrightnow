@@ -22,7 +22,7 @@ get_header(); ?>
 <section class="front-page">
 
 	<?php if ( $carousel_posts->have_posts() ) { ?>
-		<div class="carousel-container row">
+		<div class="carousel-container">
 			<div class="carousel">
 				<?php while ( $carousel_posts->have_posts() ) { ?>
 					<?php $carousel_posts->the_post(); ?>
