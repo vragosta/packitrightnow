@@ -340,6 +340,21 @@ a:hover, a:focus, a:active, a:focus:active {
 .archive .no-children > .content {
   padding: 100px 0; }
 
+.archive .no-children .content-item {
+  padding-bottom: 60px; }
+
+.archive .no-children .content-item h4 {
+  margin-bottom: 0;
+  margin-top: 30px;
+  font-size: 20px;
+  text-align: center; }
+  @media only screen and (max-width: 991px) and (min-width: 768px) {
+    .archive .no-children .content-item h4 {
+      font-size: 16px; } }
+  @media only screen and (max-width: 479px) {
+    .archive .no-children .content-item h4 {
+      font-size: 14px; } }
+
 .archive > .preface {
   border-bottom: 2px solid #333; }
 
