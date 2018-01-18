@@ -15,7 +15,7 @@ $description = get_post_type_description( ACCESSORY_POST_TYPE );
 $taxonomy = get_taxonomy( ACCESSORY_TYPE_TAXONOMY );
 $parent_terms = get_parent_terms( ACCESSORY_TYPE_TAXONOMY );
 
-#
+# Set up deep linking on page load.
 $query_var = get_query_var( 'term' );
 $query_term = get_term_by( 'slug', $query_var, ACCESSORY_TYPE_TAXONOMY );
 $query_parent_term = $query_term->parent ? get_term( $query_term->parent, ACCESSORY_TYPE_TAXONOMY ) : $query_term ;
@@ -91,6 +91,12 @@ get_header(); ?>
 										<div class="container">
 											<h2 id="<?php echo esc_attr( $child_term->slug ); ?>" class="anchor"><?php echo esc_html( $child_term->name ); ?></h2>
 										</div>
+									</div>
+									<div class="expand-bar container">
+										<h4 name="click-to-expand" data-assoc="<?php echo esc_attr( $child_term->slug ); ?>">
+											Click To Expand
+											<i class="fa fa-angle-double-down"></i>
+										</h4>
 									</div>
 									<div class="content <?php echo esc_attr( $child_term->slug ); ?> container">
 										<?php foreach( $post_ids as $post_id ) { ?>

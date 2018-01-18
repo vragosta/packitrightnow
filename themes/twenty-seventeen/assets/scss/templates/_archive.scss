@@ -123,9 +123,17 @@
 			}
 		}
 
+		.expand-bar {
+			h4 {
+				margin: 15px 0;
+				cursor: pointer;
+			}
+		}
+
 		.content {
 			& {
 				padding: 100px 0;
+				display: none;
 			}
 
 			&:last-child {

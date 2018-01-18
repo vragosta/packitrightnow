@@ -6,13 +6,13 @@ var gulp = require( 'gulp' ),
 	maps = require( 'gulp-sourcemaps' );
 
 gulp.task( 'minifyScripts', function() {
-	gulp.src( 'assets/js/packitrightnow---twenty-seventeen.js' )
+	gulp.src( 'assets/js/src/packitrightnow---twenty-seventeen.js' )
 		.pipe( uglify() )
 		.pipe( gulp.dest( 'assets/js' ) );
 } );
 
 gulp.task( 'expandScripts', function() {
-	gulp.src( 'assets/js/packitrightnow---twenty-seventeen.js' )
+	gulp.src( 'assets/js/src/packitrightnow---twenty-seventeen.js' )
 		.pipe( uglify( {
 			mangle : false,
 			output : {
