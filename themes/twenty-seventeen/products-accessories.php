@@ -18,7 +18,7 @@ $parent_terms = get_parent_terms( ACCESSORY_TYPE_TAXONOMY );
 # Set up deep linking on page load.
 $query_var = get_query_var( 'term' );
 $query_term = get_term_by( 'slug', $query_var, ACCESSORY_TYPE_TAXONOMY );
-$query_parent_term = $query_term->parent ? get_term( $query_term->parent, ACCESSORY_TYPE_TAXONOMY ) : $query_term ;
+$query_parent_term = $query_term->parent ? get_term( $query_term->parent, ACCESSORY_TYPE_TAXONOMY ) : $query_term;
 
 get_header(); ?>
 

@@ -15,11 +15,6 @@ $description = get_post_type_description( CLOTHING_POST_TYPE );
 $taxonomy = get_taxonomy( CLOTHING_TYPE_TAXONOMY );
 $parent_terms = get_parent_terms( CLOTHING_TYPE_TAXONOMY );
 
-// echo '<pre>';
-// var_dump( $parent_terms );
-// echo '</pre>';
-// exit();
-
 get_header(); ?>
 
 <div class="archive <?php echo CLOTHING_POST_TYPE; ?>">
@@ -91,6 +86,12 @@ get_header(); ?>
 										<div class="container">
 											<h2><?php echo esc_html( $child_term->name ); ?></h2>
 										</div>
+									</div>
+									<div class="expand-bar container">
+										<h4 name="click-to-expand" data-assoc="<?php echo esc_attr( $child_term->slug ); ?>">
+											Click To Expand
+											<i class="fa fa-angle-double-down"></i>
+										</h4>
 									</div>
 									<div class="content <?php echo esc_attr( $child_term->slug ); ?> container">
 										<?php foreach( $post_ids as $post_id ) { ?>
