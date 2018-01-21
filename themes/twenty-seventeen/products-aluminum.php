@@ -92,6 +92,12 @@ get_header(); ?>
 											<h2 id="<?php echo esc_attr( $child_term->slug ); ?>" class="anchor"><?php echo esc_html( $child_term->name ); ?></h2>
 										</div>
 									</div>
+									<div class="expand-bar container">
+										<h4 name="click-to-expand" data-assoc="<?php echo esc_attr( $child_term->slug ); ?>">
+											Click To Expand
+											<i class="fa fa-angle-double-down"></i>
+										</h4>
+									</div>
 									<div class="content <?php echo esc_attr( $child_term->slug ); ?> container">
 										<?php foreach( $post_ids as $post_id ) { ?>
 											<?php $featured_image = get_featured_image( $post_id ); ?>
