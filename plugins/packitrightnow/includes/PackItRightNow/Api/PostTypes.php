@@ -10,8 +10,9 @@ namespace PackItRightNow;
  * @uses get_post_type_object
  * @return string
  */
-function get_post_type_description( $post_type ) {
-	$post_type = get_post_type_object( $post_type );
+function get_post_type_description($post_type)
+{
+	$post_type = get_post_type_object($post_type);
 	return $post_type->description ? $post_type->description : NULL;
 }
 
@@ -25,7 +26,8 @@ function get_post_type_description( $post_type ) {
  * @uses wp_query
  * @return object
  */
-function get_post_ids( $post_type, $taxonomy, $term_slug ) {
+function get_post_ids($post_type, $taxonomy, $term_slug)
+{
 	$query_params = array(
 		'post_type' => $post_type,
 		'fields' => 'ids',
@@ -35,12 +37,12 @@ function get_post_ids( $post_type, $taxonomy, $term_slug ) {
 			array(
 				'taxonomy' => $taxonomy,
 				'field' => 'slug',
-				'terms' => array( $term_slug ),
+				'terms' => array($term_slug),
 			),
 		)
 	);
 
-	$query = new \WP_Query( $query_params );
+	$query = new \WP_Query($query_params);
 	return $query->posts;
 }
 
@@ -51,7 +53,8 @@ function get_post_ids( $post_type, $taxonomy, $term_slug ) {
  * @uses wp_query
  * @return object
  */
-function get_recent_posts() {
+function get_recent_posts()
+{
 	$query_args = array(
 		'post_type' => array(
 			ACCESSORY_POST_TYPE,
@@ -63,7 +66,7 @@ function get_recent_posts() {
 		'posts_per_page' => 6
 	);
 
-	return new \WP_Query( $query_args );
+	return new \WP_Query($query_args);
 }
 
 /**
@@ -73,7 +76,8 @@ function get_recent_posts() {
  * @uses wp_query
  * @return object
  */
-function get_carousel_posts() {
+function get_carousel_posts()
+{
 	$query_args = array(
 		'post_type' => CAROUSEL_POST_POST_TYPE,
 		'posts_per_page' => 6,
@@ -82,16 +86,16 @@ function get_carousel_posts() {
 		'order' => 'ASC',
 	);
 
-	$query = new \WP_Query( $query_args );
+	$query = new \WP_Query($query_args);
 
-	if ( $query->post_count == 0 ) {
+	if ($query->post_count == 0) {
 		$query_args = array(
 			'post_type' => CAROUSEL_POST_POST_TYPE,
 			'posts_per_page' => 6,
 			'order' => 'ASC',
 		);
 
-		$query = new \WP_Query( $query_args );
+		$query = new \WP_Query($query_args);
 	}
 
 	return $query;
@@ -104,7 +108,8 @@ function get_carousel_posts() {
  * @uses wp_query
  * @return object
  */
-function get_featured_products() {
+function get_featured_products()
+{
 	$query_params = array(
 		'post_type' => array(
 			ACCESSORY_POST_TYPE,
@@ -118,16 +123,16 @@ function get_featured_products() {
 		'order' => 'ASC',
 		'meta_query' => array(
 			array(
-				'key'     => '_featured',
-				'value'   => true,
+				'key' => '_featured',
+				'value' => true,
 				'compare' => '=',
 			),
 		)
 	);
 
-	$query = new \WP_Query( $query_params );
+	$query = new \WP_Query($query_params);
 
-	if ( $query->post_count == 0 ) {
+	if ($query->post_count == 0) {
 		$query = get_recent_posts();
 	}
 
@@ -135,20 +140,21 @@ function get_featured_products() {
 }
 
 // TODO
-function get_supported_post_types() {
+function get_supported_post_types()
+{
 	$post_types_array = array();
 
 	$post_types = array(
 		ACCESSORY_POST_TYPE,
+		PACKAGE_POST_TYPE,
 		ALUMINUM_POST_TYPE,
 		CLOTHING_POST_TYPE,
 		KITCHEN_POST_TYPE,
-		PACKAGE_POST_TYPE,
 		MISCELLANEOUS_POST_TYPE,
 	);
 
-	foreach( $post_types as $post_type ) {
-		$post_types_array[] = get_post_type_object( $post_type );
+	foreach ($post_types as $post_type) {
+		$post_types_array[] = get_post_type_object($post_type);
 	}
 
 	return $post_types_array;
