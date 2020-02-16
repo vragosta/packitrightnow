@@ -19,11 +19,9 @@ namespace PackItRightNow;
 
 			<div class="sub-menu">
 				<a class="dropdown-item" href="<?php echo home_url( '/accessories/' ); ?>">PPE Accessories</a>
-				<a class="dropdown-item" href="<?php echo home_url( '/aluminum/' ); ?>">Aluminum</a>
+				<a class="dropdown-item" href="<?php echo home_url( '/packaging/' ); ?>">Packaging</a>
 				<a class="dropdown-item" href="<?php echo home_url( '/clothing/' ); ?>">Clothing</a>
 				<a class="dropdown-item" href="<?php echo home_url( '/kitchen/' ); ?>">Kitchen</a>
-				<a class="dropdown-item" href="<?php echo home_url( '/packaging/' ); ?>">Packaging</a>
-				<a class="dropdown-item" href="<?php echo home_url( '/miscellaneous/' ); ?>">Miscellaneous</a>
 			</div>
 
 			<a href="<?php echo home_url( '/about/' ); ?>">About Us</a>
