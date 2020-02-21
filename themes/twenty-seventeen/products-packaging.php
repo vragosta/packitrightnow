@@ -97,13 +97,32 @@ get_header(); ?>
 										<?php foreach( $post_ids as $post_id ) { ?>
 											<?php $featured_image = get_featured_image( $post_id ); ?>
 											<?php $title = get_the_title( $post_id ); ?>
+											<?php $spec_sheet_url = get_post_meta($post_id, '_spec_sheet_url', true); ?>
 
 											<div class="content-item col-xs-6 col-sm-3">
-												<figure class="image">
-													<div class="source" style="background-image: url( <?php echo esc_url( $featured_image ); ?> );"></div>
-												</figure>
+												<?php if ($spec_sheet_url): ?>
+													<a href="#" data-toggle="modal" data-target="#spec-sheet-modal">
+													<figure class="image">
+														<div class="source" style="background-image: url( <?php echo esc_url( $featured_image ); ?> );"></div>
+													</figure>
+													</a>
+												<?php else: ?>
+													<figure class="image">
+														<div class="source" style="background-image: url( <?php echo esc_url( $featured_image ); ?> );"></div>
+													</figure>
+												<?php endif; ?>
 												<h4><?php echo esc_html( $title ); ?></h4>
 											</div>
+
+											<?php if ($spec_sheet_url): ?>
+												<div class="modal fade" id="spec-sheet-modal" tabindex="-1" role="dialog" aria-labelledby="spec-sheet" aria-hidden="true">
+													<div class="modal-dialog">
+														<div class="modal-content">
+															<iframe src="<?= $spec_sheet_url; ?>" title="your_title" align="top" height="600" width="100%" frameborder="0" scrolling="auto"></iframe>
+														</div>
+													</div>
+												</div>
+											<?php endif; ?>
 
 										<?php } /*--- end foreach $post_ids ---*/ ?>
 									</div>
@@ -119,13 +138,32 @@ get_header(); ?>
 								<?php foreach( $post_ids as $post_id ) { ?>
 									<?php $featured_image = get_featured_image( $post_id ); ?>
 									<?php $title = get_the_title( $post_id ); ?>
+									<?php $spec_sheet_url = get_post_meta($post_id, '_spec_sheet_url', true); ?>
 
 									<div class="content-item col-xs-6 col-sm-3">
-										<figure class="image">
-											<div class="source" style="background-image: url( <?php echo esc_url( $featured_image ); ?> );"></div>
-										</figure>
+										<?php if ($spec_sheet_url): ?>
+											<a href="#" data-toggle="modal" data-target="#spec-sheet-modal">
+												<figure class="image">
+													<div class="source" style="background-image: url( <?php echo esc_url( $featured_image ); ?> );"></div>
+												</figure>
+											</a>
+										<?php else: ?>
+											<figure class="image">
+												<div class="source" style="background-image: url( <?php echo esc_url( $featured_image ); ?> );"></div>
+											</figure>
+										<?php endif; ?>
 										<h4><?php echo esc_html( $title ); ?></h4>
 									</div>
+
+									<?php if ($spec_sheet_url): ?>
+										<div class="modal fade" id="spec-sheet-modal" tabindex="-1" role="dialog" aria-labelledby="spec-sheet" aria-hidden="true">
+											<div class="modal-dialog">
+												<div class="modal-content">
+													<iframe src="<?= $spec_sheet_url; ?>" title="your_title" align="top" height="600" width="100%" frameborder="0" scrolling="auto"></iframe>
+												</div>
+											</div>
+										</div>
+									<?php endif; ?>
 
 								<?php } /*--- end foreach $post_ids ---*/ ?>
 							</div>

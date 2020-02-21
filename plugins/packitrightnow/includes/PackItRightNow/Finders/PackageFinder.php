@@ -41,4 +41,8 @@ class PackageFinder {
 		return get_post_meta( $this->post_id, '_featured_position', true );
 	}
 
+	public function get_spec_sheet_url() {
+		return get_post_meta( $this->post_id, '_spec_sheet_url', true );
+	}
+
 }
