@@ -4,7 +4,8 @@ namespace PackItRightNow\Admin\MetaBoxes;
 
 use PackItRightNow\Finders\PackageFinder;
 
-class PackageMetaBox {
+class PackageMetaBox
+{
 
 	/**
 	 * Registers metabox with WordPress.
@@ -13,9 +14,10 @@ class PackageMetaBox {
 	 * @uses   add_action()
 	 * @return void
 	 */
-	function register() {
-		add_action( 'add_meta_boxes', array( $this, 'packitrightnow_package_metaboxes' ) );
-		add_action( 'save_post', array( $this, 'packitrightnow_package_save_data' ) );
+	function register()
+	{
+		add_action('add_meta_boxes', array($this, 'packitrightnow_package_metaboxes'));
+		add_action('save_post', array($this, 'packitrightnow_package_save_data'));
 	}
 
 	/**
@@ -25,11 +27,12 @@ class PackageMetaBox {
 	 * @uses   add_meta_box()
 	 * @return void
 	 */
-	function packitrightnow_package_metaboxes() {
+	function packitrightnow_package_metaboxes()
+	{
 		add_meta_box(
 			'configuration',
-			__( 'Configuration', 'packitrightnow_com' ),
-			array( $this, 'packitrightnow_package_callback' ),
+			__('Configuration', 'packitrightnow_com'),
+			array($this, 'packitrightnow_package_callback'),
 			PACKAGE_POST_TYPE
 		);
 	}
@@ -41,45 +44,56 @@ class PackageMetaBox {
 	 * @uses   wp_nonce_field(), get_post_meta(), __(), esc_textarea()
 	 * @return void
 	 */
-	function packitrightnow_package_callback( $post ) {
+	function packitrightnow_package_callback($post)
+	{
 		# Add a nonce field so we can check for it later.
-		wp_nonce_field( 'packitrightnow_package_save_data', 'packitrightnow_package_nonce' );
+		wp_nonce_field('packitrightnow_package_save_data', 'packitrightnow_package_nonce');
 
 		# Call AccessoryFinder class methods.
-		$finder = new PackageFinder( $post->ID );
+		$finder = new PackageFinder($post->ID);
 		$is_featured = $finder->is_featured();
 		$featured_position = $finder->get_featured_position();
-
+		$spec_sheet_url = $finder->get_spec_sheet_url();
 		?>
 
 		<table style="width: 100%;">
-			<tr>
-				<td>
-					<h2 style="padding: 0; margin: 30px 0 10px; font-weight: 700; font-size: 20px;">Featured Products</h2>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<label for="_featured"><?php echo esc_html( __( 'Feature Package', 'packitrightnow_com' ) ); ?></label>
-				</td>
-				<td>
-					<input name="_featured" type="checkbox" <?php echo $is_featured == true ? 'checked': ''; ?> />
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<label for="_featured_position"><?php echo esc_html( __( 'Feature Products Position', 'packitrightnow_com' ) ); ?></label>
-				</td>
-				<td>
-					<select name="_featured_position" style="width: 100%;">
-						<option value="1" <?php echo $featured_position == 1 ? 'selected' : ''; ?>>1</option>
-						<option value="2" <?php echo $featured_position == 2 ? 'selected' : ''; ?>>2</option>
-						<option value="3" <?php echo $featured_position == 3 ? 'selected' : ''; ?>>3</option>
-						<option value="4" <?php echo $featured_position == 4 ? 'selected' : ''; ?>>4</option>
-						<option value="5" <?php echo $featured_position == 5 ? 'selected' : ''; ?>>5</option>
-					</select>
-				</td>
-			</tr>
+		<tr>
+			<td>
+				<h2 style="padding: 0; margin: 30px 0 10px; font-weight: 700; font-size: 20px;">Featured Products</h2>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label for="_featured"><?php echo esc_html(__('Feature Package', 'packitrightnow_com')); ?></label>
+			</td>
+			<td>
+				<input name="_featured" type="checkbox" <?php echo $is_featured == true ? 'checked' : ''; ?> />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label
+					for="_featured_position"><?php echo esc_html(__('Feature Products Position', 'packitrightnow_com')); ?></label>
+			</td>
+			<td>
+				<select name="_featured_position" style="width: 100%;">
+					<option value="1" <?php echo $featured_position == 1 ? 'selected' : ''; ?>>1</option>
+					<option value="2" <?php echo $featured_position == 2 ? 'selected' : ''; ?>>2</option>
+					<option value="3" <?php echo $featured_position == 3 ? 'selected' : ''; ?>>3</option>
+					<option value="4" <?php echo $featured_position == 4 ? 'selected' : ''; ?>>4</option>
+					<option value="5" <?php echo $featured_position == 5 ? 'selected' : ''; ?>>5</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label
+					for="_spec_sheet_url"><?php echo esc_html(__('Spec Sheet URL', 'packitrightnow_com')); ?></label>
+			</td>
+			<td>
+				<input name="_spec_sheet_url" value="<?= $spec_sheet_url; ?>" style="width: 100%;" />
+			</td>
+		</tr>
 		</table><?php
 	}
 
@@ -90,38 +104,42 @@ class PackageMetaBox {
 	 * @uses   isset(), wp_verify_nonce(), defined(), current_user_can(), sanitize_text_field(), update_post_meta()
 	 * @return void
 	 */
-	function packitrightnow_package_save_data( $post_id ) {
+	function packitrightnow_package_save_data($post_id)
+	{
 		/**
 		 * We need to verify this came from our screen and with proper authorization,
 		 * because the save_post action can be triggered at other times.
 		 */
-		if ( ! isset( $_POST['packitrightnow_package_nonce'] ) ) {
+		if (!isset($_POST['packitrightnow_package_nonce'])) {
 			return;
 		}
 
 		# Verify that the nonce is valid.
-		if ( ! wp_verify_nonce( $_POST['packitrightnow_package_nonce'], 'packitrightnow_package_save_data' ) ) {
+		if (!wp_verify_nonce($_POST['packitrightnow_package_nonce'], 'packitrightnow_package_save_data')) {
 			return;
 		}
 
 		# If this is an autosave, our form has not been submitted, so we don't want to do anything.
-		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+		if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
 			return;
 		}
 
 		# Check the user's permissions.
-		if ( ! current_user_can( 'edit_page', $post_id ) ) {
+		if (!current_user_can('edit_page', $post_id)) {
 			return;
 		}
 
 		# Catch the default checkbox behavior.
 		$featured = $_POST['_featured'] == 'on' ? true : false;
-		$featured_position = sanitize_text_field( $_POST['_featured_position'] );
+		$featured_position = sanitize_text_field($_POST['_featured_position']);
+		$spec_sheet_url = sanitize_text_field($_POST['_spec_sheet_url']);
 
 		# Sanitize the input and update the meta field in the database.
-		update_post_meta( $post_id, '_featured', $featured );
-		update_post_meta( $post_id, '_featured_position', $featured_position );
+		update_post_meta($post_id, '_featured', $featured);
+		update_post_meta($post_id, '_featured_position', $featured_position);
+		update_post_meta($post_id, '_spec_sheet_url', $spec_sheet_url);
 	}
 
 }
+
 ?>
