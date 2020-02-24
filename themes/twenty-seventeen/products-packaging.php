@@ -101,7 +101,7 @@ get_header(); ?>
 
 											<div class="content-item col-xs-6 col-sm-3">
 												<?php if ($spec_sheet_url): ?>
-													<a href="#" data-toggle="modal" data-target="#spec-sheet-modal">
+													<a href="#" data-toggle="modal" data-target="#spec-sheet-modal-<?= $post_id; ?>">
 													<figure class="image">
 														<div class="source" style="background-image: url( <?php echo esc_url( $featured_image ); ?> );"></div>
 													</figure>
@@ -115,7 +115,7 @@ get_header(); ?>
 											</div>
 
 											<?php if ($spec_sheet_url): ?>
-												<div class="modal fade" id="spec-sheet-modal" tabindex="-1" role="dialog" aria-labelledby="spec-sheet" aria-hidden="true">
+												<div class="modal fade" id="spec-sheet-modal-<?= $post_id; ?>" tabindex="-1" role="dialog" aria-labelledby="spec-sheet" aria-hidden="true">
 													<div class="modal-dialog">
 														<div class="modal-content">
 															<iframe src="<?= $spec_sheet_url; ?>" title="your_title" align="top" height="600" width="100%" frameborder="0" scrolling="auto"></iframe>
@@ -142,7 +142,7 @@ get_header(); ?>
 
 									<div class="content-item col-xs-6 col-sm-3">
 										<?php if ($spec_sheet_url): ?>
-											<a href="#" data-toggle="modal" data-target="#spec-sheet-modal">
+											<a href="#" data-toggle="modal" data-target="#spec-sheet-modal-<?= $post_id; ?>">
 												<figure class="image">
 													<div class="source" style="background-image: url( <?php echo esc_url( $featured_image ); ?> );"></div>
 												</figure>
@@ -156,7 +156,7 @@ get_header(); ?>
 									</div>
 
 									<?php if ($spec_sheet_url): ?>
-										<div class="modal fade" id="spec-sheet-modal" tabindex="-1" role="dialog" aria-labelledby="spec-sheet" aria-hidden="true">
+										<div class="modal fade" id="spec-sheet-modal-<?= $post_id; ?>" tabindex="-1" role="dialog" aria-labelledby="spec-sheet" aria-hidden="true">
 											<div class="modal-dialog">
 												<div class="modal-content">
 													<iframe src="<?= $spec_sheet_url; ?>" title="your_title" align="top" height="600" width="100%" frameborder="0" scrolling="auto"></iframe>
