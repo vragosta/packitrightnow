@@ -33,11 +33,10 @@ get_header(); ?>
 				<div class="content col-xs-12">
 					<div class="">
 						<ul class="nav nav-pills">
-							<?php $count = 0; ?>
 							<?php foreach( $parent_terms as $parent_term ) { ?>
 								<?php $slug = esc_attr( $parent_term->slug ); ?>
 
-								<li <?php echo $count++ == 0 ? 'class="active"' : ''; ?>>
+								<li>
 									<a data-toggle="pill" href="<?php echo "#{$slug}"; ?>">
 										<?php echo esc_html( $parent_term->name ); ?>
 									</a>
@@ -54,11 +53,10 @@ get_header(); ?>
 
 	<?php if ( ! empty( $parent_terms ) ) { ?>
 		<div class="tab-content">
-			<?php $count = 0; ?>
 			<?php foreach( $parent_terms as $parent_term ) { ?>
 				<?php $child_terms = get_child_terms( CLOTHING_TYPE_TAXONOMY, $parent_term->term_id ); ?>
 
-				<div id="<?php echo esc_attr( $parent_term->slug ); ?>" class="tab-pane fade in anchor <?php echo $count++ == 0 ? 'active' : ''; ?> <?php echo empty( $child_terms ) ? 'no-children' : ''; ?>">
+				<div id="<?php echo esc_attr( $parent_term->slug ); ?>" class="tab-pane fade in anchor <?php echo empty( $child_terms ) ? 'no-children' : ''; ?>">
 					<div class="preface row">
 						<div class="container">
 

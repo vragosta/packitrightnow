@@ -40,22 +40,9 @@ $post_types = get_supported_post_types();
 				<?php endif; ?>
 
 				<?php if ( ! empty( $parent_terms ) ) { ?>
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<?php echo esc_html( $post_type->label ); ?>
-						</a>
-						<div class="dropdown-menu">
-							<?php foreach( $parent_terms as $term ) { ?>
-								<a class="dropdown-item" href="<?php echo home_url( strtolower( esc_attr( $post_type->labels->menu_name ) ) . '?term=' . esc_attr( $term->slug ) ); ?>"><?php echo esc_html( $term->name ); ?></a>
-							<?php } ?>
-
-							<!-- Patch fix for misc -->
-							<?php if ($post_type->name === ACCESSORY_POST_TYPE) : ?>
-								<a class="dropdown-item" href="<?= home_url('miscellaneous'); ?>">Miscellaneous</a>
-							<?php endif; ?>
-
-						</div>
-					</div>
+					<a href="<?= home_url(strtolower($post_type->labels->menu_name)); ?>">
+						<?php echo esc_html( $post_type->label ); ?>
+					</a>
 				<?php } ?>
 
 			<?php } ?>
